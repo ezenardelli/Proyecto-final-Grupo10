@@ -5,3 +5,5 @@ Nuestro objetivo es apuntar al publico aventurero, soñadores y romanticos por l
 
 About Us.
 -"Hola, me llamo Yamil Rodrigo Ruiz. Tengo 31 años y vivo en Buenos Aires, me adentre al mundo de la programacion por curiosidad y me interesa mucho el Frontend asi como el Backend. Formo parte de este maravilloso equipo en el cual vamos a hacer todo lo posible para que tengas la mejor experiencia." 
+
+ -"Soy Ezequiel Nardelli, tengo 31 años, y soy de Rafaela, Santa Fe. En la programacion web logre unir varias cosas que siempre me gustaron, la tecnología, la lógica y el diseño grafico. Estoy seguro que con este equipo vamos a hacer un proyecto unico."
