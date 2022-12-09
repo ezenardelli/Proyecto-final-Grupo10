@@ -9,3 +9,5 @@ About Us.
  -"Soy Ezequiel Nardelli, tengo 31 años, y soy de Rafaela, Santa Fe. En la programacion web logre unir varias cosas que siempre me gustaron, la tecnología, la lógica y el diseño grafico. Estoy seguro que con este equipo vamos a hacer un proyecto unico."
 
 -"Hola, mi nombre es Laura Pederiva, tengo 28 años y vivo en Córdoba. Me gusta investigar y aprender cosas nuevas, así es como llegé a la programación. Encuentro en ella el arte de la creatividad y el trabajo en equipo. Trabajaremos en conjunto para llegar a buenos resultados!"
+
+-"Hola, mi nombre es Diego León, tengo 25 años. Decidi empezar a explorar la programación completamente desde cero. Vi que es una actividad donde puedo poner en practica mi creatividad, mis ideas y combinarlo con la tecnología. Muy contento de formar parte de este equipo con el que vamos a brindar lo mejor de nosotros para que tu experiencia sea inolvidable."
