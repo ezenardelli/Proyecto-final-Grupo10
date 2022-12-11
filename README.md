@@ -11,3 +11,5 @@ About Us.
 -"Hola, mi nombre es Laura Pederiva, tengo 28 años y vivo en Córdoba. Me gusta investigar y aprender cosas nuevas, así es como llegé a la programación. Encuentro en ella el arte de la creatividad y el trabajo en equipo. Trabajaremos en conjunto para llegar a buenos resultados!"
 
 -"Hola, mi nombre es Diego León, tengo 25 años. Decidi empezar a explorar la programación completamente desde cero. Vi que es una actividad donde puedo poner en practica mi creatividad, mis ideas y combinarlo con la tecnología. Muy contento de formar parte de este equipo con el que vamos a brindar lo mejor de nosotros para que tu experiencia sea inolvidable."
+
+-"Hola! mi nombre es Lucia Lupi Serres, tengo 26 años y soy de buenos aires. Tome la decición de meterme en este nuevo mundo que es la programación para expandir mis fronteras. Me encantaría poder trabajar de una manera más 'libre' y sobre todo tener la opción de trabajar en otro país. Soy un poco torpe y lenta para aprender pero la idea es darlo todo."
