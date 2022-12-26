@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #FFC396;
+}
+
+.barra-busqueda {
+    text-align: center;
+}
+.logo {
+    width: 40vw;
+    margin: 10px;
+    padding: 10px;
+}
+
+.fa-bars {
+    background-color: #1259c3;
+    color: #ebebeb;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.banner {
+    width: 100vw;
+    margin: 2px;
+    padding: 2px;
+}
+
+.incluye {
+    
+    justify-content: space-around;
+    size: 14px;
+    padding: 20x;
+    margin: 20px;
+}
+
+.img-scale {
+    width: 50vw;
+    margin-left: 12vw;
+}
+.producto    {
+    font-size: 2em;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #1259c3;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.carrito    {
+    font-size: 2em;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #1259c3;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
