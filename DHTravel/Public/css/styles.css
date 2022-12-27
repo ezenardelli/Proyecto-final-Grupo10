@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: #20142A;
+}
+
+.barrainicial{
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-left: 60px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.acceso{
+    color: #FFC396;
+    margin-right: 40px;
+    font-size: 120%;
+}
+
+.button5{
+    width: 8px;
+    height: 8px;
+    padding: 17px;
+    margin-bottom: 1px;
+    color: black;
+    background-color: white ;
+    
+    cursor: pointer;
+
+}
+
+body{
+    background-image: url(/img/ciudades.jpg);
+    background-size: 100%;
+}
+
+section{
+    width: 400px;
+    background: #20142A;
+    padding: 30px;
+    margin:auto;
+    margin-top: 120px;
+    border-radius: 15px;
+}
+
+.logo{
+    width: 12%;
+}
+.logo2{
+    width: 20%;
+    margin-left: 40%;
+}
+
+.espacios{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.letras{
+    color: #FFC396;
+    text-align: center;
+
+}
+
+.button1{
+    border-radius: 100%;
+    border: none;
+    padding: 5px;
+    color: blue;
+    font-size: 58px;
+    margin-left: 20%;
+    cursor: pointer;
+    background-color: #20142A ;
+    box-shadow: 5px ;
+}
+
+.button2{
+    border-radius: 100%;
+    border: none;
+    padding: 5px;
+    color: orange;
+    font-size: 50px;
+    margin-left: 18%;
+    cursor: pointer;
+    background-color: #20142A ; ;
+    box-shadow: 2px ;
+}
+
+.button3{
+    border: none;
+    padding: 10px;
+    color: blue;
+    background-color: #20142A ;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cursor{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+    background: rgb(213, 221, 218);
+}
+
+footer{
+    background: #121F78;
+    color: white;
+
+}
+
+.footer1{
+    text-align: center;
+    color: salmon;
+    display: inline-flexbox ;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+
+.redessociales{
+    padding: 5px;
+    font-size: 30px;
+    cursor:pointer;
+    
+}
+
+.mediosdepago{
+    font-size: 140%;
+    background: #121F78;
+    border:none;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+h5{
+    color:white;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 10px;
+}
