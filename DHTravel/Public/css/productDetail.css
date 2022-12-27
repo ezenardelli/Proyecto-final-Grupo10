@@ -5,6 +5,8 @@
 
 }
 .head{
+    background-color: #20142A;
+    color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -14,6 +16,7 @@
 .login{
     display: flex;
     flex-wrap: wrap;
+    color: white;
     justify-content: space-between;
 }
 
@@ -21,25 +24,25 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: #eeeeee;
     
 }
-
+main{
+    background-color: #cacaca;
+}
 .barra-busqueda {
     text-align: center;
 }
 .logo {
-    width: 20vw;
+    width: 15vw;
     margin: 10px;
     padding: 10px;
 }
-
 .fa-bars {
     background-color: #1259c3;
     color: #ebebeb;
     border-radius: 10px;
-    font-size: 20px;
-    margin: 20px;
+    font-size: 1.5em;
+    margin: 10px;
     padding: 10px;
     align-items: center;
 }
@@ -50,70 +53,118 @@ body {
     align-items: center;
 }
 
-.banner {
-    width: 99vw;
-    margin: 2px;
-    padding: 2px;
 
-}
 .text1 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 12px;
     justify-content: center;
     align-items: center;
     color: #1259c3;
 }
-.tituloIncluye {
-    font-size: 15px;
+.nav {
+    justify-content:center;
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
     text-align: center;
-    text-decoration: none;
-    text-decoration-color: black;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);  
+    background-color: #20142A;
+    border-radius: 15px;
+    
+}
+.tituloIncluye {
+    font-size: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    font;
 }
 
 .incluye {
-    font-size: 12px;
-    margin: 40px;
-    text-decoration: none;
-    text-decoration-color: black;
-}
+
+
+    width: 100vw;
+    margin: auto;
+    padding: 15px;
+    color: #ffffff;
+    justify-content: center;
+
+    }
 
 h3 {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
+    padding: 15px;
+    
 }
 .img-scale {
+    display: flex;
+    flex-wrap: wrap;
     width: 50vw;
-    margin-left: 25vw;
+    margin: auto;
     justify-content: center;
     align-items: center;
 }
 .producto    {
+    justify-content:center;
+    margin: auto;
+    width: 70%;
     font-size: 2em;
     margin-bottom: 12px;
     justify-content: center;
     align-items: center;
-    color: #1259c3;
+    color: #ffffff;
     padding: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);  
+    background-color: #20142A;
+    border-radius: 15px;
 }
 
 .precio {
+    
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
+    padding: 10px;
 }
 .carrito    {
-    font-size: 1,5em;
-    margin-bottom: 12px;
-    text-align: center;
+    
+    font-size: 1,2em;
+    width: 50%;
+    justify-content: auto;
+    text-align: auto;
     color: #000000;
     padding: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    box-sizing:border-box;
     background-color: rgb(83, 156, 83);
+    border-radius: 15px;
 }
-articuloproducto    {
+.carro {
+    justify-content:center;
+    margin: auto;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    align-self: center; 
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.i {
+    width: 10%;
+    justify-content: center;
+
+}
+.sec-hr {
+    width: 80%;
+
+}
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
