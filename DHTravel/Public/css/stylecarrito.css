@@ -1,3 +1,29 @@
-* {
-    background-color: yellow;
+img {
+    text-align: left;
+    width: 13vw 
+}
+
+.contenedor-1 {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 10px;
+    border: solid 5px black;
+    max-width: 400px;
+}
+
+.contenedor-2 {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 10px;
+    border: solid 5px black;
+    max-width: 400px;
+}
+
+.contenedor-3 {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 10px;
+    border: solid 5px black;
+    max-width: 300px;
+    max-height: 1200px
 }
