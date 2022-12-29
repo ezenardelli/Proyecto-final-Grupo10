@@ -4,3 +4,99 @@ font-family: 'Imprima', sans-serif;
 font-family: 'Kaisei Tokumin', serif;
 font-family: 'Mako', sans-serif;
 */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(/img/sunset-background.jpg)
+}
+header{
+    /*border: solid 1px #000;
+    border-radius: 1%;*/
+    width: 100vw;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.login-container{
+    width: 15%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+.ul-li{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.header-logo{
+    width: 65px;
+    margin: 10% 10% ;
+}
+.search-bar{
+    margin-top: 5%;
+}
+.data-box{
+    margin: auto;
+    border: solid 3px #000;
+    border-radius: 2px;
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.data-logo{
+    width: 65px;
+}
+.register-media{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.fa-facebook,
+.fa-google{
+    width: 30px;
+} 
+
+
+
+
+
+
+footer{
+    width: 100vw;
+    height: 20vh;
+    border: solid 3px #000;
+    margin: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.social-media,
+.credit-card {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav-li{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 10px;
+}
+.info-li{
+    align-self: stretch;
+}
+
+
