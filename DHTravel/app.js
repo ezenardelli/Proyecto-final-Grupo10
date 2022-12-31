@@ -13,5 +13,9 @@ const publicPath = path.resolve(__dirname, "./Public");
 app.use( express.static(publicPath) );
 
 app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "./Views/index.html"));
+});
+
+app.get("/register", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/register.html"));
 });
