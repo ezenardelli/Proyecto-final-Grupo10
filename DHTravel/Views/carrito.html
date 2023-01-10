@@ -6,90 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Imprima&family=Mako&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/stylecarrito.css">
 </head>
-
 <body>
-    <header>
-        <img src="/img/logo.png" alt="">
-        <ul class="ingreso-registro" type="none">
-            <li><a href="">Ingreso</a></li>
-            <li><a href="">Registro</a></li>
-        </ul>
-    </header>
     <main>
-        <div>
-            <section class="contenedor-1">
-                <h3>Datos del usuario</h3>
-                <form action="datosusuario.html" method="POST">
-                    <p>
-                        <label>Nombre:</label>
-                        <input type="text" name="nombre" required>
-                    </p>
-                    <p>
-                        <label>Fecha de nacimiento:</label>
-                        <input type="number" name="edad" required>
-                    </p>
-                    <p>
-                        <label>Documento:</label>
-                        <input type="number" name="documento" required>
-                    </p>
-                    <p>
-                        <label>Nacionalidad:</label>
-                        <input type="text" name="nacionalidad" required>
-                    </p>
-                    <p>
-                        <label>País de residencia:</label>
-                        <input type="text" name="Paisresidencia" required>
-                    </p>
-                    <p>
-                        <label>Provincia:</label>
-                        <input type="text" name="Provincia" required>
-                    </p>
-                    <p>
-                        <label>Localidad:</label>
-                        <input type="text" name="Localidad" required>
-                    </p>
-                    <p>
-                        <label>Dirección:</label>
-                        <input type="text" name="Dirección" required>
-                    </p>
-                    <p>
-                        <label>Email:</label>
-                        <input type="email" name="email" required>
-                    </p>
-                </form>
-            </section>
-        </div>
-        <div>
-            <section class="contenedor-2">
-                <h3>Datos de la tarjeta</h3>
-                <form action="datostarjeta.html" method="POST">
+        <section class="contenedor-1">
+            <form class="form-cont" action="" method="POST">
+                <h2 class="titulo-cont">DATOS DEL USUARIO</h2>
                 <p>
-                    <label>Numero de tarjeta:</label>
-                    <input type="number" name="numtarjeta" required>
+                    <input class="form-item1" type="text" name="nombre" placeholder="Nombre" required>
                 </p>
                 <p>
-                    <label>Nombre:</label>
-                    <input type="text" name="nombretarjeta" required>
+                    <input class="form-item1" type="date" name="edad" max="2004-01-05" placeholder="Fecha de nacimiento" required>
                 </p>
                 <p>
-                    <label>Fecha de vencimiento:</label>
-                    <input type="number" name="fechavenc" required>
+                    <input class="form-item1" type="number" name="documento" placeholder="Documento" required>
                 </p>
                 <p>
-                    <label>Código de seguridad:</label>
-                    <input type="number" name="codigoseg" required>
+                    <input class="form-item1" type="text" name="nacionalidad" placeholder="Nacionalidad" required>
                 </p>
                 <p>
-                    <label>Email:</label>
-                    <input type="email" name="emailtarjeta" required>
+                    <input class="form-item1" type="text" name="Paisresidencia" placeholder="Pais de Residencia" required>
                 </p>
-            </section>
-        </div>
+                <p>
+                    <input class="form-item1" type="text" name="Provincia" placeholder="Provincia" required>
+                </p>
+                <p>
+                    <input class="form-item1" type="number" name="Telefono" placeholder="Telefono" required>
+                </p>
+                <p>
+                    <input class="form-item1" type="email" name="email" placeholder="Email" required>
+                </p>
+            </form>
+        </section>
+
+        <section class="contenedor-2">
+            <h2 class="titulo-cont">MEDIO DE PAGO</h2>
+            <form class="form-cont2" action="" method="POST">
+                <p>
+                    <input class="form-item2" type="number" name="numtarjeta" placeholder="Número de tarjeta" required>
+                </p>
+                <p>
+                    <input class="form-item2" type="text" name="nombretarjeta" placeholder="Titular de tarjeta" required>
+                </p>
+                <div class="form-item2">
+                    <p>
+                        <input class="venc-num" type="text" name="fechavenc" placeholder="Vencimiento(MM/AA)" required>
+                    </p>
+                    <p>
+                        <input class="venc-num" type="number" name="codigoseg" placeholder="CVV" required>
+                    </p>
+                </div>
+                <p>
+                    <input class="form-item2" type="number" name="documentotarjeta" placeholder="Documento" required>
+                </p>
+                <p>
+                    <input class="form-item2" type="email" name="emailtarjeta" placeholder="Email" required>
+                </p>
+        </section>
+        
         <span>
             <section class="contenedor-3">
-                <h3>Detalle del paquete</h3>
+                <h3>DETALLE DEL PAQUETE</h3>
                 <ul class="Detalle-productos" type="none">
                     <li> </li>
                     <li> </li>
@@ -102,12 +84,12 @@
             </section>
         </span>
         <div>
-            <label>
-            <input type="radio">Estoy de acuerdo con los términos y condiciones.</label>
+            <label class="terminos-condiciones">
+                <input type="radio">Estoy de acuerdo con los términos y condiciones.</label>
         </div>
         <div>
             <p>
-            <button type="submit">Confirmación de Compra</button>
+                <button class="boton-compra" type="submit">Confirmación de Compra</button>
             </p>
         </div>
     </main>
