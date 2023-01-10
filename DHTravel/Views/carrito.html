@@ -12,86 +12,97 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/css/stylecarrito.css">
 </head>
+
 <body>
     <main>
-        <section class="contenedor-1">
-            <form class="form-cont" action="" method="POST">
+        <section class="formulario-cont">
+            <form class="formulario" action="" method="POST">
                 <h2 class="titulo-cont">DATOS DEL USUARIO</h2>
-                <p>
-                    <input class="form-item1" type="text" name="nombre" placeholder="Nombre" required>
+                <p class="items-form">
+                    <input class="barras-form" type="text" name="nombre" placeholder="Nombre" required>
                 </p>
-                <p>
-                    <input class="form-item1" type="date" name="edad" max="2004-01-05" placeholder="Fecha de nacimiento" required>
+                <p class="items-form">
+                    <input class="barras-form" type="date" name="edad" max="2004-01-05"
+                        placeholder="Fecha de nacimiento" required>
                 </p>
-                <p>
-                    <input class="form-item1" type="number" name="documento" placeholder="Documento" required>
+                <p class="items-form">
+                    <input class="barras-form" type="number" name="documento" placeholder="Documento" required>
                 </p>
-                <p>
-                    <input class="form-item1" type="text" name="nacionalidad" placeholder="Nacionalidad" required>
+                <p class="items-form">
+                    <input class="barras-form" type="text" name="nacionalidad" placeholder="Nacionalidad" required>
                 </p>
-                <p>
-                    <input class="form-item1" type="text" name="Paisresidencia" placeholder="Pais de Residencia" required>
+                <p class="items-form">
+                    <input class="barras-form" type="text" name="Paisresidencia" placeholder="Pais de Residencia"
+                        required>
                 </p>
-                <p>
-                    <input class="form-item1" type="text" name="Provincia" placeholder="Provincia" required>
+                <p class="items-form">
+                    <input class="barras-form" type="text" name="Provincia" placeholder="Provincia" required>
                 </p>
-                <p>
-                    <input class="form-item1" type="number" name="Telefono" placeholder="Telefono" required>
+                <p class="items-form">
+                    <input class="barras-form" type="number" name="Telefono" placeholder="Telefono" required>
                 </p>
-                <p>
-                    <input class="form-item1" type="email" name="email" placeholder="Email" required>
+                <p class="items-form">
+                    <input class="barras-form" type="email" name="email" placeholder="Email" required>
                 </p>
             </form>
         </section>
 
-        <section class="contenedor-2">
+        <section class="formulario-cont2">
             <h2 class="titulo-cont">MEDIO DE PAGO</h2>
-            <form class="form-cont2" action="" method="POST">
-                <p>
-                    <input class="form-item2" type="number" name="numtarjeta" placeholder="Número de tarjeta" required>
+            <form class="formulario-2" action="" method="POST">
+                <p class="items-form-2">
+                    <input class="barras-form-2" type="number" name="numtarjeta" placeholder="Número de tarjeta"
+                        required>
                 </p>
-                <p>
-                    <input class="form-item2" type="text" name="nombretarjeta" placeholder="Titular de tarjeta" required>
+                <p class="items-form-2">
+                    <input class="barras-form-2" type="text" name="nombretarjeta" placeholder="Titular de tarjeta"
+                        required>
                 </p>
-                <div class="form-item2">
-                    <p>
+                <div class="items-form-2">
+                    <p class="venc-num-cont">
                         <input class="venc-num" type="text" name="fechavenc" placeholder="Vencimiento(MM/AA)" required>
                     </p>
-                    <p>
+                    <p class="venc-num-cont">
                         <input class="venc-num" type="number" name="codigoseg" placeholder="CVV" required>
                     </p>
                 </div>
-                <p>
-                    <input class="form-item2" type="number" name="documentotarjeta" placeholder="Documento" required>
+                <p class="items-form-2">
+                    <input class="barras-form-2" type="number" name="documentotarjeta" placeholder="Documento" required>
                 </p>
-                <p>
-                    <input class="form-item2" type="email" name="emailtarjeta" placeholder="Email" required>
+                <p class="items-form-2">
+                    <input class="barras-form-2" type="email" name="emailtarjeta" placeholder="Email" required>
                 </p>
         </section>
-        
-        <span>
-            <section class="contenedor-3">
-                <h3>DETALLE DEL PAQUETE</h3>
-                <ul class="Detalle-productos" type="none">
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
+
+        <section class="contenedor-3">
+            <div class="detalle-cont">
+                <h2 class="titulo-cont">DETALLE DEL PAQUETE</h2>
+                <ul class="detalle-productos" type="none">
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                    <li>item4</li>
+                    <li>item5</li>
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                    <li>item4</li>
+                    <li>item5</li>
                 </ul>
-                <h4>Subtotal</h4>
-                <h4>Total</h4>
-            </section>
-        </span>
-        <div>
-            <label class="terminos-condiciones">
-                <input type="radio">Estoy de acuerdo con los términos y condiciones.</label>
-        </div>
-        <div>
-            <p>
+                <h3>Subtotal</h3>
+                <h3>Total</H3>
+            </div>
+        </section>
+
+        <section class="contenedor-4">
+            <div class="term-cond-cont">
+                <input type="radio" name="terminos" id="terminos" required>
+                <label class="term-cond" for="terminos">Estoy de acuerdo con los términos y condiciones</label>
+            </div>
+            <div class="boton-cont">
                 <button class="boton-compra" type="submit">Confirmación de Compra</button>
-            </p>
-        </div>
+            </div>
+        </section>
     </main>
 </body>
 

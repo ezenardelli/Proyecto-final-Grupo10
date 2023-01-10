@@ -5,7 +5,6 @@
 }
 
 body {
-   /* background-image: url(/img/hong-kong-noche-1001x702.jpg);*/
     font-size: 12px;
 }
 
@@ -20,120 +19,174 @@ a:visited {
 
 /*main*/
 
-/*contenedor1*/
-
-
-
-/*contenedor2*/
-
-
-
-
-/*contenedor3*/
-
-
-
-@media (min-width: 768px) {
-
-
+main {
+    background-image: url(/img/hong-kong-noche-1001x702.jpg);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/*contenedor1*/
 
-
-
-/*
-.contenedor-1 {
-    background-color: #20142A;
+.formulario-cont {
     font-family: 'Mako', sans-serif;
-    color: #FFC396;
-    margin: 10px;
-    border: solid 5px black;
+    background-color: #20142A;
+    width: 80%;
+    text-align: center;
+    padding-top: 3%;
+    margin-top: 7%;
+    padding-bottom: 3%;
+    margin-bottom: 7%;
     border-radius: 10px;
 }
 
-.form-cont {
+.formulario {
     display: flex;
     flex-direction: column;
 }
 
 .titulo-cont {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     color: white;
     font-family: 'Imprima', sans-serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
-.form-item1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-    padding: 13px;
-    border: solid 5px black;
-    border-radius: 10px;
+.items-form {
+    padding: 3%;
 }
 
+.barras-form {
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+}
 
+/*contenedor2*/
 
-.contenedor-2 {
-    display: flex;
-    flex-direction: column;
-    background-color: #20142A;
+.formulario-cont2 {
     font-family: 'Mako', sans-serif;
-    color: #FFC396;
-    margin: 10px;
-    border: solid 5px black;
+    background-color: #20142A;
+    width: 80%;
+    text-align: center;
+    padding-top: 3%;
+    margin-top: 7%;
+    padding-bottom: 3%;
+    margin-bottom: 7%;
     border-radius: 10px;
 }
 
-.form-item2 {
+.formulario-2 {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
 }
 
+.items-form-2 {
+    padding: 3%;
+}
 
+.barras-form-2 {
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.venc-num-cont {
+    padding: 3%;
+}
+
+.venc-num {
+    border-radius: 5px;
+    border: none;
+    width: 95%;
+    height: 40px;
+    padding-left: 10px;
+}
+
+/*contenedor3*/
 
 .contenedor-3 {
+    font-family: 'Mako', sans-serif;
+    background-color: #20142A;
+    width: 80%;
+    text-align: center;
+    padding-top: 3%;
+    margin-top: 7%;
+    padding-bottom: 3%;
+    margin-bottom: 7%;
+    border-radius: 10px;
+}
+
+.detalle-cont {
     display: flex;
     flex-direction: column;
-    background-color: #20142A;
-    font-family: 'Mako', sans-serif;
-    color: #FFC396;
-    margin: 10px;
-    border: solid 5px black;
-    border-radius: 10px;
 }
 
 h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     color: white;
     font-family: 'Imprima', sans-serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    padding-left: 10%
+}
+
+.detalle-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+li {
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.contenedor-4 {
+    width: 80%;
+}
+
+.term-cond-cont {
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 h4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    color: white;
-    font-family: 'Imprima', sans-serif;
+    font-size: 15px;
 }
 
-.terminos-condiciones {
-    font-family: 'Mako', sans-serif;
-    color: white;
+.boton-cont {
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .boton-compra {
-    border: solid 2px black;
-    font-family: 'Mako', sans-serif;
-    margin: auto;
-    padding: 13px;
+    background-color: #ffc396;
+    color: white;
+    font-weight: normal;
     border-radius: 10px;
-} 
+    height: 40px;
+    width: 100%;
+    transition: background-color, font-weight, 500ms;
+}
 
-*/
+.boton-compra:hover {
+    background-color: #DF5B03;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+}
+
+
