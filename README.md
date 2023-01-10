@@ -17,3 +17,16 @@ About Us.
 
 
 Tablero de trabajo: https://trello.com/w/grupo_10_dhtravel
+
+Listado de referencias:
+1) Tarjetas con distintos destinos - loading logo - Frases inspiracionales apuntadas al Marketing.
+(https://wiztech.com.ar)
+(https://www.lozadaviajes.com).
+2) Info suministrada en su footer - diseño de Marketing.
+(https://www.dlortravel.com).
+3) Footer manejable con la diferente interfaz.
+(https://www.babelviajes.com.ar)
+4) Transición de background.
+(www.landsvacations.com).
+5) Carrusel con sus opciones de detalle - Dinamismo en su interfaz.
+(https://www.samsung.com/ar).
