@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/img/logo.ico">
     <link
         href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Carattere&family=Imprima&family=Kaisei+Tokumin&family=Mako&display=swap"
         rel="stylesheet">
@@ -22,7 +23,8 @@
                 <img class="header-logo" src="/img/logo.png" alt="DHTravel Logo">
             </div>
             <div class="search-bar">
-                <label for="search"><input type="text"></label><i class="fas fa-search"></i>
+                <input class="input-searcher" type="text" placeholder="Busque su destino">
+                <button class="icon-a"><i class="fas fa-search"></i></button>
             </div>
             <div class="login-container">
                 <nav class="login">
@@ -68,12 +70,12 @@
                         <input class="data-item" type="password" name="repeat-password" id="repeat-password"
                             placeholder="Repetir contraseña">
                     </p>
-                    <p>
+                    <!--<p>
                         <label for="no-robot"></label>
                         <input class="data-item" type="checkbox" name="no-robot" id="no-robot">
-                    </p>
+                    </p>-->
                     <p>
-                        <button class="data-item" type="button">Registrarse</button>
+                        <button class="main-button" type="button"><i class="fa-solid fa-plane-departure"></i></button>
                     </p>
                 </form>
             </div>
@@ -83,8 +85,8 @@
                 </p>
             </div>
             <div class="register-icon">
-                <a href="#"><i class="main-icon fa-brands fa-facebook"></i></a>
-                <a href="#"><i class=" main-icon fa-brands fa-google"></i></a>
+                <a class="fi1" href="#"><i class="main-icon fa-brands fa-facebook"></i></a>
+                <a class="fi2" href="#"><i class=" main-icon fa-brands fa-google"></i></a>
             </div>
         </section>
     </main>
@@ -94,14 +96,28 @@
         <section class="info-li">
             <nav class="footer-nav">
                 <ul class="footer-nav-li" type="none">
-                    <li><a href="#">Terminos y condiciones</a></li>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Conocenos</a></li>
-                    <li><a href="#">RRHH</a></li>
-                    <li><a href="#">Formas De Pago</a></li>
+                    <li><a class="nav-li-1" href="#">Terminos y condiciones</a></li>
+                    <li><a class="nav-li-2" href="#">Preguntas Frecuentes</a></li>
+                    <li><a class="nav-li-1" href="#">Contacto</a></li>
+                    <li><a class="nav-li-2" href="#">Conocenos</a></li>
+                    <li><a class="nav-li-1" href="#">RRHH</a></li>
+                    <li><a class="nav-li-2" href="#">Formas De Pago</a></li>
                 </ul>
             </nav>
+        </section>
+        <section class="social-media">
+            <div>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </section>
         <section class="copyright-info">
             <div class="credit-card">
@@ -118,20 +134,6 @@
             <div class="copy-p">
                 <p>Copyright © 2021-2023 DHTravel S.A.</p>
                 <p>Av. Cordoba 1986, Piso 2, CP 1244, Almagro, CABA</p>
-            </div>
-        </section>
-        <section class="social-media">
-            <div>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </section>
     </div>
