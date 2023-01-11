@@ -104,19 +104,33 @@ main {
 .data-box {
     margin: auto;
     width: 90vw;
-    max-width: 350px;
-    height: 500px;
+    max-width: 515px;
+    height: 574px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 6%;
     margin-bottom: 10%;
     background-color: #20142A;
-    border-radius: 20px;
-    border-start-start-radius: 120px;
-    border-end-end-radius: 120px;
+    border-radius: 30px;
+    border-start-start-radius: 5%;
+    border-end-end-radius: 5%;
     border: solid 1px #5B050C;
     background-color: rgba(32, 20, 42, 0.9);
+}
+.comprar {
+    margin: auto;
+    width: 65vw;
+    max-width: 252px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #20142A;
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgb(212 164 77);
 }
 
 .data-box input {
@@ -124,9 +138,11 @@ main {
     max-width: 250px;
 }
 
-.data-logo-container {
+.img-paq {
     display: flex;
     justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
 }
 
 .data-logo {
@@ -144,10 +160,6 @@ main {
     border-color: #5B050C;
 }
 
-.register-forms {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .forms {
     display: flex;
@@ -157,7 +169,7 @@ main {
 }
 
 .main-h4 {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 400;
     display: flex;
     justify-content: center;
