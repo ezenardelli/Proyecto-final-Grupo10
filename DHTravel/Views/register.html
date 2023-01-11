@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleRegister.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/img/logo.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Carattere&family=Imprima&family=Kaisei+Tokumin&family=Mako&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, inicial-scale=1">
+    <title>DHTravel Registro</title>
+</head>
+<body>
+    <header>
+        <section class="top-header">
+            <div class="logo-container">
+                <a href="#">
+                    <img class="header-logo" src="/img/logo.png" alt="DHTravel Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input class="input-searcher" type="text" placeholder="Busque su destino">
+                <button class="icon-a"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="login-container">
+                <nav class="login">
+                    <ul class="ul-li" type="none">
+                        <div>
+                            <li><a href="#">Ingresa</a></li>
+                        </div>
+                        <div class="li-item">
+                            <li><a href="#">Registrarte</a></li>
+                        </div>
+                        <div class="li-item">
+                            <li><a href="#"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main class="main-container">
+        <section class="data-box">
+            <div class="data-logo-container">
+                <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
+            </div>
+            <div class="register-forms">
+                <form class="forms" action="/register" method="post">
+                    <p>
+                        <label for="usuario"></label>
+                        <input class="data-item" type="text" name="text" id="usuario" required
+                            placeholder="Nombre de usuario">
+                    </p>
+                    <p>
+                        <label for="email"></label>
+                        <input class="data-item" type="email" name="email" id="email" required
+                            placeholder="Correo electronico">
+                    </p>
+                    <p>
+                        <label for="password"></label>
+                        <input class="data-item" type="password" name="password" id="password" required
+                            placeholder="Contraseña">
+                    </p>
+                    <p>
+                        <label for="repeat-password"></label>
+                        <input class="data-item" type="password" name="repeat-password" id="repeat-password"
+                            placeholder="Repetir contraseña">
+                    </p>
+                    <!--<p>
+                        <label for="no-robot"></label>
+                        <input class="data-item" type="checkbox" name="no-robot" id="no-robot">
+                    </p>-->
+                    <p>
+                        <button class="main-button" type="button"><i class="fa-solid fa-plane-departure"></i></button>
+                    </p>
+                </form>
+            </div>
+            <div class="main-h4">
+                <p>
+                <h4>Tambien registrate con</h4>
+                </p>
+            </div>
+            <div class="register-icon">
+                <a class="fi1" href="#"><i class="main-icon fa-brands fa-facebook"></i></a>
+                <a class="fi2" href="#"><i class=" main-icon fa-brands fa-google"></i></a>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div>
+        <section class="info-li">
+            <nav class="footer-nav">
+                <ul class="footer-nav-li" type="none">
+                    <li><a class="nav-li-item" href="#">Terminos y condiciones</a></li>
+                    <li><a class="nav-li-item" href="#">Preguntas Frecuentes</a></li>
+                    <li><a class="nav-li-item" href="#">Contacto</a></li>
+                    <li><a class="nav-li-item" href="#">Conocenos</a></li>
+                    <li><a class="nav-li-item" href="#">RRHH</a></li>
+                    <li><a class="nav-li-item" href="#">Formas De Pago</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="social-media">
+            <div>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </section>
+        <section class="copyright-info">
+            <div class="credit-card">
+                <div>
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-cc-amex"></i>
+                </div>
+            </div>
+            <div class="copy-p">
+                <p>Copyright © 2021-2023 DHTravel S.A.</p>
+                <p>Av. Cordoba 1986, Piso 2, CP 1244, Almagro, CABA</p>
+            </div>
+        </section>
+    </div>
+</footer>
+</html>
