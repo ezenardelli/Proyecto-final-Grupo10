@@ -6,7 +6,10 @@
 }
 
 body {
-    background-image: url(/img/paris.jpg);
+    background-image: url(/img/grecia.jpg);
+    background-size: 1400px 1060px;
+    background-repeat: no-repeat;
+
     
     font-family: Mako, Imprima;
 }
@@ -110,6 +113,11 @@ main {
     background-color: rgba(32, 20, 42, 0.9);
 }
 
+.data-box input {
+    width: 70vw;
+    max-width: 250px;
+}
+
 .data-logo-container {
     display: flex;
     justify-content: center;
@@ -172,14 +180,16 @@ main {
 }
 
 .main-button {
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 100px;
     border-radius: 100px;
-    border: solid 2px #900A0A;
+    border: solid 2px #FFC396;
     background-color: #20142A;
-    color: #900A0A;
-    box-shadow: 1px 1px #5B050C;
+    color: #FFC396;
+    box-shadow: 1px 1px #c06c2c;
+    cursor: pointer;
 }
 
 .forms p {
@@ -286,6 +296,11 @@ footer {
 
 /*NOTEBOOKS*/
 @media (min-width: 750px) {
+
+    .login-container{
+        padding-top: 10px;
+        font-size: 28px;
+    }
 
     .footer-nav-li {
         width: 100%;
