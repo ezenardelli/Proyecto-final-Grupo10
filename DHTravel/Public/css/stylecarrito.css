@@ -23,11 +23,13 @@ main {
     background-image: url(/img/hong-kong-noche-1001x702.jpg);
     width: 100%;
     margin: auto;
+}
+
+.contenedor-main, .contenedor-main-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 /*contenedor1*/
 
 .formulario-cont {
@@ -86,7 +88,8 @@ main {
 }
 
 .items-form-2 {
-    padding: 3%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .barras-form-2 {
@@ -95,18 +98,30 @@ main {
     width: 90%;
     height: 40px;
     padding-left: 10px;
+    margin: 3%;
 }
 
 .venc-num-cont {
-    padding: 3%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.venc-num {
+.venc {
     border-radius: 5px;
     border: none;
-    width: 95%;
+    width: 90%;
     height: 40px;
     padding-left: 10px;
+    margin: 3%;
+}
+
+.num {
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    margin: 3%;
 }
 
 /*contenedor3*/
@@ -170,6 +185,11 @@ h4 {
     padding-bottom: 3%;
 }
 
+.term-cond {
+    color: white;
+    font-size: 15px;
+}
+
 .boton-compra {
     background-color: #ffc396;
     color: white;
@@ -185,8 +205,15 @@ h4 {
     font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 460px) {
+    /*Tablets*/
 
 }
 
 
+@media (min-width: 768px) {
+    /*laptop*/
+
+main {
+}
+}
