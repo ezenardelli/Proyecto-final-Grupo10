@@ -20,6 +20,8 @@ app.get("/registro", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/register.html"));
 });
 
+
 app.get("/detalle", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/productDetail.html"));
 });
+
