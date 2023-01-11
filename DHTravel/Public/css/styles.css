@@ -9,8 +9,6 @@ body {
     background-image: url(/img/grecia.jpg);
     background-size: 1400px 1060px;
     background-repeat: no-repeat;
-
-    
     font-family: Mako, Imprima;
 }
 
@@ -103,7 +101,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 3%;
     margin-bottom: 10%;
     background-color: #20142A;
     border-radius: 20px;
@@ -171,7 +169,7 @@ main {
 
 .fi2,
 .fi2:visited {
-    color: #d3d1d1;
+    color: orange;
 }
 
 .main-icon {
@@ -185,12 +183,14 @@ main {
     margin-top: 20px;
     margin-right: 100px;
     border-radius: 100px;
-    border: solid 2px #FFC396;
+    border: solid 2px #14b398;
     background-color: #20142A;
-    color: #FFC396;
-    box-shadow: 1px 1px #c06c2c;
+    color: #addad0;
+    box-shadow: 1px 1px #047461;
     cursor: pointer;
+    #FFC396;
 }
+
 
 .forms p {
     display: flex;
