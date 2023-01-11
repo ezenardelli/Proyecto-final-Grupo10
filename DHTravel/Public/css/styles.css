@@ -1,185 +1,331 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
 }
 
-header{
-    display: flex;
-    background: transparent;
-}
-
-.barrainicial{
-    width: 60%;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 47px;
-    margin-left: 60px;
-    margin-top: 70px;
-    cursor: pointer;
-}
-
-.acceso{
-    color: #FFC396;
-    margin-top: 80px;
-    margin-left: 30px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    font-size: 120%;
-}
-
-.lupa{
-    width: 8px;
-    height: 8px;
-    padding: 10px;
-    margin-top: 7
-    0px;
-    margin-bottom: 10px;
-    color: white;
-    background-color: transparent;
-    font-size: 120%;
-    border-color: transparent;
-    cursor: pointer;
-
-}
-
-body{
-    background-image: url(/img/sunset-background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-section{
-    width: 400px;
-    background: #20142A;
-    padding: 30px;
-    margin:auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    border-end-end-radius: 120px;
-    border-start-start-radius: 120px;
-    border: solid 1px #5B050C;
-}
-
-.header-logo{
-    width: 12%;
-}
-.logo2{
-    width: 30%;
-    margin-left: 40%;
-}
-
-.espacios{
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    border-end-end-radius: 100px;
-    border-start-start-radius: 100px;
-    margin-bottom: 16px;
-    margin-top: 10px;
-    border-color: #5B050C;
-    text-align: center;
-}
-
-.letras{
-    color: #FFC396;
-    text-align: center;
-
-}
-
-.button1{
-    border-radius: 100%;
-    border: none;
-    padding: 5px;
-    color: blue;
-    font-size: 58px;
-    margin-left: 20%;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: #20142A ;
-    box-shadow: 5px ;
-}
-
-.button2{
-    border-radius: 100%;
-    border: none;
-    padding: 5px;
-    color: orange;
-    font-size: 50px;
-    margin-left: 18%;
-    cursor: pointer;
-    background-color: #20142A ; ;
-    box-shadow: 2px ;
-}
-
-.carrito{
-    border: none;
-    padding: 10px;
-    color: blue;
-    background-color: transparent;
-    font-size: 25px;
-    cursor: pointer;
-    margin-top: 30px;
-}
-
-.iniciarsesion{
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    border-end-end-radius: 100px;
-    border-start-start-radius: 100px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    cursor: pointer;
-    background: rgb(213, 221, 218);
-}
-
-footer{
-    background: #121F78;
-    color: white;
+body {
+    background-image: url(/img/paris.jpg);
     
+    font-family: Mako, Imprima;
 }
 
-.footer1{
-    text-align: center;
-    color: salmon;
-    display: inline-flexbox ;
-    justify-content: center;
-    margin: 10px;
-    margin-top: 20px;
-    font-size: 18px;
+header {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-header {
+    width: 100vw;
+    display: flex;
+}
+
+.logo-container {
+    width: 30%;
+}
+
+.login-container {
+    width: 20%;
+    margin-right: 2%;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.ul-li {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ul-li a,
+.ul-li a:visited {
+    color: #0C0260;
+    font-weight: 500;
+}
+
+.header-logo {
+    width: 65px;
+    margin: 10% 10%;
+}
+
+.search-bar {
     margin-top: 30px;
-    display: inline-flex;
+    width: 60%;
+    display: flex;
+    justify-content: center;
 }
 
-
-.redessociales{
-    padding: 5px;
-    font-size: 30px;
-    cursor:pointer;
-    display: inline-flex;
+.input-searcher {
+    width: 40vw;
+    height: 30px;
 }
 
-
-.mediosdepago{
-    font-size: 140%;
-    background: #121F78;
-    border:none;
-    margin-top: 10px;
-    margin-left: 30px;
-    display:inline-flex;
+.search-bar input {
+    max-width: 600px;
+    border-radius: 20px;
+    border: solid 2px #20142A;
+    text-align: center;
+    font-weight: 100;
 }
 
-h5{
-    color:white;
+.search-bar button {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    color: #FFC396;
+    background-color: #20142A;
+}
+
+main {
+    height: 400px;
+}
+
+.main-container {
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+.data-box {
+    margin: auto;
+    width: 90vw;
+    max-width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #20142A;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
+}
+
+.data-logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.data-logo {
+    width: 100px;
+    opacity: 0.7;
+}
+
+.data-item {
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-end-end-radius: 100px;
+    border-start-start-radius: 100px;
+    text-align: center;
+    border-color: #5B050C;
+}
+
+.register-forms {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main-h4 {
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    color: #FFC396;
+}
+
+.register-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fi1,
+.fi1:visited {
+    color: #171BAB;
+}
+
+.fi2,
+.fi2:visited {
+    color: #d3d1d1;
+}
+
+.main-icon {
+    font-size: 300%;
+    padding: 10px;
+}
+
+.main-button {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 100px;
+    border: solid 2px #900A0A;
+    background-color: #20142A;
+    color: #900A0A;
+    box-shadow: 1px 1px #5B050C;
+}
+
+.forms p {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: 700;
+    box-sizing: content-box;
+    background-color: rgba(32, 20, 42, 0.9);
+    color: #FFC396;
+}
+
+.footer-nav {
+    padding: 10px;
+}
+.footer-nav-li {
+    width: 90%;
+    max-width: 750px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 13px;
-    text-align: left;
-    margin-top: 10px;
+    font-weight: 700;
+    color: #FFC396;
+    justify-content: space-evenly;
 }
 
-.final{
-    display: inline-flex;
-    margin-right: 10px;
+.nav-li-item {
+    padding-left: 2px;
 }
+.nav-li-item:visited {
+    color: #FFC396;
+}
+
+.copyright-info {
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    margin-left: 10px;
+}
+.credit-card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.credit-card i {
+    font-size: 120%;
+    margin: 0px 5px;
+    color: #bb8b54;
+    background-color: #000000;
+}
+
+.copy-p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 200%;
+    padding: 10px;
+}
+
+.fa-facebook {
+    color: #171BAB;
+}
+
+.fa-instagram {
+    color: #701870;
+}
+
+.fa-youtube {
+    color: #900A0A;
+}
+
+.fa-whatsapp {
+    color: #1b940c;
+}
+
+
+/*TABLET*/
+@media (min-width: 460px) {
+    
+    .social-media {
+        justify-content: flex-end;
+    }
+
+    .social-media i {
+        padding: 20px;
+    }     
+}
+
+/*NOTEBOOKS*/
+@media (min-width: 750px) {
+
+    .footer-nav-li {
+        width: 100%;
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footer-nav li {
+        padding-left: 30px;
+    }
+
+    .social-media {
+        font-size: 250%;
+    }
+
+
+    .copyright-info {
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .copy-p {
+        font-size: 15px;
+    }
+}
+
+/*DESKTOP*/
+@media (min-width: 1280px) {}
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
