@@ -2,10 +2,13 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
 
 body {
     font-size: 12px;
+    background-image: url(/img/sunset-background.jpg);
+    font-family: Mako, Imprima;
 }
 
 a {
@@ -16,26 +19,110 @@ a:visited {
     color: black
 }
 
+/*header*/
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-header {
+    width: 100vw;
+    display: flex;
+}
+
+.logo-container {
+    width: 30%;
+}
+
+.login-container {
+    width: 20%;
+    margin-right: 2%;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.ul-li {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ul-li a,
+.ul-li a:visited {
+    font-size: 14px;
+    color: #FFC396;
+    font-weight: 500;
+}
+
+.header-logo {
+    width: 65px;
+    margin: 10% 10%;
+}
+
+.search-bar {
+    margin-top: 30px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-searcher {
+    width: 40vw;
+    height: 30px;
+}
+
+.search-bar input {
+    max-width: 600px;
+    border-radius: 20px;
+    border: solid 2px #20142A;
+    text-align: center;
+    font-weight: 100;
+}
+
+.search-bar button {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    color: #FFC396;
+    background-color: #20142A;
+}
+
+/*fin header*/
 
 /*main*/
 
 main {
-    background-image: url(/img/hong-kong-noche-1001x702.jpg);
     width: 100%;
     margin: auto;
 }
 
-.contenedor-main, .contenedor-main-2 {
+.bloque {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.bloque-1 {
+    width: 80%;
+}
+
+.bloque-2 {
+    width: 80%;
+}
+
 /*contenedor1*/
 
 .formulario-cont {
     font-family: 'Mako', sans-serif;
     background-color: #20142A;
-    width: 80%;
+    width: 100%;
     text-align: center;
     padding-top: 3%;
     margin-top: 7%;
@@ -73,7 +160,7 @@ main {
 .formulario-cont2 {
     font-family: 'Mako', sans-serif;
     background-color: #20142A;
-    width: 80%;
+    width: 100%;
     text-align: center;
     padding-top: 3%;
     margin-top: 7%;
@@ -129,7 +216,7 @@ main {
 .contenedor-3 {
     font-family: 'Mako', sans-serif;
     background-color: #20142A;
-    width: 80%;
+    width: 100%;
     text-align: center;
     padding-top: 3%;
     margin-top: 7%;
@@ -169,6 +256,8 @@ li {
 
 .contenedor-4 {
     width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 
 .term-cond-cont {
@@ -205,15 +294,145 @@ h4 {
     font-weight: bold;
 }
 
+/*footer*/
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: 700;
+    box-sizing: content-box;
+    background-color: rgba(32, 20, 42, 0.9);
+    color: #FFC396;
+}
+
+.footer-nav {
+    padding: 10px;
+}
+.footer-nav-li {
+    width: 90%;
+    max-width: 750px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFC396;
+    justify-content: space-evenly;
+}
+
+.nav-li-item {
+    padding-left: 2px;
+}
+.nav-li-item:visited {
+    color: #FFC396;
+}
+
+.copyright-info {
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    margin-left: 10px;
+}
+.credit-card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.credit-card i {
+    font-size: 120%;
+    margin: 0px 5px;
+    color: #bb8b54;
+    background-color: #000000;
+}
+
+.copy-p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 200%;
+    padding: 10px;
+}
+
+.fa-facebook {
+    color: #171BAB;
+}
+
+.fa-instagram {
+    color: #701870;
+}
+
+.fa-youtube {
+    color: #900A0A;
+}
+
+.fa-whatsapp {
+    color: #1b940c;
+}
+
+/*fin footer*/
+
 @media (min-width: 460px) {
     /*Tablets*/
 
+ /*   .formulario-cont, .formulario-cont2, .contenedor-3, .contenedor-4 {
+        max-width: 700px;
+    }*/
+
+    .social-media {
+        justify-content: flex-end;
+    }
+
+    .social-media i {
+        padding: 20px;
+    }     
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 750px) {
     /*laptop*/
 
-main {
+/*    .bloque {
+        display: row;
+    }
+
+    .bloque-1, .bloque-2 {
+        width: 50%;
+    }
+*/
 }
+    .footer-nav-li {
+        width: 100%;
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footer-nav li {
+        padding-left: 30px;
+    }
+
+    .social-media {
+        font-size: 250%;
+    }
+
+
+    .copyright-info {
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .copy-p {
+        font-size: 15px;
+    }
 }
