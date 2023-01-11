@@ -13,28 +13,34 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="img/logodeprueba.jpeg" alt="Logo DH Travel">
+        <img class="header-logo" src="img/logo.png" alt="Logo DH Travel">
         <input class="barrainicial" type="text" name="busqueda" placeholder="Buscá tu destino">
-            <button class="button5"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
             <a class="acceso" href="#" target="_blank">Ingreso</a>
             <a class="acceso" href="#" target="_blank">Registro</a>
-            <button class="button3"><i class="fa-solid fa-cart-flatbed-suitcase"></i></button>
+            <button class="carrito"><i class="fa-solid fa-cart-flatbed-suitcase"></i></button>
     </header>
 
     <section>
         <div>
-            <img class="logo2" src="img/logodeprueba.jpeg" alt="Logo DH Travel">
+            <img class="logo2" src="img/logo.png" alt="Logo DH Travel">
         </div>
-        <input class="espacios" type="text" name="usuario" placeholder="Ingrese su usuario">
-        <p><a class="letras" href="#">Recuperá tu cuenta</a></p>
-        <input class="espacios" type="password" name="contraseña" placeholder="Ingrese su contraseña">
-        <p><a class="letras" href="#" target="_blank">Olvidaste tu contraseña</a></p>
-        <input class="cursor" type="submit" value="Ingresar">
-        <h4 class="letras">logueate con</h4>
-        <div>
-        <button class="button1"><i class="fa-brands fa-facebook"></i></button>
-        <button class="button2"><i  class="fa-brands fa-google"></i></button>
-    </div>
+        
+        <form action="/registro" method="POST">
+            <input class="espacios" type="text" name="usuario" placeholder="Ingrese su usuario">
+            <p><a class="letras" href="#">Recuperá tu cuenta</a></p>
+           
+            <input class="espacios" type="password" name="contraseña" placeholder="Ingrese su contraseña">
+            <p><a class="letras" href="#" target="_blank">Olvidaste tu contraseña</a></p>
+        
+            <button class="iniciarsesion" type="submit">Iniciar Sesión</button>
+            <h4 class="letras">logueate con</h4>
+        </form>
+            
+            <div>
+               <button class="button1"><i class="fa-brands fa-facebook"></i></button>
+               <button class="button2"><i  class="fa-brands fa-google"></i></button>
+            </div>
     </section>
 
     <br>
@@ -72,5 +78,3 @@
     
 </body>
 </html>
-    
-    

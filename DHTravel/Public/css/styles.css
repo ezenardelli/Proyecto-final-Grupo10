@@ -7,14 +7,14 @@
 
 header{
     display: flex;
-    background: #20142A;
+    background: transparent;
 }
 
 .barrainicial{
     width: 60%;
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 47px;
     margin-left: 60px;
     margin-top: 70px;
     cursor: pointer;
@@ -29,22 +29,24 @@ header{
     font-size: 120%;
 }
 
-.button5{
+.lupa{
     width: 8px;
     height: 8px;
-    padding: 20px;
-    margin-top: 70px;
+    padding: 10px;
+    margin-top: 7
+    0px;
     margin-bottom: 10px;
-    color: black;
-    background-color: white ;
-    font-size: 1em;
-
+    color: white;
+    background-color: transparent;
+    font-size: 120%;
+    border-color: transparent;
     cursor: pointer;
 
 }
 
 body{
-    background-image: url(/img/ciudades.jpg);
+    background-image: url(/img/sunset-background.jpg);
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
@@ -53,24 +55,32 @@ section{
     background: #20142A;
     padding: 30px;
     margin:auto;
-    margin-top: 80px;
-    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border-end-end-radius: 120px;
+    border-start-start-radius: 120px;
+    border: solid 1px #5B050C;
 }
 
-.logo{
+.header-logo{
     width: 12%;
 }
 .logo2{
-    width: 20%;
+    width: 30%;
     margin-left: 40%;
 }
 
 .espacios{
     width: 100%;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
+    border-end-end-radius: 100px;
+    border-start-start-radius: 100px;
     margin-bottom: 16px;
-    margin-top: 16px;
+    margin-top: 10px;
+    border-color: #5B050C;
+    text-align: center;
 }
 
 .letras{
@@ -104,20 +114,22 @@ section{
     box-shadow: 2px ;
 }
 
-.button3{
+.carrito{
     border: none;
     padding: 10px;
     color: blue;
-    background-color: #20142A ;
+    background-color: transparent;
     font-size: 25px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
-.cursor{
+.iniciarsesion{
     width: 100%;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
+    border-end-end-radius: 100px;
+    border-start-start-radius: 100px;
     margin-bottom: 16px;
     margin-top: 16px;
     cursor: pointer;
