@@ -261,8 +261,7 @@ li {
 }
 
 .term-cond-cont {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 1%;
 }
 
 h4 {
@@ -276,7 +275,7 @@ h4 {
 
 .term-cond {
     color: white;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .boton-compra {
@@ -385,9 +384,9 @@ footer {
 @media (min-width: 460px) {
     /*Tablets*/
 
- /*   .formulario-cont, .formulario-cont2, .contenedor-3, .contenedor-4 {
-        max-width: 700px;
-    }*/
+    .term-cond {
+        font-size: 19px;
+    }
 
     .social-media {
         justify-content: flex-end;
@@ -402,37 +401,103 @@ footer {
 @media (min-width: 750px) {
     /*laptop*/
 
-/*    .bloque {
-        display: row;
+    .term-cond-cont {
+        padding-top: 1%;
     }
 
-    .bloque-1, .bloque-2 {
-        width: 50%;
+    .term-cond {
+        font-size: 16px;
     }
-*/
+
+    .bloque {
+        align-items: flex-start;
+        margin-left: 8%;
+    }
+
+    .bloque-1 {
+        max-width: 50%;
+    }
+
+    .bloque-2 {
+        top: 16%;
+        max-width: 38%;
+        position: absolute;
+        right: 4%;
+    }
+
+    .contenedor-4 {
+        margin-bottom: 1%;
+    }
+    .boton-cont {
+        margin-left: 23%;
+    }
+
+    .boton-compra {
+        width: 41%;
+    }
+
+.footer-nav-li {
+    width: 100%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
-    .footer-nav-li {
-        width: 100%;
-        margin-right: 20px;
-        display: flex;
-        justify-content: flex-end;
+
+.footer-nav li {
+    padding-left: 30px;
+}
+
+.social-media {
+    font-size: 250%;
+}
+
+
+.copyright-info {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.copy-p {
+    font-size: 15px;
+}
+
+
+
+}
+
+@media (min-width: 1200px) {
+
+    .bloque {
+        align-items: flex-start;
+        margin-left: 15%;
     }
 
-    .footer-nav li {
-        padding-left: 30px;
+    .bloque-1 {
+        max-width: 45%;
+    }
+    .bloque-2 {
+        max-width: 30%;
+        right: 15%;
+        top: 14%;
     }
 
-    .social-media {
-        font-size: 250%;
+    .contenedor-4 {
+        margin-left: 17%;
     }
 
-
-    .copyright-info {
-        padding-bottom: 20px;
-        font-size: 20px;
+    .term-cond-cont {
+        padding-top: 0%;
+        padding-bottom: 0%;
     }
 
-    .copy-p {
-        font-size: 15px;
+    .boton-cont {
+        margin-left: 22%;
+    }
+    .term-cond {
+        font-size: 19px;
+    }
+
+    .boton-compra {
+        width: 30%;
     }
 }

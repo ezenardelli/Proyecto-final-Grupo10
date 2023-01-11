@@ -16,6 +16,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/index.html"));
 });
 
-app.get('/carrito', function(req, res) {
-    res.sendFile(path.join(__dirname, '/views/carrito.html')); 
+app.get('/productCart', function(req, res) {
+    res.sendFile(path.join(__dirname, '/views/productCart.html')); 
 });
