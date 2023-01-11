@@ -46,12 +46,12 @@ header {
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: colum
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
 }
-.login{
+
+.login {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -62,7 +62,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     background-color: #eeeeee;
-  
+
 }
 
 .ul-li {
@@ -101,7 +101,7 @@ body {
     border: solid 2px #20142A;
     text-align: center;
     font-weight: 100;
-
+}
 
 .search-bar button {
     width: 25px;
@@ -109,6 +109,8 @@ body {
     border-radius: 100px;
     color: #FFC396;
     background-color: #20142A
+}
+
 .logo {
     width: 20vw;
     margin: 10px;
@@ -139,6 +141,7 @@ main {
     border: none;
     background-color: #1c1224de;
 }
+
 .comprar {
     margin: auto;
     width: 65vw;
@@ -155,11 +158,13 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 .burger-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
 
 .data-box input {
     width: 70vw;
@@ -171,12 +176,15 @@ main {
     justify-content: center;
     padding: 35px;
     border-radius: 30p
+}
+
 .banner {
     width: 99vw;
     margin: 2px;
     padding: 2px;
 
 }
+
 .text1 {
     font-size: 2em;
     margin-bottom: 12px;
@@ -184,6 +192,7 @@ main {
     align-items: center;
     color: #1259c3;
 }
+
 .tituloIncluye {
     font-size: 15px;
     text-align: center;
@@ -198,7 +207,8 @@ main {
     align-items: center;
     justify-content: center;
 }
-.incluye 
+
+.incluye {
     display: flex;
 }
 
@@ -296,6 +306,7 @@ footer {
 .footer-nav {
     padding: 10px;
 }
+
 .footer-nav-li {
     width: 90%;
     max-width: 750px;
@@ -312,6 +323,7 @@ footer {
 .nav-li-item {
     padding-left: 2px;
 }
+
 .nav-li-item:visited {
     color: #FFC396;
 }
@@ -321,6 +333,7 @@ footer {
     padding-bottom: 2vh;
     margin-left: 10px;
 }
+
 .credit-card {
     display: flex;
     justify-content: flex-start;
@@ -334,7 +347,6 @@ footer {
 }
 
 .copy-p {
-=======
     font-size: 12px;
     margin: 40px;
     text-decoration: none;
@@ -345,37 +357,41 @@ h3 {
     text-align: center;
     font-size: 15px;
 }
+
 .img-scale {
     width: 50vw;
     margin-left: 25vw;
     justify-content: center;
     align-items: center;
 }
-.producto    {
+
+.producto {
     font-size: 2em;
     margin-bottom: 12px;
     justify-content: center;
     align-items: center;
     color: #1259c3;
     padding: 10px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);  
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .precio {
     text-align: center;
     font-size: 12px;
 }
-.carrito    {
-    font-size: 1,5em;
+
+.carrito {
+    font-size: 1, 5em;
     margin-bottom: 12px;
     text-align: center;
     color: #000000;
     padding: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    box-sizing:border-box;
+    box-sizing: border-box;
     background-color: rgb(83, 156, 83);
 }
-articuloproducto    
+
+articuloproducto {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -411,14 +427,14 @@ articuloproducto
 
 /*TABLET*/
 @media (min-width: 460px) {
-    
+
     .social-media {
         justify-content: flex-end;
     }
 
     .social-media i {
         padding: 20px;
-    }     
+    }
 }
 
 /*NOTEBOOKS*/
@@ -430,7 +446,7 @@ articuloproducto
     }
 
 
-.footer-nav-li {
+    .footer-nav-li {
         width: 100%;
         margin-right: 20px;
         display: flex;
@@ -456,8 +472,3 @@ articuloproducto
     }
 }
 
-/*DESKTOP*/
-@media (min-width: 1280px) {}
-    align-self: center; 
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
