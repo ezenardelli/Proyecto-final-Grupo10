@@ -1,0 +1,253 @@
+/*font-family: 'Anek Telugu', sans-serif;
+font-family: 'Carattere', cursive;
+font-family: 'Imprima', sans-serif;
+font-family: 'Kaisei Tokumin', serif;
+font-family: 'Mako', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(/img/sunset-background.jpg);
+    background-position-y: center;
+    background-position-x: center;
+    font-family: Mako, Imprima;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.login-container {
+    width: 15%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.ul-li {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.header-logo {
+    width: 65px;
+    margin: 10% 10%;
+}
+
+.search-bar {
+    margin-top: 30px;
+}
+
+.input-searcher {
+    width: 50vw;
+}
+
+.search-bar input {
+    border-radius: 20px;
+    border: solid 2px #20142A;
+    text-align: center;
+    font-weight: 100;
+}
+
+.search-bar button {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    color: #FFC396;
+    background-color: #20142A;
+}
+
+.ul-li a,
+.ul-li a:visited {
+    color: #0C0260;
+    font-weight: 500;
+}
+
+.main-container {
+    margin-bottom: 100px;
+}
+
+.data-box {
+    margin: auto;
+    width: 80vw;
+    max-width: 430px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #20142A;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+}
+
+.data-logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.data-logo {
+    width: 100px;
+    opacity: 0.7;
+}
+
+.data-item {
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border-end-end-radius: 100px;
+    border-start-start-radius: 100px;
+    text-align: center;
+    border-color: #5B050C;
+}
+
+.register-forms {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main-h4 {
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    color: #FFC396;
+}
+
+.register-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fi1,
+.fi1:visited {
+    color: #171BAB;
+}
+
+.fi2,
+.fi2:visited {
+    color: #171BAB;
+}
+
+.main-icon {
+    font-size: 300%;
+    padding: 10px;
+}
+
+.main-button {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 100px;
+    border: solid 2px #900A0A;
+    background-color: #20142A;
+    color: #900A0A;
+    box-shadow: 1px 1px #5B050C;
+}
+
+.forms p {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: 700;
+    box-sizing: content-box;
+    background-color: #20142A;
+    color: #FFC396;
+}
+
+.footer-nav-li {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    font-weight: 700;
+    justify-content: space-evenly;
+}
+
+.nav-li-1,
+.nav-li-1:visited {
+    color: #5B050C;
+}
+
+.nav-li-2,
+.nav-li-2:visited {
+    color: #900A0A;
+}
+
+.credit-card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.credit-card i {
+    font-size: 120%;
+    margin: 0px 5px;
+}
+
+.copy-p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 150%;
+}
+
+.social-media i {
+    margin: 10px 5px 0px 5px;
+}
+
+.social-media a,
+.social-media a:visited {
+    color: #0C0260;
+}
+
+
+/*TABLET*/
+@media (min-width: 460px) {}
+
+/*NOTEBOOKS*/
+@media (min-width: 750px) {}
+
+/*DESKTOP*/
+@media (min-width: 1280px) {}
