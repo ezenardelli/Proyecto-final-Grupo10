@@ -8,6 +8,8 @@
 body {
     font-size: 12px;
     background-image: url(/img/sunset-background.jpg);
+    background-position-y: center;
+    background-position-x: center;
     font-family: Mako, Imprima;
 }
 
