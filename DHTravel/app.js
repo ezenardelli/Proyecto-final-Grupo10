@@ -13,7 +13,7 @@ const publicPath = path.resolve(__dirname, "./Public");
 app.use( express.static(publicPath) );
 
 app.get("/ingresa", (req, res) => {
-    res.sendFile(path.join(__dirname, "./Views/login.html"));
+    res.sendFile(path.join(__dirname, "./Views/ingresa.html"));
 });
 
 app.get("/registro", (req, res) => {
