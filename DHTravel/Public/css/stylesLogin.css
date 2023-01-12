@@ -7,7 +7,9 @@
 
 body {
     background-image: url(/img/grecia.jpg);
-    background-size: 1400px 1060px;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 300vh;
     background-repeat: no-repeat;
     font-family: Mako, Imprima;
 }
