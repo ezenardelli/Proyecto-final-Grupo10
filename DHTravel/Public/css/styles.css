@@ -1,24 +1,14 @@
-/*font-family: 'Anek Telugu', sans-serif;
-font-family: 'Carattere', cursive;
-font-family: 'Imprima', sans-serif;
-font-family: 'Kaisei Tokumin', serif;
-font-family: 'Mako', sans-serif;
-*/
-
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-
 }
 
-
-
 body {
-    background-image: url(/img/sunset-background.jpg);
-    background-position-y: center;
-    background-position-x: center;
+    background-image: url(/img/grecia.jpg);
+    background-size: 1400px 1060px;
+    background-repeat: no-repeat;
     font-family: Mako, Imprima;
 }
 
@@ -27,7 +17,7 @@ header {
     height: 100px;
     margin: auto;
     display: flex;
-    flex-wrap: wra
+    flex-wrap: wrap;
 }
 
 .top-header {
@@ -43,26 +33,9 @@ header {
     width: 20%;
     margin-right: 2%;
     margin-top: 1%;
-    padding-top: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.login {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    background-color: #eeeeee;
-
 }
 
 .ul-li {
@@ -108,16 +81,7 @@ body {
     height: 25px;
     border-radius: 100px;
     color: #FFC396;
-    background-color: #20142A
-}
-
-
-
-
-.logo {
-    width: 20vw;
-    margin: 10px;
-    padding: 10px
+    background-color: #20142A;
 }
 
 main {
@@ -129,112 +93,46 @@ main {
     margin-bottom: 100px;
 }
 
+.main-button{
+    animation: movimiento 9s infinite linear ;
+}
+@keyframes movimiento{
+    from {
+        transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  
+}
+
 .data-box {
     margin: auto;
     width: 90vw;
-    max-width: 450px;
-    height: 574px;
+    max-width: 350px;
+    height: 500px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    background-color: #20142A;
     border-radius: 20px;
-    border-start-start-radius: 15%;
-    border-end-end-radius: 15%;
-    border: none;
-    background-color: #1c1224de;
-    align-items: center;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
 }
-
-.comprar {
-    margin: auto;
-    width: 65vw;
-    max-width: 252px;
-    height: 40px;
-    display: flex;
-    margin-top: 5%;
-    border-radius: 10px;
-    background-color: rgb(212 164 77);
-    flex-wrap: nowrap;
-    font-size: 20px;
-    margin: 20px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.burger-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-
 
 .data-box input {
     width: 70vw;
     max-width: 250px;
 }
 
-.img-paq {
+.data-logo-container {
     display: flex;
     justify-content: center;
-    padding: 35px;
-    border-radius: 30p
-}
-
-
-
-
-.banner {
-    width: 99vw;
-    margin: 2px;
-    padding: 2px;
-
-}
-
-.text1 {
-    font-size: 2em;
-    margin-bottom: 12px;
-    justify-content: center;
-    align-items: center;
-    color: #1259c3;
-}
-
-.tituloIncluye {
-    font-size: 15px;
-    text-align: center;
-    text-decoration: none;
-    text-decoration-color: blac
-}
-
-.paquete {
-    color: #f6d9be;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-
-.incluye {
-    display: flex;
-}
-
-.precio {
-    display: flex;
-    align-items: center;
-    padding: 2%;
-}
-
-.main-h3 {
-    display: flex;
-    margin-left: 0%;
-    align-items: center;
 }
 
 .data-logo {
@@ -252,6 +150,10 @@ main {
     border-color: #5B050C;
 }
 
+.register-forms {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .forms {
     display: flex;
@@ -261,7 +163,7 @@ main {
 }
 
 .main-h4 {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -281,7 +183,7 @@ main {
 
 .fi2,
 .fi2:visited {
-    color: #d3d1d1;
+    color: orange;
 }
 
 .main-icon {
@@ -290,15 +192,19 @@ main {
 }
 
 .main-button {
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 100px;
     border-radius: 100px;
-    border: solid 2px #900A0A;
+    border: solid 2px #14b398;
     background-color: #20142A;
-    color: #900A0A;
-    box-shadow: 1px 1px #5B050C;
+    color: #addad0;
+    box-shadow: 1px 1px #047461;
+    cursor: pointer;
+    #FFC396;
 }
+
 
 .forms p {
     display: flex;
@@ -319,7 +225,6 @@ footer {
 .footer-nav {
     padding: 10px;
 }
-
 .footer-nav-li {
     width: 90%;
     max-width: 750px;
@@ -336,7 +241,6 @@ footer {
 .nav-li-item {
     padding-left: 2px;
 }
-
 .nav-li-item:visited {
     color: #FFC396;
 }
@@ -346,7 +250,6 @@ footer {
     padding-bottom: 2vh;
     margin-left: 10px;
 }
-
 .credit-card {
     display: flex;
     justify-content: flex-start;
@@ -360,51 +263,6 @@ footer {
 }
 
 .copy-p {
-    font-size: 12px;
-    margin: 40px;
-    text-decoration: none;
-    text-decoration-color: black;
-}
-
-h3 {
-    text-align: center;
-    font-size: 15px;
-}
-
-.img-scale {
-    width: 50vw;
-    margin-left: 25vw;
-    justify-content: center;
-    align-items: center;
-}
-
-.producto {
-    font-size: 2em;
-    margin-bottom: 12px;
-    justify-content: center;
-    align-items: center;
-    color: #1259c3;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-.precio {
-    text-align: center;
-    font-size: 12px;
-}
-
-.carrito {
-    font-size: 1, 5em;
-    margin-bottom: 12px;
-    text-align: center;
-    color: #000000;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    box-sizing: border-box;
-    background-color: rgb(83, 156, 83);
-}
-.articuloproducto  {  
-
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -440,24 +298,23 @@ h3 {
 
 /*TABLET*/
 @media (min-width: 460px) {
-
+    
     .social-media {
         justify-content: flex-end;
     }
 
     .social-media i {
         padding: 20px;
-    }
+    }     
 }
 
 /*NOTEBOOKS*/
 @media (min-width: 750px) {
 
-    .login-container {
+    .login-container{
         padding-top: 10px;
-        font-size: 20px;
+        font-size: 28px;
     }
-
 
     .footer-nav-li {
         width: 100%;
@@ -485,7 +342,19 @@ h3 {
     }
 }
 
-
 /*DESKTOP*/
-
-
+@media (min-width: 1280px) {}
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
