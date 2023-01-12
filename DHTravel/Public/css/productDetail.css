@@ -139,10 +139,11 @@ main {
     flex-direction: column;
     margin-top: 5%;
     border-radius: 20px;
-    border-start-start-radius: 30%;
-    border-end-end-radius: 30%;
+    border-start-start-radius: 15%;
+    border-end-end-radius: 15%;
     border: none;
     background-color: #1c1224de;
+    align-items: center;
 }
 
 .comprar {
