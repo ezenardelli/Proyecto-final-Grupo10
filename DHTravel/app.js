@@ -5,8 +5,8 @@ const app = express ();
 const path = require("path");           
 
 
-app.listen(3030, () => {
-    console.log("servidor a la escucha del puerto 3030");
+app.listen(3031, () => {
+    console.log("servidor a la escucha del puerto 3031");
 }); 
 
 const publicPath = path.resolve(__dirname, "./Public");
