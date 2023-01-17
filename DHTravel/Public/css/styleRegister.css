@@ -285,6 +285,47 @@ footer {
     color: #1b940c;
 }
 
+/*prueba iconos*/
+
+
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 60%;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+}
+.icon:hover {
+    outline-offset: 4px;
+    outline: 2px solid #fff;
+}
+.icon-facebook:hover {
+    background-color: #2709ce;
+    outline-color: #330cc4;
+}
+.icon-instagram:hover {
+    background-image: 
+    radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%,
+    #285AEB);
+    outline-color: #a02d76;
+}
+.icon-telegram:hover {
+    background-color: rgb(52, 116, 253);
+    outline-color: rgb(2, 90, 172);
+}
+.icon-whatsapp:hover {
+    background-color: #04ad12;
+    outline-color: #338305;
+}
+
 
 /*TABLET*/
 @media (min-width: 460px) {
