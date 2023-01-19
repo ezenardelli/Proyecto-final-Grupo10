@@ -1,4 +1,21 @@
-Retrospectiva Sprint 1
+Restrospectiva SPRINT 1
+=======================
+  ### Start doing:
+  ##### -Hacer mas investigaciones individuales.
+ 
+  ### More of:
+ 
+  ### Keep Doing:
+  #### -Conocer el equipo de trabajo.
+  #### -Crear los canales de comunicacion en conjunto.
+  #### -Seguir teniendo reuniones constantes.
+  
+  ### Less of:
+  
+  ### Stop Doing:
+
+
+Retrospectiva SPRINT 2
 =====================
 <p><h5>Se define utilizando el metodo "Starfish retrospective".</h5><p>
 
@@ -19,5 +36,6 @@ Retrospectiva Sprint 1
   
   ### Stop Doing:
   #### -Postegar las prioridades.
+  #### -No Respetar los tiempos de entrega de trabajo. 
   
  
