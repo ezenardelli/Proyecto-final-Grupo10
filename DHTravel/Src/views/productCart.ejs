@@ -1,53 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Imprima&family=Mako&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/css/stylesproductCart.css">
-    <link rel="icon" href="/img/logo.ico">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Carattere&family=Imprima&family=Kaisei+Tokumin&family=Mako&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <meta name="viewport" content="width=device-width, inicial-scale=1">
-</head>
-
+    <%- include("./partials/head.ejs") %>
 <body>
-    <header>
-        <section class="top-header">
-            <div class="logo-container">
-                <a href="/">
-                    <img class="header-logo" src="/img/logo.png" alt="DHTravel Logo">
-                </a>
-            </div>
-            <div class="search-bar">
-                <input class="input-searcher" type="text" placeholder="Busque su destino">
-                <button class="icon-a"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="login-container">
-                <nav class="login">
-                    <ul class="ul-li" type="none">
-                        <div>
-                            <li><a href="/ingresa">Ingresa</a></li>
-                        </div>
-                        <div class="li-item">
-                            <li><a href="/registro">Registrarte</a></li>
-                        </div>
-                        <div class="li-item">
-                            <li><a href="/carrito"><i class="fa-solid fa-cart-flatbed"></i></a></li>
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </header>
+    <%- include("./partials/header.ejs") %>
     <main>
         <div class="bloque">
             <div class="bloque-1">
@@ -145,53 +100,7 @@
         </section>
 
     </main>
-    <footer>
-        <div>
-            <section class="info-li">
-                <nav class="footer-nav">
-                    <ul class="footer-nav-li" type="none">
-                        <li><a class="nav-li-item" href="#">Terminos y condiciones</a></li>
-                        <li><a class="nav-li-item" href="#">Preguntas Frecuentes</a></li>
-                        <li><a class="nav-li-item" href="#">Contacto</a></li>
-                        <li><a class="nav-li-item" href="#">Conocenos</a></li>
-                        <li><a class="nav-li-item" href="#">RRHH</a></li>
-                        <li><a class="nav-li-item" href="#">Formas De Pago</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="social-media">
-                <div>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-                <div>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <div>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-                <div>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </section>
-            <section class="copyright-info">
-                <div class="credit-card">
-                    <div>
-                        <i class="fa-brands fa-cc-visa"></i>
-                    </div>
-                    <div>
-                        <i class="fa-brands fa-cc-mastercard"></i>
-                    </div>
-                    <div>
-                        <i class="fa-brands fa-cc-amex"></i>
-                    </div>
-                </div>
-                <div class="copy-p">
-                    <p>Copyright © 2021-2023 DHTravel S.A.</p>
-                    <p>Av. Cordoba 1986, Piso 2, CP 1244, Almagro, CABA</p>
-                </div>
-            </section>
-        </div>
-    </footer>
+    
 </body>
-
+<%- include("./partials/footer.ejs") %>
 </html>

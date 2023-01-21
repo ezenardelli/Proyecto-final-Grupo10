@@ -1,0 +1,10 @@
+Fonts Sugeridos:
+Mako (Primera Eleccion)
+Imprima
+Anek Telugu
+Kaisei Tokumin
+Mako
+Carattere
+
+Paquete armado en googlefonts:
+https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Carattere&family=Imprima&family=Kaisei+Tokumin&family=Mako&display=swap
