@@ -211,6 +211,7 @@ footer {
 .footer-nav {
     padding: 10px;
 }
+
 .footer-nav-li {
     width: 90%;
     max-width: 750px;
@@ -227,6 +228,7 @@ footer {
 .nav-li-item {
     padding-left: 2px;
 }
+
 .nav-li-item:visited {
     color: #FFC396;
 }
@@ -236,6 +238,7 @@ footer {
     padding-bottom: 2vh;
     margin-left: 10px;
 }
+
 .credit-card {
     display: flex;
     justify-content: flex-start;
@@ -268,25 +271,29 @@ footer {
 /*prueba iconos*/
 
 .icon {
+    margin: auto;
+    padding-right: 30px;
     width: 60px;
     height: 60px;
     display: inline-flex;
     align-items: center;
-    text-decoration: none;
-    font-size: 26px;
+    font-size: 25px;
     color: #fff;
-    border-radius: 60%;
+    border-radius: 100%;
     transition-property: outline-offset, outline-color, background-color;
-    transition-duration: .25s;
+    transition-duration: 250ms;
 }
+
 .icon:hover {
     outline-offset: 4px;
     outline: 2px solid #fff;
 }
+
 .icon-facebook:hover {
     background-color: #2709ce;
     outline-color: #330cc4;
 }
+
 .icon-instagram:hover {
     background-image: 
     radial-gradient(circle at 30% 107%,
@@ -295,10 +302,12 @@ footer {
     #285AEB);
     outline-color: #a02d76;
 }
+
 .icon-telegram:hover {
     background-color: rgb(52, 116, 253);
     outline-color: rgb(2, 90, 172);
 }
+
 .icon-whatsapp:hover {
     background-color: #04ad12;
     outline-color: #338305;
@@ -324,9 +333,8 @@ footer {
         padding-top: 10px;
         font-size: 20px;
     }
-
-
-.footer-nav-li {
+    
+    .footer-nav-li {
         width: 100%;
         margin-right: 20px;
         display: flex;
@@ -340,7 +348,6 @@ footer {
     .social-media {
         font-size: 250%;
     }
-
 
     .copyright-info {
         padding-bottom: 20px;
