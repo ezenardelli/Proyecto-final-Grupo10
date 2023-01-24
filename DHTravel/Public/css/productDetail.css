@@ -8,10 +8,7 @@ font-family: 'Mako', sans-serif;
 * {
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
-    text-decoration: none;
 }
-
 .body-register {
     background-image: url(/img/sunset-background.jpg);
     background-position-y: center;
@@ -47,7 +44,7 @@ font-family: 'Mako', sans-serif;
 .comprar {
     margin: auto;
     width: 65vw;
-    max-width: 252px;
+    max-width: 150px;
     height: 40px;
     display: flex;
     margin-top: 5%;
@@ -59,6 +56,11 @@ font-family: 'Mako', sans-serif;
     padding: 10px;
     align-items: center;
     justify-content: center;
+}
+
+.boton {
+    background-color: #1259c300;
+    border: none;
 }
 
 .burger-menu {
@@ -101,12 +103,7 @@ font-family: 'Mako', sans-serif;
     color: #1259c3;
 }
 
-.tituloIncluye {
-    font-size: 15px;
-    text-align: center;
-    text-decoration: none;
-    text-decoration-color: blac
-}
+
 
 .paquete {
     color: #f6d9be;
@@ -116,23 +113,21 @@ font-family: 'Mako', sans-serif;
     justify-content: center;
 }
 
-
-
-
 .incluye {
     display: flex;
+    padding: 6px;
+    font-size: 20px;
 }
 
 .precio {
-    display: flex;
-    align-items: center;
-    padding: 2%;
+    padding: 6%;
+    padding-bottom: 0%;
+    
 }
 
 .main-h3 {
-    display: flex;
-    margin-left: 0%;
-    align-items: center;
+    text-align: center;
+    font-size: 12px;
 }
 
 .data-logo {
@@ -205,7 +200,9 @@ font-family: 'Mako', sans-serif;
 
 .h3-detail {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 140px;
 }
 
 .img-scale {
@@ -225,10 +222,6 @@ font-family: 'Mako', sans-serif;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.precio {
-    text-align: center;
-    font-size: 12px;
-}
 
 .carrito {
     font-size: 1, 5em;
