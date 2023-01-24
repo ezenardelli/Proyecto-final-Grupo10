@@ -2,9 +2,9 @@ const express = require("express");
 const path = require("path"); 
 const morgan = require("morgan");
 
-const mainRouter = require('./src/routes/main.js')
-const userRouter = require('./src/routes/user.js');
-const productRouter = require('./src/routes/product.js')
+const mainRouter = require('./src/routes/mainRouter.js')
+const userRouter = require('./src/routes/userRouter.js');
+const productRouter = require('./src/routes/productRouter.js')
 
 
 const app = express ();
