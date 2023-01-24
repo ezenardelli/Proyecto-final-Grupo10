@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs") %>
-<body class="body-register">
-    <%- include("./partials/header.ejs") %>
+    <%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
     <main class="main-container">
         <section class="data-box">
             <div class="data-logo-container">
@@ -14,48 +14,36 @@
                         <label for="usuario"></label>
                         <input class="data-item" type="text" name="text" id="usuario" required
                             placeholder="Nombre de usuario">
-                    </p>
-                    <p>
-                        <label for="email"></label>
-                        <input class="data-item" type="email" name="email" id="email" required
-                            placeholder="Correo electronico">
+                            <p><a class="letras" href="#">Recuperá tu cuenta</a></p>
                     </p>
                     <p>
                         <label for="password"></label>
                         <input class="data-item" type="password" name="password" id="password" required
                             placeholder="Contraseña">
-                    </p>
-                    <p>
-                        <label for="repeat-password"></label>
-                        <input class="data-item" type="password" name="repeat-password" id="repeat-password"
-                            placeholder="Repetir contraseña">
+                            <p><a href="#" target="_blank">Olvidaste tu contraseña</a></p>
                     </p>
                     <!--<p>
                         <label for="no-robot"></label>
                         <input class="data-item" type="checkbox" name="no-robot" id="no-robot">
                     </p>-->
                     <p>
-                        <button class="main-button" type="button">
-                            <i class="fa-solid fa-plane-departure"></i>
-                        </button>
+                        <button class="main-button" type="submit"><i class="material-symbols-outlined">
+                            airplanemode_active
+                            </i></button>
                     </p>
                 </form>
             </div>
             <div class="main-h4">
                 <p>
-                <h4>Tambien registrate con</h4>
+                <h4>logueate con</h4>
                 </p>
             </div>
             <div class="register-icon">
-                <a class="fi1" href="#">
-                    <i class="main-icon fa-brands fa-facebook"></i>
-                </a>
-                <a class="fi2" href="#">
-                    <i class=" main-icon fa-brands fa-google"></i>
-                </a>
+                <a class="fi1" href="#"><i class="main-icon fa-brands fa-facebook"></i></a>
+                <a class="fi2" href="#"><i class=" main-icon fa-brands fa-google"></i></a>
             </div>
         </section>
     </main>
 </body>
-<%- include("./partials/footer.ejs") %>
+<%- include("../partials/footer.ejs") %>
 </html>
