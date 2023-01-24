@@ -188,7 +188,7 @@ h1 {
   flex-direction: column;
   font-weight: 700;
   box-sizing: content-box;
-  background-color: rgba(32, 20, 42, 0.9);
+  background-color: rgb(32, 20, 42);
   color: #ffc396;
 }
 
