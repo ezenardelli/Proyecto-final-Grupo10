@@ -12,7 +12,7 @@ font-family: 'Mako', sans-serif;
     text-decoration: none;
 }
 
-body {
+.body-register {
     background-image: url(/img/sunset-background.jpg);
     background-position-y: center;
     background-position-x: center;
@@ -90,10 +90,6 @@ header {
     border-radius: 100px;
     color: #FFC396;
     background-color: #20142A;
-}
-
-main {
-    height: 400px;
 }
 
 .main-container {
