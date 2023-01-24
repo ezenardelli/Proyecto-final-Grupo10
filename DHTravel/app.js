@@ -1,34 +1,28 @@
-const express = require("express");  
+const express = require("express"); 
+const path = require("path"); 
+const morgan = require("morgan");
 
-const app = express ();             
+const mainRouter = require('./src/routes/mainRouter.js')
+const userRouter = require('./src/routes/userRouter.js');
+const productRouter = require('./src/routes/productRouter.js')
 
-const path = require("path");           
 
-
-app.listen(3031, () => {
-    console.log("servidor a la escucha del puerto 3031");
-}); 
+const app = express ();
 
 const publicPath = path.resolve(__dirname, "./public");
-app.use( express.static(publicPath) );
+app.use( express.static(publicPath) )
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/index.html"));
-});
+const port = process.env.PORT || 3031;
 
-app.get("/registro", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/register.html"));
-});
+app.listen(port, () => {
+    console.log(`servidor escuchando en puerto ${port}`);
+}); 
 
-app.get("/detalle", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/productDetail.html"));
-});
+app.use(morgan('dev'));
 
-app.get("/ingresa", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/login.html"));
-});
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/src/views');
 
-app.get("/carrito", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/productCart.html"));
-});
-
+app.use(mainRouter);
+app.use(userRouter);
+app.use(productRouter);
