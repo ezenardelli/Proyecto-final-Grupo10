@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
 }
 
 .bloque-1 {
@@ -43,11 +44,16 @@
     background-color: #20142A;
     width: 100%;
     text-align: center;
-    padding-top: 3%;
+    padding-top: 15%;
     margin-top: 7%;
-    padding-bottom: 3%;
+    padding-bottom: 15%;
     margin-bottom: 7%;
-    border-radius: 10px;
+    background-color: #20142A;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
 }
 
 .formulario {
@@ -56,7 +62,7 @@
 }
 
 .titulo-cont {
-    color: white;
+    color: #FFC396;
     font-family: 'Imprima', sans-serif;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -69,8 +75,8 @@
 .barras-form {
     border-radius: 5px;
     border: none;
-    width: 90%;
-    height: 40px;
+    width: 75%;
+    height: 35px;
     padding-left: 10px;
 }
 
@@ -81,11 +87,16 @@
     background-color: #20142A;
     width: 100%;
     text-align: center;
-    padding-top: 3%;
+    padding-top: 15%;
     margin-top: 7%;
-    padding-bottom: 3%;
+    padding-bottom: 15%;
     margin-bottom: 7%;
-    border-radius: 10px;
+    background-color: #20142A;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
 }
 
 .formulario-2 {
@@ -94,40 +105,36 @@
 }
 
 .items-form-2 {
-    display: flex;
-    justify-content: space-around;
+    padding: 3%;
+
 }
 
 .barras-form-2 {
     border-radius: 5px;
     border: none;
-    width: 90%;
-    height: 40px;
+    width: 75%;
+    height: 35px;
     padding-left: 10px;
-    margin: 3%;
 }
 
 .venc-num-cont {
-    display: flex;
-    justify-content: space-around;
+    padding: 3%;
 }
 
 .venc {
     border-radius: 5px;
     border: none;
-    width: 90%;
-    height: 40px;
+    width: 75%;
+    height: 35px;
     padding-left: 10px;
-    margin: 3%;
 }
 
 .num {
     border-radius: 5px;
     border: none;
-    width: 90%;
-    height: 40px;
+    width: 75%;
+    height: 35px;
     padding-left: 10px;
-    margin: 3%;
 }
 
 /*contenedor3*/
@@ -137,12 +144,18 @@
     background-color: #20142A;
     width: 100%;
     text-align: center;
-    padding-top: 3%;
+    padding-top: 15%;
     margin-top: 7%;
-    padding-bottom: 3%;
+    padding-bottom: 15%;
     margin-bottom: 7%;
-    border-radius: 10px;
+    background-color: #20142A;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
 }
+
 
 .detalle-cont {
     display: flex;
@@ -175,7 +188,6 @@
 
 .contenedor-4 {
     width: 80%;
-    margin-left: 10%;
     margin-bottom: 5%;
 }
 
@@ -213,14 +225,32 @@
 @media (min-width: 460px) {
     /*Tablets*/
 
+    .bloque-1, .bloque-2 {
+        width: auto;
+    }
+    
+    .formulario-cont, .formulario-cont2, .contenedor-3{
+        width: 360px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
     .term-cond {
         font-size: 19px;
+    }
+
+    .contenedor-4 {
+        width: 336px;
     }
 }
 
 
 @media (min-width: 750px) {
     /*laptop*/
+
+    .formulario-cont, .formulario-cont2, .contenedor-3 {
+        width: 320px;
+    }
 
     .term-cond-cont {
         padding-top: 1%;
@@ -240,30 +270,31 @@
     }
 
     .bloque-2 {
-        top: 16%;
+        top: 148px;
         max-width: 38%;
         position: absolute;
-        right: 4%;
+        right: 9%;
     }
 
     .contenedor-4 {
-        margin-bottom: 1%;
+        width: 320px;
     }
     .boton-cont {
-        margin-left: 23%;
+        margin-left: auto;
+        text-align: right;
     }
 
     .boton-compra {
-        width: 41%;
+        width: 185px;
     }
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
 
     .bloque {
         align-items: flex-start;
-        margin-left: 15%;
+        margin-left: 21%;
     }
 
     .bloque-1 {
@@ -271,12 +302,8 @@
     }
     .bloque-2 {
         max-width: 30%;
-        right: 15%;
-        top: 14%;
-    }
-
-    .contenedor-4 {
-        margin-left: 17%;
+        right: 19%;
+        top: 174px;
     }
 
     .term-cond-cont {
@@ -284,14 +311,16 @@
         padding-bottom: 0%;
     }
 
-    .boton-cont {
-        margin-left: 22%;
-    }
     .term-cond {
-        font-size: 19px;
+        font-size: 17px;
     }
 
-    .boton-compra {
-        width: 30%;
+    .contenedor-4 {
+        width: 350px;
     }
+
+    .formulario-cont, .formulario-cont2, .contenedor-3 {
+        width: 350px;
+    }
+
 }
