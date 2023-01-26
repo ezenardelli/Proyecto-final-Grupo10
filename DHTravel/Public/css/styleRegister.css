@@ -5,12 +5,7 @@ font-family: 'Kaisei Tokumin', serif;
 font-family: 'Mako', sans-serif;
 */
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-}
+
 
 .body-register {
     background-image: url(/img/sunset-background.jpg);
@@ -25,6 +20,7 @@ header {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    font-family: Mako, Imprima;
 }
 
 .top-header {
@@ -206,6 +202,7 @@ footer {
     box-sizing: content-box;
     background-color: rgba(32, 20, 42, 0.9);
     color: #FFC396;
+    font-family: Mako, Imprima;
 }
 
 .footer-nav {
@@ -269,7 +266,6 @@ footer {
 }
 
 /*prueba iconos*/
-
 .icon {
     margin: auto;
     padding-right: 30px;
@@ -313,45 +309,83 @@ footer {
     outline-color: #338305;
 }
 
-/*prueba iconos*/
+/*productEdit*/
+.main-containerAdmin {
+    padding-top: 6%;
+    margin-top: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/581591.jpg);
+    background-position-y: 65%;
+    background-position-x: center;
+}
 
+.data-boxAdmin {
+    font-family: mako , imprima;
+    padding-bottom: 50px;
+    margin: auto;
+    width: 90vw;
+    max-width: 450px;
+    height: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
+}
 
+.data-itemAdmin {
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-end-end-radius: 100px;
+    border-start-start-radius: 100px;
+    text-align: center;
+    border-color: #5B050C;
+}
 
-.icon {
-    width: 60px;
-    height: 60px;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 26px;
-    color: #fff;
-    border-radius: 60%;
-    transition-property: outline-offset, outline-color, background-color;
-    transition-duration: .25s;
+.data-logoAdmin {
+    display: flex;
+    justify-content: center;
 }
-.icon:hover {
-    outline-offset: 4px;
-    outline: 2px solid #fff;
+
+.data-logoAdmin data-logo {
+    width: 100px;
+    opacity: 0.7;
 }
-.icon-facebook:hover {
-    background-color: #2709ce;
-    outline-color: #330cc4;
+
+.data-boxAdmin input {
+    width: 70vw;
+    max-width: 250px;
 }
-.icon-instagram:hover {
-    background-image: 
-    radial-gradient(circle at 30% 107%,
-    #fdf497 0%, #fdf497 5%,
-    #fd5949 45%, #d6249f 60%,
-    #285AEB);
-    outline-color: #a02d76;
+
+.data-itemAdmin-textarea {
+    margin-top: 20px;
+    width: 250px;
+
+    height: 100px;
+    border-radius: 10px;
+    border: solid 1px #5B050C;
 }
-.icon-telegram:hover {
-    background-color: rgb(52, 116, 253);
-    outline-color: rgb(2, 90, 172);
+
+.register-formsAdmin {
+    display: flex;
+    justify-content: space-evenly;
 }
-.icon-whatsapp:hover {
-    background-color: #04ad12;
-    outline-color: #338305;
+
+.formsAdmin {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.submit-b {
+    width: 70px;
+    margin-top: 20px;
 }
 
 
