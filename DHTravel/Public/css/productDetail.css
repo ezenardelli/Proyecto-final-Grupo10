@@ -5,11 +5,7 @@ font-family: 'Kaisei Tokumin', serif;
 font-family: 'Mako', sans-serif;
 */
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-}
-.body-register {
+.body-detail {
     background-image: url(/img/sunset-background.jpg);
     background-position-y: center;
     background-position-x: center;
@@ -24,7 +20,7 @@ font-family: 'Mako', sans-serif;
     margin-bottom: 100px;
 }
 
-.data-box {
+.detail-box {
     margin: auto;
     width: 90vw;
     max-width: 450px;
@@ -70,9 +66,6 @@ font-family: 'Mako', sans-serif;
     align-items: center;
 }
 
-
-
-
 .data-box input {
     width: 70vw;
     max-width: 250px;
@@ -84,9 +77,6 @@ font-family: 'Mako', sans-serif;
     padding: 35px;
     border-radius: 30p
 }
-
-
-
 
 .banner {
     width: 99vw;
@@ -252,7 +242,6 @@ font-family: 'Mako', sans-serif;
 @media (min-width: 750px) {
 
 }
-
 
 /*DESKTOP*/
 
