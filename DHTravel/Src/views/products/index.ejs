@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+  <body class="body-index">
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <!--- Carrusel, todavía no se como hacerle el estilo-->
+      <div class="slider-container">
+        <ul class="slider">
+          <li id="slide1">
+            <img src="/img/MachuPicchu.jpg" alt="Machupicchu" class="img"/>
+          </li>
+          <li id="slide2">
+            <img src="/img/NuevaZelanda.jpg" alt="Nueva Zelanda" class="img"/>
+          </li>
+          <li id="slide3">
+            <img src="/img/Disney.jpg" alt="Disney" class="img"/>
+          </li>
+          <li id="slide4">
+            <img src="/img/Quito.jpg" alt="Quito" class="img"/>
+          </li>
+          <li id="slide5">
+            <img src="/img/RiodeJaneiro.jpg" alt="Rio de Janeiro" class="img"/>
+          </li>
+          <li id="slide6">
+            <img src="/img/Roma.jpg" alt="Roma" class="img"/>
+          </li>
+          <li id="slide7">
+            <img src="/img/Sydney.jpg" alt="Sydney" class="img"/>
+          </li>
+          <li id="slide8">
+            <img src="/img/Venecia.jpg" alt="Venecia" class="img"/>
+          </li>
+          <li id="slide9">
+            <img src="/img/Cancún.jpg" alt="Cancún" class="img"/>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li>
+            <a href="#slide1">1</a>
+          </li>
+          <li>
+            <a href="#slide2">2</a>
+          </li>
+          <li>
+            <a href="#slide3">3</a>
+          </li>
+          <li>
+            <a href="#slide4">4</a>
+          </li>
+          <li>
+            <a href="#slide5">5</a>
+          </li>
+          <li>
+            <a href="#slide6">6</a>
+          </li>
+          <li>
+            <a href="#slide7">7</a>
+          </li>
+          <li>
+            <a href="#slide8">8</a>
+          </li>
+          <li>
+            <a href="#slide9">9</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1 class="h1-index">Encontrá tu lugar!</h1>
+      </div>
+      <div>
+        <a href="web.whatsapp.com">Chatea con nosotros</a>
+      </div>
+      <!--- Imagenes que dirigen al los productos-->
+      <div class="product-container">
+        <div class="product">
+          <a href="/detalle">
+            <img
+              src="/img/RiodeJaneiro.jpg"
+              alt="Rio de Janeiro"
+              class="Imagen-link-prod"
+            />
+          </a>
+          <p class="p-main">RIO DE JANEIRO</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img
+              src="/img/MachuPicchu.jpg"
+              alt="Machu Picchu"
+              class="Imagen-link-prod"
+            />
+          </a>
+          <p class="p-main">MACHU PICCHU</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img
+              src="/img/NuevaZelanda.jpg"
+              alt="Nueva Zelanda"
+              class="Imagen-link-prod"
+            />
+          </a>
+          <p class="p-main">NUEVA ZELANDA</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img src="/img/Disney.jpg" alt="Disney" class="Imagen-link-prod" />
+          </a>
+          <p class="p-main">DISNEY WORLD</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img src="/img/Quito.jpg" alt="Quito" class="Imagen-link-prod" />
+          </a>
+          <p class="p-main">QUITO</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img src="/img/Roma.jpg" alt="Roma" class="Imagen-link-prod" />
+          </a>
+          <p class="p-main">ROMA</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img src="/img/Sydney.jpg" alt="Sydney" class="Imagen-link-prod" />
+          </a>
+          <p class="p-main">SYDNEY</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img
+              src="/img/Venecia.jpg"
+              alt="Venecia"
+              class="Imagen-link-prod"
+            />
+          </a>
+          <p class="p-main">VENECIA</p>
+        </div>
+        <div class="product">
+          <a href="/detalle">
+            <img src="/img/Cancún.jpg" alt="Cancún" class="Imagen-link-prod" />
+          </a>
+          <p class="p-main">CANCÚN</p>
+        </div>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>
