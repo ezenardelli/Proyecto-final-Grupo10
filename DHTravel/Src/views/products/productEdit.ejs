@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+    <body>
+        <main class="main-containerAdmin">
+            <section class="data-boxAdmin">
+                <div class="data-logoAdmin">
+                    <a href="/">
+                        <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
+                    </a>
+                </div>
+                <div class="register-formsAdmin">
+                    <form class="formsAdmin" action="/" method="post">
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="text" id="product" required
+                                placeholder="Nombre del producto">
+                        </p>
+                        <p>
+                            <textarea class="data-itemAdmin-textarea" name="description" id="description" cols="30"
+                                rows="10" required placeholder=" Descripcion del producto"></textarea>
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="file" name="image" accept=".jpg .png" multiple required>
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="text" id="category" required
+                                placeholder="Categoria">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="text" id="producto" required
+                                placeholder="Detalle del producto">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="text" id="price" required
+                                placeholder="Precio del producto">
+                        </p>
+                        <p>
+                            <button class="submit-b" type="submit">Enviar</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
