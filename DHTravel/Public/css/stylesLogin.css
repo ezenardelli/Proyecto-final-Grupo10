@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-}
 
 .body-login {
     background-image: url(/img/grecia.jpg);
@@ -95,7 +89,7 @@ main {
     margin-bottom: 100px;
 }
 
-.main-button{
+.main-button-login{
     animation: movimiento 9s infinite linear ;
 }
 @keyframes movimiento{
@@ -109,7 +103,7 @@ main {
   
 }
 
-.data-box {
+.data-box-login {
     margin: auto;
     width: 90vw;
     max-width: 350px;
@@ -127,12 +121,12 @@ main {
     background-color: rgba(32, 20, 42, 0.9);
 }
 
-.data-box input {
+.data-box-login input {
     width: 70vw;
     max-width: 250px;
 }
 
-.data-logo-container {
+.data-logo-container-login {
     display: flex;
     justify-content: center;
 }
