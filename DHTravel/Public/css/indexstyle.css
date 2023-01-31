@@ -92,16 +92,16 @@
 .slider-container{
 margin: auto;
 background-color: white;
-width: 800px;
-padding: 10px;
+width: 100%;
+padding: 10%;
 }
 ul, li{
   list-style: none;
 }
 ul.slider{
   position: relative;
-  width: 800px;
-  height: 300px;
+  width: 100%;
+  height: 60%;
 }
 ul.slider li{
   position: absolute;
@@ -127,11 +127,11 @@ ul.slider li:target{
   margin: 20px;
 }
 .menu li{
-  display: flex;
+  display: inline-block;
   text-align: center;
 }
 .menu li a{
-  display: flex;
+  display: inline-block;
   color: white;
   text-decoration: none;
   background-color: gray;
