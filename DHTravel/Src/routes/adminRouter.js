@@ -4,7 +4,4 @@ const adminController = require('../controller/adminController');
 
 adminRouter.get('/admin', adminController.admin);
 
-
-
-
 module.exports = adminRouter;
