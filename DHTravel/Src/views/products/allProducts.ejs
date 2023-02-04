@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+    <body>
+        <main>
+            <h2>List of users</h2>
+    <ul>
+        <% for(let i=0; i< allProducts.length; i++) {%>
+            <li>
+                <article class="card">
+                    <img src="<%= allProducts[i].image %>" alt="">
+                    <p>
+                        <a href="/user/<%= allProducts[i].id %>">
+                            Name: <%= allProducts[i].name %>
+                        </a>
+                    </p>
+                </article>
+            </li>
+        <%}%>
+    </ul>
+        </main>
+    </body>
+</html>

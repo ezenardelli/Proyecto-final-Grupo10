@@ -4,5 +4,4 @@ const mainController = require('../controller/mainController');
 
 mainRouter.get('/', mainController.index);
 
-
 module.exports = mainRouter;
