@@ -20,9 +20,15 @@ const productController = {
     postCreateProducts: (req, res) => {
         const {
             name,
-            description,
             image,
-            } = req.body;
+            description,
+            origin,
+            destination,
+            person,
+            category,
+            date,
+            price,
+        } = req.body;
     },
     productId: (req, res) => {
         const {id} = req.params;
@@ -30,10 +36,19 @@ const productController = {
         if (products){
             res.render('./products/productsId', {allProducts});
         }else{
-            res.send('not found')
+            res.send('Not found')
         }
+    },
+    productIdEdit: (req, res) => {
+        const {id} = req.params;
+        const products = allProducts.find(elem => elem.id === parseInt(id));
+        if (products){
+            res.render('./products/productId', {allProducts});
+        }else{
+            res.send('Not found')
+        }
+    } ,
 
-    }
 };
 
 module.exports = productController;
