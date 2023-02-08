@@ -21,8 +21,10 @@ app.listen(port, () => {
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/src/views');
 
+app.use(express.json());
 app.use(morgan('dev'));
 app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
 
 app.use(mainRouter);
 app.use(userRouter);

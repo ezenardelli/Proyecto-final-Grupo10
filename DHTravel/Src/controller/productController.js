@@ -17,7 +17,7 @@ const productController = {
     createProducts: (req, res) => {
         res.render('./products/productCreate')
     },
-    postCreateProducts: (req, res) => {
+    createProductsPost: (req, res) => {
         const {
             name,
             image,
@@ -34,9 +34,9 @@ const productController = {
         const {id} = req.params;
         const products = allProducts.find(elem => elem.id === parseInt(id));
         if (products){
-            res.render('./products/productsId', {allProducts});
+            res.render('./products/productId', {allProducts});
         }else{
-            res.send('Not found')
+            res.send('Product Not Found')
         }
     },
     productIdEdit: (req, res) => {
@@ -45,10 +45,13 @@ const productController = {
         if (products){
             res.render('./products/productId', {allProducts});
         }else{
-            res.send('Not found')
+            res.send('Product Not Found')
         }
-    } ,
-
+    },
+    productIdEditPut: (req, res) => {
+        
+    },
+    productIdDelete: (req, res) => {res.send('not')}
 };
 
 module.exports = productController;
