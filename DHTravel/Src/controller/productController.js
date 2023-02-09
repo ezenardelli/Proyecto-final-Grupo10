@@ -18,7 +18,7 @@ const productController = {
         res.render('./products/productCreate')
     },
     createProductsPost: (req, res) => {
-        const {
+        const  {
             name,
             image,
             description,
@@ -29,6 +29,16 @@ const productController = {
             date,
             price,
         } = req.body;
+        const newId = products[allProducts.length -1].id +1;
+
+        const obj = {
+            id: newId,
+            ...req.body
+        };
+        allProducts.push(obj);
+        console.log("allProducts");
+        fs.writeFileSync(allProducts, JSON.stringify(allProducts))
+        res.redirect('/index');
     },
     productId: (req, res) => {
         const {id} = req.params;

@@ -5,24 +5,26 @@
   text-decoration: none;
 }
 .body-index {
-  background: rgb(228, 228, 228);
-  background: linear-gradient(
-    90deg,
-    rgba(228, 228, 228, 1) 0%,
-    rgba(109, 109, 204, 1) 38%,
-    rgba(45, 48, 83, 1) 63%,
-    rgba(32, 20, 42, 1) 100%
-  );
+  background-image: url(/img/581591.jpg);
+  background-attachment:fixed;
+  background-position-x: center;
+  background-position-y: center;
 }
 /*----Header----*/
 
 /*----Main----*/
 /*---Carrusel-, todavía no le encuentro la vuelta para que quede bien--*/
+.index-main {
+    width: 100vw;
+}
+
 .slider-container{
+
 margin: auto;
-background-color: white;
-width: 800px;
+background-color: #3a1757;
+width: 70vw;
 padding: 10px;
+border-radius: 10px;
 }
 ul, li{
   list-style: none;
@@ -42,7 +44,8 @@ ul.slider li{
   transition: opacity 0.5s;
 }
 ul.slider li img{
-  width: 100%;
+  object-fit: fill;
+  width: 70vw;
   height: 300px;
 }
 ul.slider li:first-child{
