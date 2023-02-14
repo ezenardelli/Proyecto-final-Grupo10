@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-
+const pathRoute = path.join(__dirname, "../database/products.json");
 const file = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
 const allProducts = JSON.parse(file);
+const productJSON = JSON.stringify(allProducts, null, 4);
 
 const productController = {
     cart: (req, res) => {
@@ -18,33 +19,20 @@ const productController = {
         res.render('./products/productCreate')
     },
     createProductsPost: (req, res) => {
-        const  {
-            name,
-            image,
-            description,
-            origin,
-            destination,
-            person,
-            category,
-            date,
-            price,
-        } = req.body;
-        const newId = products[allProducts.length -1].id +1;
-
+        const newId = allProducts[allProducts.length -1].id +1;
         const obj = {
             id: newId,
             ...req.body
         };
         allProducts.push(obj);
-        console.log("allProducts");
-        fs.writeFileSync(allProducts, JSON.stringify(allProducts))
-        res.redirect('/index');
+        fs.writeFileSync(pathRoute, productJSON );
+        res.redirect('/');
     },
     productId: (req, res) => {
         const {id} = req.params;
         const products = allProducts.find(elem => elem.id === parseInt(id));
         if (products){
-            res.render('./products/productId', {allProducts});
+            res.render('./products/productId', {allProducts:[products]});
         }else{
             res.send('Product Not Found')
         }
@@ -53,7 +41,7 @@ const productController = {
         const {id} = req.params;
         const products = allProducts.find(elem => elem.id === parseInt(id));
         if (products){
-            res.render('./products/productId', {allProducts});
+            res.render('./products/productEdit', {allProducts:[products]});
         }else{
             res.send('Product Not Found')
         }
