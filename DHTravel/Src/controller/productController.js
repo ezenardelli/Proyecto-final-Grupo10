@@ -17,8 +17,8 @@ const productController = {
     createProducts: (req, res) => {
         res.render('./products/productCreate')
     },
-    postCreateProducts: (req, res) => {
-        const {
+    createProductsPost: (req, res) => {
+        const  {
             name,
             image,
             description,
@@ -29,14 +29,24 @@ const productController = {
             date,
             price,
         } = req.body;
+        const newId = products[allProducts.length -1].id +1;
+
+        const obj = {
+            id: newId,
+            ...req.body
+        };
+        allProducts.push(obj);
+        console.log("allProducts");
+        fs.writeFileSync(allProducts, JSON.stringify(allProducts))
+        res.redirect('/index');
     },
     productId: (req, res) => {
         const {id} = req.params;
         const products = allProducts.find(elem => elem.id === parseInt(id));
         if (products){
-            res.render('./products/productsId', {allProducts});
+            res.render('./products/productId', {allProducts});
         }else{
-            res.send('Not found')
+            res.send('Product Not Found')
         }
     },
     productIdEdit: (req, res) => {
@@ -45,10 +55,13 @@ const productController = {
         if (products){
             res.render('./products/productId', {allProducts});
         }else{
-            res.send('Not found')
+            res.send('Product Not Found')
         }
-    } ,
-
+    },
+    productIdEditPut: (req, res) => {
+        
+    },
+    productIdDelete: (req, res) => {res.send('not')}
 };
 
 module.exports = productController;
