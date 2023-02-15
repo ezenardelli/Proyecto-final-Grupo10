@@ -1,6 +1,6 @@
 const adminController ={
     admin: (req, res) =>{
-        res.render('./products/productEdit')
+        res.render('./')
     } 
 };
 

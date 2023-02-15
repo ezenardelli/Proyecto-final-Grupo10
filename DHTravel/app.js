@@ -2,6 +2,7 @@ const express = require("express");
 const app = express ();
 const path = require("path"); 
 const morgan = require("morgan");
+const methodOverride = require('method-override');
 
 const mainRouter = require('./src/routes/mainRouter.js')
 const userRouter = require('./src/routes/userRouter.js');
@@ -21,6 +22,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/src/views');
 
 app.use(morgan('dev'));
+app.use(methodOverride('_method'));
 
 app.use(mainRouter);
 app.use(userRouter);
