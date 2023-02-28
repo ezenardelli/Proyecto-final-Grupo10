@@ -25,18 +25,8 @@ productRouter.post('/products/create',upload.single('image'), productController.
 
 productRouter.get('/products/:id', productController.productId);
 productRouter.get('/products/:id/edit', productController.productIdEdit);
-productRouter.put('/products/:id',upload.single('image'), productController.productIdEditPut);
+productRouter.post('/products/:id/edit',upload.single('image'), productController.productIdEditPut);
 productRouter.delete('/products/:id', productController.productIdDelete);
 
 module.exports = productRouter;
 
-//USAR COMO GUIA:
-// routerUser.get('/users',getAllUsers);
-// routerUser.get('/user/:id', getUserId);
-// routerUser.get('/search', search);
-
-// routerUser.get('/new-user',formNewUser);
-// routerUser.post('/new-user',upload.single('img') ,postUser);
-
-// routerUser.get('/user-edit/:id', userEdit);
-// routerUser.put('/user-edit',upload.single('img') ,editConfirm)

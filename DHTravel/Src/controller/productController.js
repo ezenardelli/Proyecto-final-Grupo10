@@ -3,7 +3,7 @@ const path = require('path');
 const pathRoute = path.join(__dirname, "../database/products.json");
 const file = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
 const allProducts = JSON.parse(file);
-const productJSON = JSON.stringify(allProducts, null, 4);
+
 
 const productController = {
     cart: (req, res) => {
@@ -25,6 +25,7 @@ const productController = {
             ...req.body
         };
         allProducts.push(obj);
+        const productJSON = JSON.stringify(allProducts, null, 4);
         fs.writeFileSync(pathRoute, productJSON );
         res.redirect('/');
     },
@@ -41,13 +42,28 @@ const productController = {
         const {id} = req.params;
         const products = allProducts.find(elem => elem.id === parseInt(id));
         if (products){
-            res.render('./products/productEdit', {allProducts:[products]});
+            res.render('./products/productCreate2', {allProducts:[products]});
         }else{
             res.send('Product Not Found')
         }
     },
     productIdEditPut: (req, res) => {
-        
+        const {id} = req.params;
+        let products = allProducts.find(elem => elem.id === parseInt(id));
+            products.name = req.body.name;
+            products.image = req.body.image;
+            products.description = req.body.description;
+            products.origin = req.body.origin;
+            products.destination = req.body.destination;
+            products.person = req.body.person;
+            products.category = req.body.category;
+            products.date = req.body.date;
+            products.price = req.body.price || products.price;
+        const product2 = allProducts.filter(elem => elem.id !== parseInt(id));
+        product2.push(products);
+        const productJSON = JSON.stringify(allProducts, null, 4);
+        fs.writeFileSync(pathRoute, productJSON );
+        res.redirect('/');
     },
     productIdDelete: (req, res) => {res.send('not')}
 };
