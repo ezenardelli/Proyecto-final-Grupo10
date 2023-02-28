@@ -47,7 +47,13 @@ const productController = {
         }
     },
     productIdEditPut: (req, res) => {
-        
+        allProducts.forEach(elem => {
+            if(elem.id == req.body.id){
+                elem.name = req.body.name;
+                elem.person = req.body.person;
+            }
+        });
+        res.redirect('/products')
     },
     productIdDelete: (req, res) => {res.send('not')}
 };
