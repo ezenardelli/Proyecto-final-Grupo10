@@ -10,40 +10,40 @@
                     </a>
                 </div>
                 <div class="register-formsAdmin">
-                    <form class="formsAdmin" action="/products/<%= allProducts[0].id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form class="formsAdmin" action="/products/create" method="POST" enctype="multipart/form-data">
                         <p>
-                            <input class="data-itemAdmin" type="text" name="name" id="name"
+                            <input class="data-itemAdmin" type="text" name="name" id="name" required
                                 placeholder="Nombre del producto">
                         </p>
                         <p>
                             <textarea class="data-itemAdmin-textarea" name="description" id="description" cols="30"
-                                rows="10" placeholder=" Descripcion del producto"></textarea>
+                                rows="10" required placeholder=" Descripcion del producto"></textarea>
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="file" name="image" multiple>
+                            <input class="data-itemAdmin" type="file" name="image" multiple required>
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="origin" id="origin"
+                            <input class="data-itemAdmin" type="text" name="origin" id="origin" required
                                 placeholder="Origen del viaje">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="destination" id="destination"
+                            <input class="data-itemAdmin" type="text" name="destination" id="destination" required
                                 placeholder="Destino del viaje">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="person" id="person"
+                            <input class="data-itemAdmin" type="text" name="person" id="person" required
                                 placeholder="Numero de personas incluidas">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="category" id="category"
+                            <input class="data-itemAdmin" type="text" name="category" id="category" required
                                 placeholder="Categoria">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="date" id="date"
+                            <input class="data-itemAdmin" type="text" name="date" id="date" required
                                 placeholder="Fecha de inicio">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="number" name="price" id="price"
+                            <input class="data-itemAdmin" type="text" name="price" id="price" required
                                 placeholder="Precio del producto">
                         </p>
                         <p>

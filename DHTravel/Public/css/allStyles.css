@@ -4,3 +4,194 @@
     padding: 0px;
     text-decoration: none;
 }
+
+/*HEADER*/
+header {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Mako, Imprima;
+}
+
+.top-header {
+    width: 100vw;
+    display: flex;
+}
+
+.logo-container {
+    width: 30%;
+}
+
+.login-container {
+    width: 20%;
+    margin-right: 2%;
+    margin-top: 1%;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.ul-li {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ul-li a,
+.ul-li a:visited {
+    color: #0C0260;
+    font-weight: 500;
+}
+
+.header-logo {
+    width: 65px;
+    margin: 10% 10%;
+}
+
+.search-bar {
+    margin-top: 30px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-searcher {
+    width: 40vw;
+    height: 30px;
+}
+
+.search-bar input {
+    max-width: 600px;
+    border-radius: 20px;
+    border: solid 2px #20142A;
+    text-align: center;
+    font-weight: 100;
+}
+
+.search-bar button {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    color: #FFC396;
+    background-color: #20142A;
+}
+
+/*FOOTER*/
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: 700;
+    box-sizing: content-box;
+    background-color: rgba(32, 20, 42, 0.9);
+    color: #FFC396;
+    font-family: Mako, Imprima;
+}
+
+.footer-nav {
+    padding: 10px;
+}
+
+.footer-nav-li {
+    width: 90%;
+    max-width: 750px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFC396;
+    justify-content: space-evenly;
+}
+
+.nav-li-item {
+    padding-left: 2px;
+}
+
+.nav-li-item:visited {
+    color: #FFC396;
+}
+
+.copyright-info {
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    margin-left: 10px;
+}
+
+.credit-card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.credit-card i {
+    font-size: 120%;
+    margin: 0px 5px;
+    color: #bb8b54;
+    background-color: #000000;
+}
+
+.copy-p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 200%;
+    padding: 10px;
+}
+
+.icon {
+    margin: auto;
+    padding-right: 30px;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 100%;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 250ms;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+    outline: 2px solid #fff;
+}
+
+.icon-facebook:hover {
+    background-color: #2709ce;
+    outline-color: #330cc4;
+}
+
+.icon-instagram:hover {
+    background-image: 
+    radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%,
+    #285AEB);
+    outline-color: #a02d76;
+}
+
+.icon-telegram:hover {
+    background-color: rgb(52, 116, 253);
+    outline-color: rgb(2, 90, 172);
+}
+
+.icon-whatsapp:hover {
+    background-color: #04ad12;
+    outline-color: #338305;
+}
