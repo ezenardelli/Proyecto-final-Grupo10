@@ -24,9 +24,12 @@ productRouter.get('/products/create', productController.createProducts);
 productRouter.post('/products/create',upload.single('image'), productController.createProductsPost);
 
 productRouter.get('/products/:id', productController.productId);
+
 productRouter.get('/products/:id/edit', productController.productIdEdit);
-productRouter.post('/products/:id/edit',upload.single('image'), productController.productIdEditPut);
-productRouter.delete('/products/:id', productController.productIdDelete);
+productRouter.put('/products/:id/edit',upload.single('image'), productController.productIdEditPut);
+
+productRouter.get('/products/:id/delete', productController.productIdViewDelete);
+productRouter.delete('/products/:id/delete', productController.productIdDelete);
 
 module.exports = productRouter;
 

@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="">
-        
-    </form>
-</body>
+<%- include('../partials/head.ejs') %>
+    <body>
+        <main class="main-containerAdmin">
+            <section class="data-boxAdmin">
+                <div class="data-logoAdmin">
+                    <a href="/">
+                        <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
+                    </a>
+                </div>
+                <div class="register-formsAdmin">
+                    <form class="formsAdmin" action="/products/<%= allProducts[0].id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="name" id="name"
+                                placeholder="Nombre del producto">
+                        </p>
+                        <p>
+                            <textarea class="data-itemAdmin-textarea" name="description" id="description" cols="30"
+                                rows="10" placeholder=" Descripcion del producto"></textarea>
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="file" name="image" multiple>
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="origin" id="origin"
+                                placeholder="Origen del viaje">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="destination" id="destination"
+                                placeholder="Destino del viaje">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="person" id="person"
+                                placeholder="Numero de personas incluidas">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="category" id="category"
+                                placeholder="Categoria">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="date" id="date"
+                                placeholder="Fecha de inicio">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="number" name="price" id="price"
+                                placeholder="Precio del producto">
+                        </p>
+                        <p>
+                            <button class="submit-b" type="submit">Crear Paquete</button>
+                        </p>
+                        <p>
+                            <button class="submit-b" type="reset">Eliminar datos</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>

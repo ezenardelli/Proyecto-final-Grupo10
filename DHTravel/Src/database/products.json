@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "name": "1",
-        "description": "11",
+        "name": "dad",
+        "description": "1",
         "origin": "1",
         "destination": "1",
         "person": "1",
         "category": "1",
         "date": "1",
-        "price": "1"
+        "price": "180"
     },
     {
         "id": 2,
@@ -26,13 +26,13 @@
         "id": 3,
         "name": "id",
         "image": "Phased",
-        "description": "platea",
+        "description": "1",
         "origin": "posuere",
         "destination": "Taoudenni",
         "person": 2,
         "category": "solteros",
         "date": "8/3/2023",
-        "price": 348612
+        "price": "140"
     },
     {
         "id": 4,

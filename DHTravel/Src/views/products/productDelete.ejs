@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+    <body>
+        <main class="main-containerAdmin">
+            <section class="data-boxAdmin">
+                <div class="data-logoAdmin">
+                    <a href="/">
+                        <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
+                    </a>
+                </div>
+                <div class="register-formsAdmin">
+                    <form class="formsAdmin" action="/products/<%= allProducts[0].id %>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
+                        <p>
+                            <button class="submit-b" type="submit">Eliminar datos</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -42,30 +42,40 @@ const productController = {
         const {id} = req.params;
         const products = allProducts.find(elem => elem.id === parseInt(id));
         if (products){
-            res.render('./products/productCreate2', {allProducts:[products]});
+            res.render('./products/productEdit', {allProducts:[products]});
         }else{
             res.send('Product Not Found')
         }
     },
     productIdEditPut: (req, res) => {
         const {id} = req.params;
-        let products = allProducts.find(elem => elem.id === parseInt(id));
-            products.name = req.body.name;
-            products.image = req.body.image;
-            products.description = req.body.description;
-            products.origin = req.body.origin;
-            products.destination = req.body.destination;
-            products.person = req.body.person;
-            products.category = req.body.category;
-            products.date = req.body.date;
-            products.price = req.body.price || products.price;
-        const product2 = allProducts.filter(elem => elem.id !== parseInt(id));
-        product2.push(products);
+        let product = allProducts.find(elem => elem.id === parseInt(id));
+            product.name = req.body.name || product.name;
+            product.image = req.body.image || product.image;
+            product.description = req.body.description || product.description;
+            product.origin = req.body.origin || product.origin;
+            product.destination = req.body.destination || product.destination;
+            product.person = req.body.person || product.person;
+            product.category = req.body.category || product.category;
+            product.date = req.body.date || product.date;
+            product.price = req.body.price || product.price;
+        const productPut = allProducts.filter(elem => elem.id !== parseInt(id));
+        productPut.push(product);
         const productJSON = JSON.stringify(allProducts, null, 4);
         fs.writeFileSync(pathRoute, productJSON );
         res.redirect('/');
     },
-    productIdDelete: (req, res) => {res.send('not')}
+    productIdViewDelete: (req, res) => {
+        res.render('./products/productDelete')
+    },
+    productIdDelete: (req, res) => {
+    const {id} = req.params;
+    let productDelete = allProducts.filter(elem => elem.id !== parseInt(id));
+        productDelete.push(product);
+        const productJSON = JSON.stringify(allProducts, null, 4);
+        fs.writeFileSync(pathRoute, productJSON );
+        res.redirect('/');
+    },
 };
 
 module.exports = productController;
