@@ -66,13 +66,18 @@ const productController = {
         res.redirect('/');
     },
     productIdViewDelete: (req, res) => {
-        res.render('./products/productDelete')
+        const {id} = req.params;
+        const products = allProducts.find(elem => elem.id === parseInt(id));
+        if (products){
+            res.render('./products/productDelete', {allProducts:[products]});
+        }else{
+            res.send('Product Not Found')
+        }
     },
     productIdDelete: (req, res) => {
     const {id} = req.params;
-    let productDelete = allProducts.filter(elem => elem.id !== parseInt(id));
-        productDelete.push(product);
-        const productJSON = JSON.stringify(allProducts, null, 4);
+    let newproducts = allProducts.filter(elem => elem.id !== parseInt(id));
+        const productJSON = JSON.stringify(newproducts, null, 4);
         fs.writeFileSync(pathRoute, productJSON );
         res.redirect('/');
     },

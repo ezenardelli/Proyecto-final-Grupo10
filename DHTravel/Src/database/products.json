@@ -330,16 +330,5 @@
         "category": "dwa",
         "date": "daw",
         "price": "dw"
-    },
-    {
-        "id": 29,
-        "name": "da",
-        "description": "da",
-        "origin": "da",
-        "destination": "da",
-        "person": "ad",
-        "category": "ad",
-        "date": "ad",
-        "price": "ad"
     }
 ]
