@@ -1,6 +1,8 @@
+const { allProducts } = require("./productController");
+
 const mainController = {
     index: (req, res) => {
-        res.render('./products/index')
+        res.render('./products/index', {allProducts: allProducts})
     },
     contact: () => { 
     },
