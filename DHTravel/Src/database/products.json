@@ -226,29 +226,5 @@
         "category": "Ciudad",
         "date": "30/01/2024",
         "price": 1800
-    },
-    {
-        "id": 20,
-        "name": "PRODUCTO DE PRUEBA",
-        "description": "prueba con multer",
-        "origin": "eze",
-        "destination": "rio",
-        "person": "2",
-        "category": "parejas",
-        "date": "13/04/23",
-        "price": "$195.000",
-        "image": "product-1678209032651_img.jpg"
-    },
-    {
-        "id": 21,
-        "image": "product-1678208660998_img.jpg",
-        "name": "a",
-        "description": "a",
-        "origin": "a",
-        "destination": "a",
-        "person": "aaa",
-        "category": "a",
-        "date": "a",
-        "price": "a"
     }
 ]
