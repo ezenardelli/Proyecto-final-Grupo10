@@ -22,6 +22,7 @@ const productController = {
         const newId = allProducts[allProducts.length -1].id +1;
         const obj = {
             id: newId,
+            image: req.file.filename,
             ...req.body
         };
         allProducts.push(obj);
@@ -51,7 +52,7 @@ const productController = {
         const {id} = req.params;
         let product = allProducts.find(elem => elem.id === parseInt(id));
             product.name = req.body.name || product.name;
-            product.image = req.body.image || product.image;
+            product.image = req.file.filename || product.image;
             product.description = req.body.description || product.description;
             product.origin = req.body.origin || product.origin;
             product.destination = req.body.destination || product.destination;
