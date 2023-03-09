@@ -133,11 +133,11 @@ font-family: 'Mako', sans-serif;
 
 .data-boxAdmin {
     font-family: mako , imprima;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     margin: auto;
     width: 90vw;
     max-width: 450px;
-    height: 700px;
+    height: 735px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -194,9 +194,47 @@ font-family: 'Mako', sans-serif;
     flex-direction: column;
 }
 
+.botones-form-admin {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .submit-b {
     width: 70px;
     margin-top: 20px;
+}
+
+.items-delete-box {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.items-delete {
+    color: white;
+    font-size: 19px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.boton-delete {
+    text-align: center;
+}
+
+.data-boxAdmin-delete {
+    font-family: mako , imprima;
+    padding-bottom: 15px;
+    margin: auto;
+    width: 90vw;
+    max-width: 450px;
+    height: 330px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 20px;
+    border-start-start-radius: 120px;
+    border-end-end-radius: 120px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
 }
 
 
