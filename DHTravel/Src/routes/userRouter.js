@@ -23,7 +23,6 @@ const userValidations = [
     body('email').notEmpty().withMessage('Debe especificar un email valido.'),
     body('category').notEmpty().withMessage('Elija una categoria.'),
     body('password').notEmpty().withMessage('Debe ingresar una contraseña.'),
-    body('password-repeat').notEmpty().withMessage('Debe repetir la contraseña.'),
     body('userImage').custom((value, { req }) => {
         let file = req.file;
         let acceptedFormat = ['.jpg', '.png'];
