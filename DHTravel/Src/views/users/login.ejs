@@ -11,16 +11,23 @@
             <div class="register-forms">
                 <form class="forms" action="/login" method="post">
                     <p>
-                        <label for="usuario"></label>
-                        <input class="data-item" type="text" name="text" id="usuario" required
-                            placeholder="Nombre de usuario">
-                            <p><a class="letras" href="#">Recuperá tu cuenta</a></p>
+                        <input class="data-item" type="email" name="email" id="email"
+                        placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="validation-error">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <p>
+                            <a class="letras" href="#">Recuperá tu cuenta</a>
+                        </p>
                     </p>
                     <p>
-                        <label for="password"></label>
-                        <input class="data-item" type="password" name="password" id="password" required
+                        <input class="data-item" type="password" name="password" id="password" 
                             placeholder="Contraseña">
-                            <p><a href="#" target="_blank">Olvidaste tu contraseña</a></p>
+                            <p>
+                                <a href="#" target="_blank">Olvidaste tu contraseña</a>
+                            </p>
                     </p>
                     <!--<p>
                         <label for="no-robot"></label>

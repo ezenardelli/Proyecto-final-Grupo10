@@ -1,4 +1,7 @@
-const validationsMiddleware = [
+const path = require('path');
+const { body } = require('express-validator');
+
+module.exports = [
     body('name').notEmpty().withMessage('Debe completar el nombre del paquete.'),
     body('description').notEmpty().withMessage('Debe completar la descripcion.'),
     body('origin').notEmpty().withMessage('Debe especificar el origen.'),
@@ -21,5 +24,3 @@ const validationsMiddleware = [
         return true;
     }),
 ];
-
-module.exports = validationsMiddleware;

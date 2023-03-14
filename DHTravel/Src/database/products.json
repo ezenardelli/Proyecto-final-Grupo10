@@ -226,29 +226,5 @@
         "category": "Ciudad",
         "date": "30/01/2024",
         "price": 1800
-    },
-    {
-        "id": 20,
-        "image": "product-1678511789839_img.jpg",
-        "name": "",
-        "description": "",
-        "origin": "",
-        "destination": "",
-        "person": "",
-        "category": "",
-        "date": "",
-        "price": ""
-    },
-    {
-        "id": 21,
-        "image": "product-1678511803264_img.jpg",
-        "name": "s",
-        "description": "s",
-        "origin": "s",
-        "destination": "s",
-        "person": "s",
-        "category": "s",
-        "date": "s",
-        "price": "s"
     }
 ]

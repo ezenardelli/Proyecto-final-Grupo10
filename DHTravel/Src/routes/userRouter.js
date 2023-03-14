@@ -5,6 +5,11 @@ const userController = require('../controller/userController');
 const multer = require('multer');
 const { body } = require('express-validator');
 
+const registerValidation = require('../middlewares/registerValidationMiddleware');
+const loginValidation = require('../middlewares/loginValidateMiddleware');
+// const guestMiddleware = require('../middlewares/guestMiddleware');
+// const authMiddleware = require('../middlewares/authentificationMiddleware');
+
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
         cb(null, path.join(__dirname, '../../public/img/users'))
@@ -17,30 +22,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage});
 
-const userValidations = [
-    body('firstName').notEmpty().withMessage('Debe completar con sus nombres.'),
-    body('lastName').notEmpty().withMessage('Debe completar con sus apellidos.'),
-    body('email').notEmpty().withMessage('Debe especificar un email valido.'),
-    body('category').notEmpty().withMessage('Elija una categoria.'),
-    body('password').notEmpty().withMessage('Debe ingresar una contraseña.'),
-    body('userImage').custom((value, { req }) => {
-        let file = req.file;
-        let acceptedFormat = ['.jpg', '.png'];
-        if (!file){
-            throw new Error('Debes subir una imagen de perfil.');
-        } else {
-            let fileExtension = path.extname(file.originalname);
-            if(!acceptedFormat.includes(fileExtension)) {
-                throw new Error(`Las extenciones permitidas son ${acceptedFormat.join(', ')}`)
-            }
-        }
-        return true;
-    }),
-];
 
 userRouter.get('/register', userController.register);
-userRouter.post('/register',upload.single('userImage'), userValidations, userController.registerPost);
+userRouter.post('/register',upload.single('userImage'), registerValidation, userController.registerPost);
 
 userRouter.get('/login', userController.login);
+userRouter.post('/login',loginValidation, userController.loginPost);
+
+userRouter.get('/profile/', userController.profile);
+
+userRouter.get('/logout/', userController.logout);
 
 module.exports = userRouter;

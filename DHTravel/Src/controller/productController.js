@@ -36,7 +36,9 @@ const productController = {
         allProducts.push(obj);
         const productJSON = JSON.stringify(allProducts, null, 4);
         fs.writeFileSync(pathRoute, productJSON );
+
         res.redirect('/');
+
     },
     productId: (req, res) => {
         const {id} = req.params;

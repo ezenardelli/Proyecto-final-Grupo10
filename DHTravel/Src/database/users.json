@@ -901,72 +901,11 @@
     },
     {
         "id": 101,
-        "image": "user-1678512254667_img.jpg",
-        "firstName": "1",
-        "lastName": "1",
+        "firstName": "Yamil",
+        "lastName": "Ruiz",
         "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "1",
-        "repeat-password": "1"
-    },
-    {
-        "id": 102,
-        "image": "user-1678512264772_img.jpg",
-        "firstName": "1",
-        "lastName": "1",
-        "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "1",
-        "repeat-password": "1"
-    },
-    {
-        "id": 103,
-        "image": "user-1678512277872_img.jpg",
-        "firstName": "1",
-        "lastName": "1",
-        "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "1",
-        "repeat-password": "1"
-    },
-    {
-        "id": 104,
-        "image": "user-1678512292696_img.png",
-        "firstName": "1",
-        "lastName": "1",
-        "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "w",
-        "repeat-password": "w"
-    },
-    {
-        "id": 105,
-        "image": "user-1678512464783_img.jpg",
-        "firstName": "1",
-        "lastName": "1",
-        "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "a",
-        "repeat-password": "a"
-    },
-    {
-        "id": 106,
-        "image": "user-1678512677264_img.png",
-        "firstName": "1",
-        "lastName": "1",
-        "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "",
-        "repeat-password": ""
-    },
-    {
-        "id": 107,
-        "image": "user-1678512692118_img.png",
-        "firstName": "1",
-        "lastName": "1",
-        "email": "rod_ruiz@hotmail.com.ar",
-        "category": "1",
-        "password": "333",
-        "repeat-password": "333"
+        "category": "casado",
+        "password": "$2a$10$WV5pmHSIqf6HFY6Blh/JlevcS0hMF/khjXb53NgGuxHlCYOj7hVau",
+        "image": "user-1678689702475_img.jpg"
     }
 ]
