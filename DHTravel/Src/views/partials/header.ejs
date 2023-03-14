@@ -14,7 +14,36 @@
         <div class="login-container">
             <nav class="login">
                 <ul class="ul-li" type="none">
-                    <div>
+                    <% if (locals.userLogged) { %>
+                    <div class="li-item">
+                        <li>
+                            <a href="/profile">
+                                <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;"> 
+                            </a>
+                        </li>
+                    </div>
+                    <div class="li-item">
+                        Hola <%= locals.userLogged.firstName %>!
+                    </div>
+                    <div class="li-item">
+                        <li>
+                            <a href="/profile">Mi perfil</a>
+                        </li>
+                    </div>
+                    <div class="li-item">
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    </div>
+                    <div class="li-item">
+                        <li>
+                            <a href="/carrito">
+                                <i class="fa-solid fa-cart-flatbed"></i>
+                            </a>
+                        </li>
+                    </div>
+                    <% } else { %>
+                    <div class="li-item">
                         <li>
                             <a href="/login">Ingresa</a>
                         </li>
@@ -31,6 +60,7 @@
                             </a>
                         </li>
                     </div>
+                    <% } %>
                 </ul>
             </nav>
         </div>

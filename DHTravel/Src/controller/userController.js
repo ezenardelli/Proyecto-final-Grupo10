@@ -69,13 +69,13 @@ const userController = {
             if(userLogin){
                 const enterPassword = bcrypt.compareSync(password,userLogin.password);
                 if(enterPassword){
-                    //delete userLogin.password;
+                    delete userLogin.password;
                     req.session.userLogged = userLogin;
-                    // if(req.body.remember_user) {
-                    //     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-                    // }
+                    if(req.body.rememberUser) {
+                      res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                    }
                     
-                    return res.redirect('/profile')
+                    return res.redirect('/')
                     
                 }else{
                     return res.send('Correo electronico o contraseña incorrecta');
@@ -97,7 +97,7 @@ const userController = {
 	},
 
     logout: (req,res) => {
-        // res.clearCookie('');
+        res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
     }

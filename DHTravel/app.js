@@ -4,6 +4,7 @@ const path = require("path");
 const morgan = require("morgan");
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookies = require('cookie-parser');
 
 const mainRouter = require('./src/routes/mainRouter.js');
 const userRouter = require('./src/routes/userRouter.js');
@@ -22,6 +23,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cookies());
 app.use(loggedMiddleware);
 
 const publicPath = path.resolve(__dirname, "./public");
