@@ -3,7 +3,8 @@
 <%- include('../partials/head.ejs') %>
     <body>
         <main class="main-containerAdmin">
-            <section class="data-boxAdmin">
+            <% for(let i=0; i< allProducts.length; i++) {%>
+            <section class="data-boxAdmin-delete">
                 <div class="data-logoAdmin">
                     <a href="/">
                         <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
@@ -11,12 +12,24 @@
                 </div>
                 <div class="register-formsAdmin">
                     <form class="formsAdmin" action="/products/<%= allProducts[0].id %>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
+                        <div class="items-delete-box">
+                        <p class="items-delete">
+                            Id: <%= allProducts[i].id %>
+                        </p>
+                        <p class="items-delete">
+                            Nombre: <%= allProducts[i].name %>
+                        </p>
+                    </div>
+                    <div class="boton-delete">
                         <p>
                             <button class="submit-b" type="submit">Eliminar datos</button>
                         </p>
+                    </div>
                     </form>
                 </div>
             </section>
+            <% } %>
+
         </main>
     </body>
 </html>

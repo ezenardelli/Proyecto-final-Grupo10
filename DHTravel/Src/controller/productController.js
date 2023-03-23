@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 const pathRoute = path.join(__dirname, "../database/products.json");
 const file = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
 const allProducts = JSON.parse(file);
@@ -19,15 +20,25 @@ const productController = {
         res.render('./products/productCreate')
     },
     createProductsPost: (req, res) => {
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0) {
+            res.render('./products/productCreate', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            })
+        };
         const newId = allProducts[allProducts.length -1].id +1;
         const obj = {
             id: newId,
+            image: req.file.filename,
             ...req.body
         };
         allProducts.push(obj);
         const productJSON = JSON.stringify(allProducts, null, 4);
         fs.writeFileSync(pathRoute, productJSON );
+
         res.redirect('/');
+
     },
     productId: (req, res) => {
         const {id} = req.params;
@@ -51,7 +62,7 @@ const productController = {
         const {id} = req.params;
         let product = allProducts.find(elem => elem.id === parseInt(id));
             product.name = req.body.name || product.name;
-            product.image = req.body.image || product.image;
+            product.image = req.file.filename || product.image;
             product.description = req.body.description || product.description;
             product.origin = req.body.origin || product.origin;
             product.destination = req.body.destination || product.destination;

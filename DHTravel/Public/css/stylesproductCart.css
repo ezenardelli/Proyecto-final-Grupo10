@@ -213,6 +213,34 @@
     font-weight: bold;
 }
 
+/*productId*/
+
+.h3-name-prodId {
+    font-size: 25px;
+    color: #FFC396;
+}
+
+.p-prodId {
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+}
+
+.p-prodId-desc {
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.h3-detail-prodId {
+    font-size: 22px;
+    color: #FFC396;
+}
+
+/*productId*/
+
 
 @media (min-width: 460px) {
     /*Tablets*/

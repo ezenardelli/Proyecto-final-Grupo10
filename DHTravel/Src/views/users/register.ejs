@@ -9,37 +9,67 @@
                 <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
             </div>
             <div class="register-forms">
-                <form class="forms" action="/register" method="post">
+                <form class="forms" action="/register" method="POST" enctype="multipart/form-data">
                     <p>
-                        <label for="usuario"></label>
-                        <input class="data-item" type="text" name="text" id="usuario" required
-                            placeholder="Nombre de usuario">
+                        <input class="data-item" type="text" name="firstName" id="firstName"
+                        placeholder="Nombres" value="<%= locals.oldData ? oldData.firstName : null %>">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div class="validation-error">
+                                <%= errors.firstName.msg %>
+                            </div>
+                        <% } %>
                     </p>
                     <p>
-                        <label for="email"></label>
-                        <input class="data-item" type="email" name="email" id="email" required
-                            placeholder="Correo electronico">
+                        <input class="data-item" type="text" name="lastName" id="lastName"
+                        placeholder="Apellidos" value="<%= locals.oldData ? oldData.lastName : null %>">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div class="validation-error">
+                                <%= errors.lastName.msg %>
+                            </div>
+                        <% } %>
                     </p>
                     <p>
-                        <label for="password"></label>
-                        <input class="data-item" type="password" name="password" id="password" required
-                            placeholder="Contraseña">
+                        <input class="data-item" type="email" name="email" id="email"
+                        placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="validation-error">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
                     </p>
                     <p>
-                        <label for="repeat-password"></label>
-                        <input class="data-item" type="password" name="repeat-password" id="repeat-password"
-                            placeholder="Repetir contraseña">
+                        <input class="data-item" type="text" name="category" id="category"
+                        placeholder="Elija una categoria" value="<%= locals.oldData ? oldData.category : null %>">
+                        <% if (locals.errors && errors.category) { %>
+                            <div class="validation-error">
+                                <%= errors.category.msg %>
+                            </div>
+                        <% } %>
+                    </p>
+                    <label for=""></label>
+                    <p>
+                        <input class="data-item" type="file" name="userImage" id="userImage"
+                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.userImage : null %>">
+                        <% if (locals.errors && errors.userImage) { %>
+                            <div class="validation-error">
+                                <%= errors.userImage.msg %>
+                            </div>
+                        <% } %>
+                    </p>
+                    </label>
+                    <p>
+                        <input class="data-item" type="password" name="password" id="password"
+                        placeholder="Contraseña">
                     </p>
                     <!--<p>
                         <label for="no-robot"></label>
                         <input class="data-item" type="checkbox" name="no-robot" id="no-robot">
                     </p>-->
                     <p>
-                        <button class="main-button" type="button">
+                        <button class="main-button-login" type="submit">
                             <i class="material-symbols-outlined">
                                 airplanemode_active
-                            </i>
-                        </button>
+                            </i></button>
                     </p>
                 </form>
             </div>
