@@ -26,7 +26,7 @@ const upload = multer({storage});
 userRouter.get('/register', guestMiddleware, userController.register);
 userRouter.post('/register',upload.single('userImage'), registerValidation, userController.registerPost);
 
-userRouter.get('/login', userController.login);
+userRouter.get('/login',guestMiddleware, userController.login);
 userRouter.post('/login',loginValidation, userController.loginPost);
 
 userRouter.get('/profile/',authMiddleware, userController.profile);
