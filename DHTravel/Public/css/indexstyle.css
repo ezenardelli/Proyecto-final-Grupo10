@@ -1,4 +1,4 @@
-* {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,8 +14,8 @@
 
 /*----Main----*/
 /*---Carrusel-, todavía no le encuentro la vuelta para que quede bien--*/
-.index-main {
-    width: 100vw;
+/*.index-main {
+width: 100vw;
 }
 
 .slider-container{
@@ -74,7 +74,7 @@ ul.slider li:target{
   border-radius: 100%;
 }
 /*--- Imagenes Link----*/
-.h1-index {
+/*.h1-index {
   display: flex;
   font-family: "Mako", sans-serif;
   font-size: 200%;
@@ -114,9 +114,210 @@ ul.slider li:target{
 }
 /*----Footer---*/
 
-/*TABLET*/
-@media (min-width: 460px) {}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.titulo-index{
+  color: rgb(30, 3, 66);
+  font-size: 70px;
+  text-align: center;
+  font-family:'Zeyada', cursive;;
+  font-weight: 200;
+  background-color: #FFF;
+
+}
+
+.container-index{
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  padding: 2%;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+
+.box-index{
+  flex: 1;
+  margin: 0px;
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+  line-height: 0;
+  transition: all 600ms;
+}
+
+.box-index > img{
+  width: 200%;
+  height: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: all 300ms;
+  background-color: transparent;
+}
 
 
-/*NOTEBOOKS*/
-@media (min-width: 750px) {}
+.box-index:hover{
+  flex: 50%;
+}
+
+.box-index:hover > img{
+  width: 100%;
+  height: 100%;
+}
+
+.container-card{
+width: 100%;
+display: flex;
+max-width: 1100px;
+margin: auto;
+}
+.title-cards{
+width: 100%;
+max-width: 1080px;
+margin: auto;
+padding: 20px;
+margin-top: 20px;
+text-align: center;
+color: #7a7a7a;
+}
+.card-index{
+width: 100%;
+margin: 20px;
+border-radius: 6px;
+overflow: hidden;
+background-color: #FFF;
+box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+transition: all 400ms ease-out;
+cursor: default;
+}
+.card-index:hover{
+box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+transform: translateY(-3%);
+}
+.card-index img{
+width: 100%;
+height: 210px;
+}
+.card-index .contenido-card{
+padding: 15px;
+text-align: center;
+  background-color: #FFF;
+}
+.card-index .contenido-card h3{
+margin-bottom: 15px;
+color: #7a7a7a;
+  background-color: #FFF;
+}
+.card-index .contenido-card p{
+line-height: 1.8;
+color: #6a6a6a;
+font-size: 14px;
+margin-bottom: 5px;
+  background-color: #FFF;
+}
+.card-index .contenido-card a{
+display: inline-block;
+padding: 10px;
+margin-top: 10px;
+text-decoration: none;
+color: #390552;
+border: 1px solid #390552;;
+border-radius: 4px;
+transition: all 400ms ease;
+margin-bottom: 5px;
+}
+.card-index .contenido-card a:hover{
+background: #390552;;
+color: #fff;
+}
+
+
+.btn-wsp{
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:35px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover{
+  background: #20ba5a;
+}
+
+
+
+.wrapper {
+  font-family: 'Nunito', sans-serif;
+  line-height: 50px;
+  color: #FFF;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  position: relative;
+  }
+  .img-index {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  }
+  .content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 100px;
+  text-align: center;
+  }
+  .content span{
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 40px;
+  display: block
+  }
+
+  .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: transparent;
+      }
+      .wrapper:hover .overlay {
+      opacity: 1;
+      }
+
+
+      @media only screen and (min-width:460px) and (max-width:750px){
+          .container-card{
+              flex-wrap: wrap;
+          }
+          .card-index{
+              margin: 15px;
+          }
+          .btn-wsp{
+              width:63px;
+              height:63px;
+              line-height: 66px;
+          }
+      }
+
