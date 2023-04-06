@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const file = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf-8');
 const user = JSON.parse(file);
+const db = require('../database/models');
 
 
 const userController = {
@@ -100,6 +101,13 @@ const userController = {
         res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
+    },
+
+    see: (req,res) => {
+        db.Users.findAll()
+        .then((user) => {
+            res.send({user:user})
+        })
     }
 };
 
