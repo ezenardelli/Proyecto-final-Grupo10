@@ -121,7 +121,7 @@ Lista de Retrospectivas:
   </ul>
   
   
-     <h2 id="r2">Retrospectiva SPRINT 5</h2>
+   <h2 id="r2">Retrospectiva SPRINT 5</h2>
 
   ### Start doing:
   <ul>
@@ -149,7 +149,7 @@ Lista de Retrospectivas:
   </ul>
   
   
-      <h2 id="r2">Retrospectiva SPRINT 6</h2>
+  <h2 id="r2">Retrospectiva SPRINT 6</h2>
 
   ### Start doing:
   <ul>
