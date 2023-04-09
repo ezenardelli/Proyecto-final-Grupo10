@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 const pathRoute = path.join(__dirname, "../database/products.json");
 const file = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
 const allProducts = JSON.parse(file);
-
+const db = require('../database/models');
 
 const productController = {
     cart: (req, res) => {
@@ -14,7 +14,10 @@ const productController = {
         res.render('./products/productDetail')
     },
     allProducts: (req, res) => {
-        res.render('./products/allProducts', {allProducts})
+        db.Product.findAll()
+        .then((products) => {
+            res.render('./products/allProducts', {products})
+        })
     },
     createProducts: (req, res) => {
         res.render('./products/productCreate')
@@ -27,17 +30,30 @@ const productController = {
                 oldData: req.body,
             })
         };
-        const newId = allProducts[allProducts.length -1].id +1;
-        const obj = {
-            id: newId,
+        db.Product.create({
+            name: req.body.name,
             image: req.file.filename,
-            ...req.body
-        };
-        allProducts.push(obj);
-        const productJSON = JSON.stringify(allProducts, null, 4);
-        fs.writeFileSync(pathRoute, productJSON );
-
+            description: req.body.description,
+            origin: req.body.origin,
+            destination: req.body.destination,
+            person: req.body.person,
+            category: req.body.category,
+            date: req.body.date,
+            price: req.body.price,
+        });
+        
         res.redirect('/');
+        
+        // const newId = allProducts[allProducts.length -1].id +1;
+        // const obj = {
+        //     id: newId,
+        //     image: req.file.filename,
+        //     ...req.body
+        // };
+        // allProducts.push(obj);
+        // const productJSON = JSON.stringify(allProducts, null, 4);
+        // fs.writeFileSync(pathRoute, productJSON );
+
 
     },
     productId: (req, res) => {
