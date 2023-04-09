@@ -119,3 +119,59 @@ Lista de Retrospectivas:
   <ul>
   <li>No postergar las tareas principiales del proyecto.</li>
   </ul>
+  
+  
+     <h2 id="r2">Retrospectiva SPRINT 5</h2>
+
+  ### Start doing:
+  <ul>
+  <li>Tener un comunicación constante respecto a los temas que nos parecen complejos para no estancarnos con los objetivos y tener mayor productividad.</li>
+  </ul>
+  
+  ### More of:
+  <ul>
+  <li>Aprovechar de forma efectiva las reuniones que tenemos en equipo para avanzar en las actividades más importantes.</li>
+  </ul>
+  
+  ### Keep Doing:
+  <ul>
+  <li>Darnos espacios para hacer las tareas en las cuales nos sentimos con más capacidad.</li>
+  </ul>
+  
+  ### Less of:
+  <ul>
+  <li>No tener una división clara de tareas.</li>
+  </ul>
+  
+  ### Stop Doing:
+  <ul>
+  <li>No tener reuniones semanales.</li>
+  </ul>
+  
+  
+      <h2 id="r2">Retrospectiva SPRINT 6</h2>
+
+  ### Start doing:
+  <ul>
+  <li>Usar nuevas metodologías para resolver problemas puntuales que no nos permitan avanzar con el desarrollo de la actividad.</li>
+  </ul>
+  
+  ### More of:
+  <ul>
+  <li>Mantenernos en constante aprendizaje e investigación para usar de una forma más productiva las herramientas necesarias para el proyecto.</li>
+  </ul>
+  
+  ### Keep Doing:
+  <ul>
+  </ul>
+  
+  ### Less of:
+  <ul>
+  <li>No organizarnos correctamente con el desarrollo de las tareas y ejecutarlas en periodos de tiempo muy cortos.</li>
+  </ul>
+  
+  ### Stop Doing:
+  <ul>
+  <li>Sobrecargar las actividades en una persona.</li>
+  </ul>
+
