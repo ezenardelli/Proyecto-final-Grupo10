@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     
-    const alias = 'Users';
+    const alias = 'User';
 
     const cols = {
         id: {
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         image: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(100),
             allowNull: false
         }
     };
@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define(alias, cols, config);
 
     User.associate = (models) => {
-        User.belongsTo(models.OrderList, {
+        User.hasMany(models.OrderList, {
             as: 'orderList',
             foreignKey: 'user_id'
         })

@@ -29,18 +29,15 @@ const productController = {
                 oldData: req.body,
             })
         };
-        const categoryId = req.body.category;
-        
-        const categoryType = db.Category.findByPk(categoryId);
         
         db.Product.create({
             name: req.body.name,
-            image: req.body.filename,
+            image: req.file.filename,
             description: req.body.description,
             origin: req.body.origin,
             destination: req.body.destination,
             person: req.body.person,
-            category_id: categoryType,
+            category_id: req.body.category,
             date: req.body.date,
             price: req.body.price,
         });
@@ -74,7 +71,7 @@ const productController = {
             origin: req.body.origin || product.origin,
             destination: req.body.destination || product.destination,
             person: req.body.person || product.person,
-            category_id: categoryType || product.category_id,
+            category_id: req.body.category || product.category,
             date: req.body.date || product.date,
             price: req.body.price || product.price,
         }, {
@@ -86,13 +83,13 @@ const productController = {
         res.redirect('/');
     },
     productIdViewDelete: (req, res) => {
-        // const {id} = req.params;
-        // const products = allProducts.find(elem => elem.id === parseInt(id));
-        // if (products){
-        //     res.render('./products/productDelete', {allProducts:[products]});
-        // }else{
-        //     res.send('Product Not Found')
-        // }
+        db.Product.findByPk(req.params.id)
+        .then((product) => {
+            res.render('./products/productDelete', {product:product})
+        })
+        .catch((error) => {
+            res.status(404).send(error)
+        });
     },
     productIdDelete: (req, res) => {
         db.Product.destroy({

@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100),
         },
         description: {
-            type: DataTypes.STRING(200),
+            type: DataTypes.STRING(300),
             allowNull: false
         },
         origin: {
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         price: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false
         },
         category_id: {
