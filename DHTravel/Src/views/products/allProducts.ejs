@@ -3,20 +3,20 @@
 <%- include('../partials/head.ejs') %>
     <body>
         <main>
-            <h2>List of Porducts</h2>
+            <h2>List of Products</h2>
     <ul>
-        <% for(let i=0; i< allProducts.length; i++) {%>
+        
             <li>
                 <article class="card">
-                    <img src="<%= allProducts[i].image %>" alt="">
+                    <img src="<%= products.image %>" alt="">
                     <p>
-                        <a href="/user/<%= allProducts[i].id %>">
-                            Name: <%= allProducts[i].name %>
+                        <a href="/user/<%= products.id %>">
+                            Name: <%= products.name %>
                         </a>
                     </p>
                 </article>
             </li>
-        <%}%>
+        
     </ul>
         </main>
     </body>

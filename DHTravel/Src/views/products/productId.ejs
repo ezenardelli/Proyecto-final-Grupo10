@@ -6,13 +6,12 @@
 </head>
 <body class="body-detail">
     <main class="main-container-detail">
-        <% for(let i=0; i< allProducts.length; i++) {%>
             <section class="detail-box">
                 <div class="incluye">
-                    <h3 class="h3-name-prodId"><%= allProducts[i].name %></h3>
+                    <h3 class="h3-name-prodId"><%= product.name %></h3>
                 </div>
                 <div class="img-paq">
-                    <img src="<%= allProducts[i].image %>" alt="">
+                    <img src="<%= product.image %>" alt="">
                 </div>
                 <section class="paquete">
                     <div class="incluye">
@@ -20,26 +19,26 @@
                     </div>
                     <div class="main-h3">
                         <p class="p-prodId-desc">
-                            Descripción: <%= allProducts[i].description %>
+                            Descripción: <%= product.description %>
                         </p>
                         <p class="p-prodId">
-                            Origen: <%= allProducts[i].origin %>
+                            Origen: <%= product.origin %>
                         </p>
                         <p class="p-prodId">
-                            Destino: <%= allProducts[i].destination %>
+                            Destino: <%= product.destination %>
                         </p>
                         <p class="p-prodId">
-                            Personas: <%= allProducts[i].person %>
+                            Personas: <%= product.person %>
                         </p>
                         <p class="p-prodId">
-                            Categoria: <%= allProducts[i].category %>
+                            Categoria: <%= product.category %>
                         </p>
                         <p class="p-prodId">
-                            Fecha: <%= allProducts[i].date %>
+                            Fecha: <%= product.date %>
                         </p>
                     </div>
                     <div class="precio">
-                        <h3 class="h3-detail-prodId">Precio Total US$ <%= allProducts[i].price %>
+                        <h3 class="h3-detail-prodId">Precio Total US$ <%= product.price %>
                         </h3>
                     </div>
                 </section>
@@ -54,7 +53,6 @@
                 </section>
 
             </section>
-            <% } %>
     </main>
 </body>
 
