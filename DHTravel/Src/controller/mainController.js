@@ -1,6 +1,12 @@
+const db = require('../database/models');
 const mainController = {
-    index: (req, res) => {
-        res.render('./products/index')
+    index: async (req, res) => {
+        try {
+            let products = await db.Product.findAll();
+            return res.render('./products/index', { products });
+        } catch (error) {
+            return res.send(error);
+        };
     },
     contact: () => { 
     },

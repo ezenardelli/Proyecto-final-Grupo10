@@ -22,6 +22,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage});
 
+userRouter.get('/users/listall', userController.getAllUsers);
+userRouter.get('/user/:id', userController.getUser);
+
+userRouter.get('/user/:id/edit', userController.getUserEdit);
+userRouter.put('/user/:id/edit',upload.single('image'), userController.userEdit);
+
+// userRouter.get('/user/:id/delete', userController.getUserEdit);
+userRouter.delete('/user/:id', userController.userDelete);
 
 userRouter.get('/register', guestMiddleware, userController.register);
 userRouter.post('/register',upload.single('userImage'), registerValidation, userController.registerPost);
@@ -29,8 +37,10 @@ userRouter.post('/register',upload.single('userImage'), registerValidation, user
 userRouter.get('/login',guestMiddleware, userController.login);
 userRouter.post('/login',loginValidation, userController.loginPost);
 
-userRouter.get('/profile/',authMiddleware, userController.profile);
+userRouter.get('/profile',authMiddleware, userController.profile);
+userRouter.get('/profile/edit',authMiddleware, userController.getProfile);
+userRouter.put('/profile/:id/edit',authMiddleware,upload.single('image'), userController.profileEdit);
 
-userRouter.get('/logout/', userController.logout);
+userRouter.get('/profile/logout/', userController.logout);
 
 module.exports = userRouter;

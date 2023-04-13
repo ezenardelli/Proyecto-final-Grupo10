@@ -2,7 +2,6 @@ const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
-
 const userController = {
     register: (req, res) => {
         res.render('./users/register')
@@ -14,7 +13,6 @@ const userController = {
 
     registerPost: async (req, res) => {
         try {
-
             const resultValidation = validationResult(req);
             if (resultValidation.errors.length > 0) {
                 res.render('./users/register', {
@@ -87,18 +85,99 @@ const userController = {
         });
     },
 
+    getProfile: (req, res) => {
+        return res.render('./users/profileEdit', {
+            user: req.session.userLogged
+        });
+    },
+
+    profileEdit: async (req, res) => {
+        try{
+            const user = await db.User.findByPk(req.params.id);
+            let image = req.file ? req.file.filename : user.image;
+            await db.User.update({
+                firstName: req.body.firstName || user.firstName,
+                lastName: req.body.lastName || user.lastName,
+                email: req.body.email || user.email,
+                category: req.body.category || user.category,
+                image: image,
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.redirect('/profile');
+
+            } catch (error) {
+            return res.send(error);
+        } 
+    },
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
     },
 
-    getAllUsers: (req, res) => {
-        db.Users.findAll()
-            .then((user) => {
-                res.send({ user: user })
-            })
-    }
+    getAllUsers: async (req, res) => {
+        try {
+            const user = await db.User.findAll();
+            return res.render('./users/allusers', { user });
+        } catch (error) {
+            return res.send(error);
+        };
+    },
+    
+    getUser: async (req, res) => {
+        try {
+            const user = await db.User.findByPk(req.params.id);
+            return res.render('./users/userDetail', { user });
+        } catch (error) {
+            return res.send(error);
+        };
+    },
+
+    getUserEdit: async (req, res) => {
+        try {
+        const user = await db.User.findByPk(req.params.id);
+            return res.render('./users/userEdit', { user});
+        } catch (error) {
+            return res.send(error);
+        };
+
+    },
+
+    userEdit: async (req, res) => {
+        try{
+            const user = await db.User.findByPk(req.params.id);
+            let image = req.file ? req.file.filename : user.image;
+        await db.User.update({
+            firstName: req.body.firstName || user.firstName,
+            lastName: req.body.lastName || user.lastName,
+            email: req.body.email || user.email,
+            category: req.body.category || user.category,
+            image: image
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect('/users/listall');
+
+        } catch (error) {
+        return res.send(error);
+    } 
+    },
+    userDelete: (req, res) => {
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+        
+        res.redirect('/users/listall');
+    },
+
 };
 
 module.exports = userController;

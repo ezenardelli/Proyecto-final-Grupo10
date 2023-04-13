@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <%= product.description %>
+    <title>Product</title>
+    <img src="<%= `/img/productImage/${product.image}` %>" alt="">
+    <h4><%= product.name %></h4>
+    <h4><%= product.description %></h4>
+    <h4><%= product.origin %></h4>
+    <h4><%= product.destination %></h4>
+    <h4><%= product.person %></h4>
+    <h4><%= product.date %></h4>
+    <h4><%= product.price %></h4>
+    <h4><%= product.category_id %></h4>
+    <button>
+        <h4>
+            <a href="/product/<%= product.id %>/edit">
+                <h4>editar datos</h4>
+            </a>
+        </h4>
+    </button>
+		<form action="/product/<%= product.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_method" value="delete"> 
+            <button type="submit">
+                <h4>Eliminar datos</h4>
+            </button>
+        </form>
 </head>
 <body>
     
