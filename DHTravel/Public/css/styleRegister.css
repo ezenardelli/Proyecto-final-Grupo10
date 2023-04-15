@@ -8,7 +8,7 @@ font-family: 'Mako', sans-serif;
 
 
 .body-register {
-    background-image: url(/img/sunset-background.jpg);
+    background-image: url(/img/productImage/sunset-background.jpg);
     background-position-y: center;
     background-position-x: center;
     font-family: Mako, Imprima;
@@ -126,7 +126,7 @@ font-family: 'Mako', sans-serif;
     margin-top: 0%;
     width: 100vw;
     height: 100vh;
-    background-image: url(/img/581591.jpg);
+    background-image: url(/img/productImage/581591.jpg);
     background-position-y: 65%;
     background-position-x: center;
 }

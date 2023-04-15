@@ -1,10 +1,6 @@
 const fs = require('fs');
-const path = require('path');
 const { validationResult } = require('express-validator');
-const pathRoute = path.join(__dirname, "../database/products.json");
-const file = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
-const allProducts = JSON.parse(file);
-
+const db = require('../database/models');
 
 const productController = {
     cart: (req, res) => {
@@ -13,8 +9,14 @@ const productController = {
     detail: (req, res) => {
         res.render('./products/productDetail')
     },
-    allProducts: (req, res) => {
-        res.render('./products/allProducts', {allProducts})
+    allProducts: async (req, res) => {
+        db.Product.findAll()
+        .then((products) => {
+            res.render('./products/allProducts', {products:products})
+        })
+        .catch((error) => {
+            res.status(404).send(error)
+        });
     },
     createProducts: (req, res) => {
         res.render('./products/productCreate')
@@ -27,70 +29,77 @@ const productController = {
                 oldData: req.body,
             })
         };
-        const newId = allProducts[allProducts.length -1].id +1;
-        const obj = {
-            id: newId,
+        
+        db.Product.create({
+            name: req.body.name,
             image: req.file.filename,
-            ...req.body
-        };
-        allProducts.push(obj);
-        const productJSON = JSON.stringify(allProducts, null, 4);
-        fs.writeFileSync(pathRoute, productJSON );
-
-        res.redirect('/');
-
+            description: req.body.description,
+            origin: req.body.origin,
+            destination: req.body.destination,
+            person: req.body.person,
+            category_id: req.body.category,
+            date: req.body.date,
+            price: req.body.price,
+        });
+        
+        res.redirect('/products/listall');
+        
     },
     productId: (req, res) => {
-        const {id} = req.params;
-        const products = allProducts.find(elem => elem.id === parseInt(id));
-        if (products){
-            res.render('./products/productId', {allProducts:[products]});
-        }else{
-            res.send('Product Not Found')
-        }
-    },
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                res.render('./products/productId', {product:product} )
+            }).catch((error) => {
+                res.status(500).send(error)
+            });
+    }, 
     productIdEdit: (req, res) => {
-        const {id} = req.params;
-        const products = allProducts.find(elem => elem.id === parseInt(id));
-        if (products){
-            res.render('./products/productEdit', {allProducts:[products]});
-        }else{
-            res.send('Product Not Found')
-        }
+        db.Product.findByPk(req.params.id)
+        .then((product) => {
+            res.render('./products/productEdit', {product:product})
+        })
+        .catch((error) => {
+            res.status(404).send(error)
+        });
     },
     productIdEditPut: (req, res) => {
-        const {id} = req.params;
-        let product = allProducts.find(elem => elem.id === parseInt(id));
-            product.name = req.body.name || product.name;
-            product.image = req.file.filename || product.image;
-            product.description = req.body.description || product.description;
-            product.origin = req.body.origin || product.origin;
-            product.destination = req.body.destination || product.destination;
-            product.person = req.body.person || product.person;
-            product.category = req.body.category || product.category;
-            product.date = req.body.date || product.date;
-            product.price = req.body.price || product.price;
-        const productPut = allProducts.filter(elem => elem.id !== parseInt(id));
-        productPut.push(product);
-        const productJSON = JSON.stringify(allProducts, null, 4);
-        fs.writeFileSync(pathRoute, productJSON );
-        res.redirect('/');
+        let product = db.Product.findByPk(req.params.id);
+        let image = req.file ? req.file.filename : product.image;
+        db.Product.update({
+            name: req.body.name || product.name,
+            image: image,
+            description: req.body.description || product.description,
+            origin: req.body.origin || product.origin,
+            destination: req.body.destination || product.destination,
+            person: req.body.person || product.person,
+            category_id: req.body.category || product.category,
+            date: req.body.date || product.date,
+            price: req.body.price || product.price,
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.redirect('/products/listall');
     },
     productIdViewDelete: (req, res) => {
-        const {id} = req.params;
-        const products = allProducts.find(elem => elem.id === parseInt(id));
-        if (products){
-            res.render('./products/productDelete', {allProducts:[products]});
-        }else{
-            res.send('Product Not Found')
-        }
+        db.Product.findByPk(req.params.id)
+        .then((product) => {
+            res.render('./products/productDelete', {product:product})
+        })
+        .catch((error) => {
+            res.status(404).send(error)
+        });
     },
     productIdDelete: (req, res) => {
-    const {id} = req.params;
-    let newproducts = allProducts.filter(elem => elem.id !== parseInt(id));
-        const productJSON = JSON.stringify(newproducts, null, 4);
-        fs.writeFileSync(pathRoute, productJSON );
-        res.redirect('/');
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+        
+        res.redirect('/products/listall');
     },
 };
 
