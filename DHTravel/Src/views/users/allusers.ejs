@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <main>
+            <h2>List of Users</h2>
+            <ul>
+                <% for(let i=0; i< user.length; i++) {%>
+                    <li>
+                        <article class="card">
+                            <a href="/user/<%= user[i].id %>">
+                                <img src="<%= `/img/users/${user[i].image}` %>">
+                                <p>
+                                    <h4>first name: <%= user[i].firstName %>
+                                    </h4>
+                                    <h4>last name: <%= user[i].lastName %>
+                                    </h4>
+                                    <h4>email: <%= user[i].email %>
+                                    </h4>
+                                    <h4>category: <%= user[i].category %>
+                                    </h4>
+                                </p>
+                            </a>
+                            <button>
+                                <a href="/user/<%= user[i].id %>">ver detalle</a>
+                            </button>
+                        </article>
+                    </li>
+                <%}%>
+            </ul>
+        </main>
+    </body>
+
+</html>

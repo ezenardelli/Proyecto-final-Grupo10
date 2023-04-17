@@ -1,284 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-    <body>
+    <body class="index-body">
         <%- include("../partials/header.ejs") %>
             <main class="main-index">
+                <div class="div-fondo">
                 <h2 class="titulo-index">Encontrá tu escencia...</h2>
-
+                <div class="container-plus">
                 <div class="container-index">
                     <div class="box-index">
-                        <img class="img-index" src="img/img17.jpg">
-
+                        <img class="img-index" src="img/productImage/img17.jpg">
                     </div>
                     <div class="box-index">
-                        <img class="img-index" src="img/img13.jpg">
-
+                        <img class="img-index" src="img/productImage/img13.jpg">
                     </div>
                     <div class="box-index">
-                        <img class="img-index" src="img/img3.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img4.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img6.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img5.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img7.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img8.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/hindu.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img10.jpg">
-
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/img11.jpg">
-
+                        <img class="img-index" src="img/productImage/img3.jpg">
                     </div>
                 </div>
-
+            </div>
                 <h2 class="titulo-index">...y elegí tu destino</h2>
-
-
+            
                 <div class="container-card">
-
-                    <div class="card-index">
-                        <figure>
-                            <img src="img/brasil.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Brasil</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptate beatae rerum
-                                pariatur eius nemo animi saepe, labore facere sint amet eveniet sed quam dolore, nulla
-                                quis corporis laboriosam suscipit!</p>
-                            <a href="#">Leer Màs</a>
+                    <% for (let i=0; i < 9; i++) { %>
+                        <div class="card-index">
+                            <figure>
+                                <img class="img-index" src="<%= `/img/productImage/${products[i].image}` %>">
+                            </figure>
+                            <div class="contenido-card">
+                                <h3>
+                                    <%= products[i].name %>
+                                </h3>
+                                <p>
+                                    <%= products[i].description %>
+                                </p>
+                                <a href="#">Comprar</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/greciaa.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Grecia</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea nobis aliquam
-                                laboriosam expedita maiores natus velit voluptas eaque dignissimos, minus perferendis
-                                vero quam repudiandae libero fugit aspernatur delectus nemo!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/roma.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Roma</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quibusdam quo at vero
-                                vitae incidunt! Neque eligendi quam perspiciatis dicta similique, fuga voluptas nostrum
-                                recusandae veritatis dolores eum nesciunt et.</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
+                        <% } %>
                 </div>
-                <br>
-
-
-                <div class="container-card">
-
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/img5.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Patagonia</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptate beatae rerum
-                                pariatur eius nemo animi saepe, labore facere sint amet eveniet sed quam dolore, nulla
-                                quis corporis laboriosam suscipit!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/img8.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Mexico</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea nobis aliquam
-                                laboriosam expedita maiores natus velit voluptas eaque dignissimos, minus perferendis
-                                vero quam repudiandae libero fugit aspernatur delectus nemo!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/img7.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>París</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quibusdam quo at vero
-                                vitae incidunt! Neque eligendi quam perspiciatis dicta similique, fuga voluptas nostrum
-                                recusandae veritatis dolores eum nesciunt et.</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="container-card">
-
-                    <div class="card-index">
-                        <figure>
-                            <img src="img/newyork.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>New York</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptate beatae rerum
-                                pariatur eius nemo animi saepe, labore facere sint amet eveniet sed quam dolore, nulla
-                                quis corporis laboriosam suscipit!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/disney.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Disney</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea nobis aliquam
-                                laboriosam expedita maiores natus velit voluptas eaque dignissimos, minus perferendis
-                                vero quam repudiandae libero fugit aspernatur delectus nemo!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/puntacana.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Punta Cana</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quibusdam quo at vero
-                                vitae incidunt! Neque eligendi quam perspiciatis dicta similique, fuga voluptas nostrum
-                                recusandae veritatis dolores eum nesciunt et.</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="container-card">
-
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/brasil.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Brasil</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptate beatae rerum
-                                pariatur eius nemo animi saepe, labore facere sint amet eveniet sed quam dolore, nulla
-                                quis corporis laboriosam suscipit!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/greciaa.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Grecia</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea nobis aliquam
-                                laboriosam expedita maiores natus velit voluptas eaque dignissimos, minus perferendis
-                                vero quam repudiandae libero fugit aspernatur delectus nemo!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/roma.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Roma</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quibusdam quo at vero
-                                vitae incidunt! Neque eligendi quam perspiciatis dicta similique, fuga voluptas nostrum
-                                recusandae veritatis dolores eum nesciunt et.</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="container-card">
-
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/brasil.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Brasil</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptate beatae rerum
-                                pariatur eius nemo animi saepe, labore facere sint amet eveniet sed quam dolore, nulla
-                                quis corporis laboriosam suscipit!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/greciaa.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Grecia</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea nobis aliquam
-                                laboriosam expedita maiores natus velit voluptas eaque dignissimos, minus perferendis
-                                vero quam repudiandae libero fugit aspernatur delectus nemo!</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                    <div class="card-index">
-                        <figure>
-                            <img class="img-index" src="img/roma.jpg">
-                        </figure>
-                        <div class="contenido-card">
-                            <h3>Roma</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quibusdam quo at vero
-                                vitae incidunt! Neque eligendi quam perspiciatis dicta similique, fuga voluptas nostrum
-                                recusandae veritatis dolores eum nesciunt et.</p>
-                            <a href="#">Leer Màs</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-
+                
+            </div>
                 <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp" target="_blank">
                     <i class="fa fa-whatsapp icono"></i>
                 </a>
-
-
                 <div class="wrapper">
-                    <img class="img-index" src="img/img21.jpg">
+                    <img class="img-index" src="img/productImage/img21.jpg">
                     <div class="overlay">
-                        <div class="content"><span>Un lugar nunca es solo ese lugar: ese lugar también se parece un poco
-                                a nosotros.<br> De alguna manera, sin saberlo, lo llevamos adentro y un día, por
-                                casualidad, llegamos allí
-                                <br>(Antonio Tabucchi).<br><br><br> DH TRAVEL</span></div>
+                        <div class="content">
+                            <p class="parrafo-index-final">"Un lugar nunca es solo ese lugar: ese lugar también se parece un poco
+                                a nosotros. De alguna manera, sin saberlo, lo llevamos adentro y un día, por
+                                casualidad, llegamos allí."
+                            </p>
+                                <p class="linea-index-final">(Antonio Tabucchi).</p>
+                               
+                                <p class="linea-index-final">DH TRAVEL</p>
+                                
+                            </div>
                     </div>
                 </div>
             </main>
-
-
     </body>
     <%- include("../partials/footer.ejs") %>
 

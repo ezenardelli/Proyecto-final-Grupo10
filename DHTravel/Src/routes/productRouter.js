@@ -22,18 +22,18 @@ const upload = multer({storage});
 
 productRouter.get('/carrito',authMiddleware, productController.cart);
 productRouter.get('/detalle',authMiddleware, productController.detail);
-productRouter.get('/products', productController.allProducts);
+productRouter.get('/products/listall', productController.allProducts);
 
-productRouter.get('/products/create', productController.createProducts);
-productRouter.post('/products/create',upload.single('image'), productValidations, productController.createProductsPost);
+productRouter.get('/product/create', productController.createProducts);
+productRouter.post('/product/create',upload.single('image'), productValidations, productController.createProductsPost);
 
-productRouter.get('/products/:id', productController.productId);
+productRouter.get('/product/:id', productController.productId);
 
-productRouter.get('/products/:id/edit', productController.productIdEdit);
-productRouter.put('/products/:id/edit',upload.single('image'), productController.productIdEditPut);
+productRouter.get('/product/:id/edit', productController.productIdEdit);
+productRouter.put('/product/:id/edit',upload.single('image'), productController.productIdEditPut);
 
-productRouter.get('/products/:id/delete', productController.productIdViewDelete);
-productRouter.delete('/products/:id/delete', productController.productIdDelete);
+// productRouter.get('/product/:id/delete', productController.productIdViewDelete);
+productRouter.delete('/product/:id', productController.productIdDelete);
 
 module.exports = productRouter;
 

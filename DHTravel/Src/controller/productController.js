@@ -9,7 +9,7 @@ const productController = {
     detail: (req, res) => {
         res.render('./products/productDetail')
     },
-    allProducts: (req, res) => {
+    allProducts: async (req, res) => {
         db.Product.findAll()
         .then((products) => {
             res.render('./products/allProducts', {products:products})
@@ -42,7 +42,7 @@ const productController = {
             price: req.body.price,
         });
         
-        res.redirect('/');
+        res.redirect('/products/listall');
         
     },
     productId: (req, res) => {
@@ -64,9 +64,10 @@ const productController = {
     },
     productIdEditPut: (req, res) => {
         let product = db.Product.findByPk(req.params.id);
+        let image = req.file ? req.file.filename : product.image;
         db.Product.update({
             name: req.body.name || product.name,
-            image: req.body.filename || product.image,
+            image: image,
             description: req.body.description || product.description,
             origin: req.body.origin || product.origin,
             destination: req.body.destination || product.destination,
@@ -80,7 +81,7 @@ const productController = {
             }
         });
 
-        res.redirect('/');
+        res.redirect('/products/listall');
     },
     productIdViewDelete: (req, res) => {
         db.Product.findByPk(req.params.id)
@@ -98,7 +99,7 @@ const productController = {
             }
         });
         
-        res.redirect('/');
+        res.redirect('/products/listall');
     },
 };
 
