@@ -10,40 +10,40 @@
                     </a>
                 </div>
                 <div class="register-formsAdmin">
-                    <form class="formsAdmin" action="/products/<%= allProducts[0].id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form class="formsAdmin" action="/product/<%= product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                         <p>
-                            <input class="data-itemAdmin" type="text" name="name" id="name"
+                            <input class="data-itemAdmin" type="text" name="name" id="name" value="<%= product.name %>"
                                 placeholder="Nombre del producto">
                         </p>
                         <p>
-                            <textarea class="data-itemAdmin-textarea" name="description" id="description" cols="30"
-                                rows="10" placeholder=" Descripcion del producto"></textarea>
+                            <input class="data-itemAdmin" type="text" name="description" id="description" value="<%= product.description %>"
+                                placeholder="Descripcion">
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="file" name="image" multiple>
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="origin" id="origin"
+                            <input class="data-itemAdmin" type="text" name="origin" id="origin" value="<%= product.origin %>"
                                 placeholder="Origen del viaje">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="destination" id="destination"
+                            <input class="data-itemAdmin" type="text" name="destination" id="destination" value="<%= product.destination %>"
                                 placeholder="Destino del viaje">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="person" id="person"
+                            <input class="data-itemAdmin" type="text" name="person" id="person" value="<%= product.person %>"
                                 placeholder="Numero de personas incluidas">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="category" id="category"
+                            <input class="data-itemAdmin" type="text" name="category" id="category" value="<%= product.category_id %>"
                                 placeholder="Categoria">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="text" name="date" id="date"
+                            <input class="data-itemAdmin" type="text" name="date" id="date" value="<%= product.date %>"
                                 placeholder="Fecha de inicio">
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="number" name="price" id="price"
+                            <input class="data-itemAdmin" type="number" name="price" id="price" value="<%= product.price %>"
                                 placeholder="Precio del producto">
                         </p>
                         <div class="botones-form-admin">

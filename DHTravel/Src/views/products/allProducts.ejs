@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs') %>
+
     <body>
         <main>
-            <h2>List of Porducts</h2>
-    <ul>
-        <% for(let i=0; i< allProducts.length; i++) {%>
-            <li>
-                <article class="card">
-                    <img src="<%= allProducts[i].image %>" alt="">
-                    <p>
-                        <a href="/user/<%= allProducts[i].id %>">
-                            Name: <%= allProducts[i].name %>
-                        </a>
-                    </p>
-                </article>
-            </li>
-        <%}%>
-    </ul>
+            <h2>List of Products</h2>
+            <ul>
+                <% for(let i=0; i< products.length; i++) {%>
+                    <li>
+                        <article class="card">
+                            <a href="/product/<%= products[i].id %>">
+                                <img src="<%= `/img/productImage/${products[i].image}` %>">
+                                <p>
+                                    <h4>name: <%= products[i].name %>
+                                    </h4>
+                                    <h4>description: <%= products[i].description %>
+                                    </h4>
+                                    <h4>origin: <%= products[i].origin %>
+                                    </h4>
+                                    <h4>destination: <%= products[i].destination %>
+                                    </h4>
+                                    <h4>person: <%= products[i].person %>
+                                    </h4>
+                                    <h4>date: <%= products[i].date %>
+                                    </h4>
+                                    <h4>price: <%= products[i].price %>
+                                    </h4>
+                                    <h4>category: <%= products[i].category_id %>
+                                    </h4>
+                                </p>
+                            </a>
+                            <button>
+                                <a href="/product/<%= products[i].id %>">ver detalle</a>
+                            </button>
+                        </article>g
+                    </li>
+                <%}%>
+            </ul>
         </main>
     </body>
+
 </html>

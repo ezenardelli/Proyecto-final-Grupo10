@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+    <body>
+        <main class="main-containerAdmin">
+            <section class="data-boxAdmin">
+                <div class="data-logoAdmin">
+                    <img src="/img/users/<%= user.image %> ">
+                </div>
+                <div class="register-formsAdmin">
+                    <form class="formsAdmin" action="/profile/<%= user.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="firstName" id="firstName" value="<%= user.firstName %>"
+                                placeholder="First name">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="lastName" id="lastName" value="<%= user.lastName %>"
+                                placeholder="Last name">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="file" name="image" multiple>
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="email" id="email" value="<%= user.email %>"
+                                placeholder="Email">
+                        </p>
+                        <p>
+                            <input class="data-itemAdmin" type="text" name="category" id="category" value="<%= user.category %>"
+                                placeholder="Category">
+                        </p>
+                        <p>
+                            <button class="submit-b" type="submit">modificar datos</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
