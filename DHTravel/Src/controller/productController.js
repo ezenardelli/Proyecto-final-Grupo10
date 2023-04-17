@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const op = db.Sequelize.Op;
 
 const productController = {
     cart: (req, res) => {

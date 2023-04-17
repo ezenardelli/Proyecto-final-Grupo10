@@ -1,4 +1,6 @@
 const db = require('../database/models');
+const op = db.Sequelize.Op;
+
 const mainController = {
     index: async (req, res) => {
         try {

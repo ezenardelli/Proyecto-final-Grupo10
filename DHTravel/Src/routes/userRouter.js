@@ -28,7 +28,6 @@ userRouter.get('/user/:id', userController.getUser);
 userRouter.get('/user/:id/edit', userController.getUserEdit);
 userRouter.put('/user/:id/edit',upload.single('image'), userController.userEdit);
 
-// userRouter.get('/user/:id/delete', userController.getUserEdit);
 userRouter.delete('/user/:id', userController.userDelete);
 
 userRouter.get('/register', guestMiddleware, userController.register);
