@@ -124,8 +124,8 @@ font-family: 'Mako', sans-serif;
 .main-containerAdmin {
     padding-top: 6%;
     margin-top: 0%;
+    padding-bottom: 6%;
     width: 100vw;
-    height: 100vh;
     background-image: url(/img/productImage/581591.jpg);
     background-position-y: 65%;
     background-position-x: center;
