@@ -8,7 +8,7 @@ module.exports = [
     .isEmail().withMessage('Debes escribir un formato de correo válido'),
     body('category').notEmpty().withMessage('Elija una categoria.'),
     body('password').notEmpty().withMessage('Debe ingresar una contraseña.'),
-    body('userImage').custom((value, { req }) => {
+    body('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedFormat = ['.jpg', '.png'];
         if (!file){

@@ -48,11 +48,11 @@
                     </p>
                     <label for=""></label>
                     <p>
-                        <input class="data-item" type="file" name="userImage" id="userImage"
-                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.userImage : null %>">
-                        <% if (locals.errors && errors.userImage) { %>
+                        <input class="data-item" type="file" name="image" id="image"
+                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
+                        <% if (locals.errors && errors.image) { %>
                             <div class="validation-error">
-                                <%= errors.userImage.msg %>
+                                <%= errors.image.msg %>
                             </div>
                         <% } %>
                     </p>

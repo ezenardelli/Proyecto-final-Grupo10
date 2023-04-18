@@ -40,41 +40,51 @@ const userController = {
                 image: req.file.filename,
                 password: bcrypt.hashSync(req.body.password, 10)
             };
-            await db.User.create(newUser)
+            await db.User.create(newUser);
+
             res.redirect('/login');
 
         } catch (error) {
-            return res.send(error);
+            res.send(error)
+
         }
     },
 
     loginPost: async (req, res) => {
         const { email, password } = req.body;
+        const errors = validationResult(req);
+        if (errors.errors.length > 0) {
+            res.render('./users/login', {
+                errors: errors.mapped(),
+                oldData: req.body,
+            })
+        };
 
         try {
-            const errors = validationResult(req);
             if (!errors.isEmpty()) {
-                return res.render('./users/login', {
-                    errors: errors.array(),
-                    prev: req.body
+                res.render('./users/login', {
+                    'errors': errors.array(),
+                    'prev': req.body
                 });
-            }
-
-            const userLogin = await db.User.findOne({ where: { email: email } });
-            if (userLogin) {
-                const enterPassword = bcrypt.compareSync(password, userLogin.password);
-                if (enterPassword) {
-                    req.session.userLogged = userLogin;
-                    if (req.body.rememberUser) {
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 });
+            } else {
+                const userLogin = await db.User.findOne({ where: { email: email } });
+                if (userLogin) {
+                    const enterPassword = bcrypt.compareSync(password, userLogin.password);
+                    if (enterPassword) {
+                        req.session.userLogged = userLogin;
+                        if (req.body.rememberUser) {
+                            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 });
+                        }
+                        return res.redirect('/');
+                    } else {
+                        return res.send('Correo electrónico o contraseña incorrecta');
                     }
-                    return res.redirect('/');
                 } else {
                     return res.send('Correo electrónico o contraseña incorrecta');
                 }
-            } else {
-                return res.send('Correo electrónico o contraseña incorrecta');
             }
+
+
         } catch (error) {
             return res.send(error);
         }
@@ -93,7 +103,7 @@ const userController = {
     },
 
     profileEdit: async (req, res) => {
-        try{
+        try {
             const user = await db.User.findByPk(req.params.id);
             let image = req.file ? req.file.filename : user.image;
             await db.User.update({
@@ -109,9 +119,9 @@ const userController = {
             });
             res.redirect('/profile');
 
-            } catch (error) {
+        } catch (error) {
             return res.send(error);
-        } 
+        }
     },
 
     logout: (req, res) => {
@@ -128,7 +138,7 @@ const userController = {
             return res.send(error);
         };
     },
-    
+
     getUser: async (req, res) => {
         try {
             const user = await db.User.findByPk(req.params.id);
@@ -140,8 +150,8 @@ const userController = {
 
     getUserEdit: async (req, res) => {
         try {
-        const user = await db.User.findByPk(req.params.id);
-            return res.render('./users/userEdit', { user});
+            const user = await db.User.findByPk(req.params.id);
+            return res.render('./users/userEdit', { user });
         } catch (error) {
             return res.send(error);
         };
@@ -149,25 +159,25 @@ const userController = {
     },
 
     userEdit: async (req, res) => {
-        try{
+        try {
             const user = await db.User.findByPk(req.params.id);
             let image = req.file ? req.file.filename : user.image;
-        await db.User.update({
-            firstName: req.body.firstName || user.firstName,
-            lastName: req.body.lastName || user.lastName,
-            email: req.body.email || user.email,
-            category: req.body.category || user.category,
-            image: image
-        }, {
-            where: {
-                id: req.params.id
-            }
-        });
-        res.redirect('/users/listall');
+            await db.User.update({
+                firstName: req.body.firstName || user.firstName,
+                lastName: req.body.lastName || user.lastName,
+                email: req.body.email || user.email,
+                category: req.body.category || user.category,
+                image: image
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.redirect('/users/listall');
 
         } catch (error) {
-        return res.send(error);
-    } 
+            return res.send(error);
+        }
     },
     userDelete: (req, res) => {
         db.User.destroy({
@@ -175,7 +185,7 @@ const userController = {
                 id: req.params.id
             }
         });
-        
+
         res.redirect('/users/listall');
     },
 
