@@ -31,7 +31,7 @@ userRouter.put('/user/:id/edit',upload.single('image'), userController.userEdit)
 userRouter.delete('/user/:id', userController.userDelete);
 
 userRouter.get('/register', guestMiddleware, userController.register);
-userRouter.post('/register',upload.single('userImage'), registerValidation, userController.registerPost);
+userRouter.post('/register',upload.single('image'), registerValidation, userController.registerPost);
 
 userRouter.get('/login',guestMiddleware, userController.login);
 userRouter.post('/login',loginValidation, userController.loginPost);

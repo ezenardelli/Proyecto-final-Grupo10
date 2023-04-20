@@ -13,42 +13,44 @@ const userController = {
     },
 
     registerPost: async (req, res) => {
+
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('./users/register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
+    
         try {
-            const resultValidation = validationResult(req);
-            if (resultValidation.errors.length > 0) {
-                res.render('./users/register', {
-                    errors: resultValidation.mapped(),
-                    oldData: req.body,
-                })
-            };
             if (!resultValidation.isEmpty()) {
-                res.render('./users/register', {
-                    'errors': resultValidation.array(),
-                    'prev': req.body
+                return res.render('./users/register', {
+                    errors: resultValidation.array(),
+                    prev: req.body
                 });
-            };
-
-            const userExist = await db.User.findOne({ where: { email: req.body.email } })
-            if (userExist) {
-                return res.send('El usuario ya se encuentra registrado');
+            } else {
+                const userExist = await db.User.findOne({ where: { email: req.body.email } })
+                if (userExist) {
+                    return res.send('El usuario ya se encuentra registrado');
+                } else {
+                    const newUser = {
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        email: req.body.email,
+                        category: req.body.category,
+                        image: req.file.filename,
+                        password: bcrypt.hashSync(req.body.password, 10)
+                    };
+                    await db.User.create(newUser);
+    
+                    return res.redirect('/login');
+                }
             }
-            const newUser = {
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                category: req.body.category,
-                image: req.file.filename,
-                password: bcrypt.hashSync(req.body.password, 10)
-            };
-            await db.User.create(newUser);
-
-            res.redirect('/login');
-
         } catch (error) {
-            res.send(error)
-
+            return res.send(error);
         }
     },
+    
 
     loginPost: async (req, res) => {
         const { email, password } = req.body;
