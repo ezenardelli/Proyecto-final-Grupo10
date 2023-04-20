@@ -5,17 +5,18 @@ const db = require('../database/models');
 module.exports = [
     body('firstName').notEmpty().withMessage('Debe completar con su nombre/s.')
     .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres.'),
-    body('lastName').notEmpty().withMessage('Debe completar con su apellido/s.'),
+    body('lastName').notEmpty().withMessage('Debe completar con su apellido/s.')
+    .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres.'),
     body('email').notEmpty().withMessage('Debe especificar un email valido.').bail()
-    .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    // .custom(async (value) => {
-    //     const user = await db.User.findOne({where: {email : value}});
-    //     if (user) {
-    //         return Promise.reject('El email ya se encuentra en uso');
-    //     } else {
-    //         return Promise.resolve();
-    //     }
-    // }),
+    .isEmail().withMessage('Debes escribir un formato de correo válido')
+    .custom(async (value) => {
+        const user = await db.User.findOne({where: {email : value}});
+        if (user) {
+            return Promise.reject('El email ya se encuentra en uso');
+        } else {
+            return Promise.resolve();
+        }
+    }),
     body('category').notEmpty().withMessage('Elija una categoria.'),
     body('password').notEmpty().withMessage('Debe ingresar una contraseña.')
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres.')

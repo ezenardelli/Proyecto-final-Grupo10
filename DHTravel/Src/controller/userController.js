@@ -29,10 +29,10 @@ const userController = {
                     prev: req.body
                 });
             } else {
-                const userExist = await db.User.findOne({ where: { email: req.body.email } })
-                if (userExist) {
-                    return res.send('El usuario ya se encuentra registrado');
-                } else {
+                // const userExist = await db.User.findOne({ where: { email: req.body.email } })
+                // if (userExist) {
+                //     return res.send('El usuario ya se encuentra registrado');
+                // } else {
                     const newUser = {
                         firstName: req.body.firstName,
                         lastName: req.body.lastName,
@@ -45,7 +45,7 @@ const userController = {
     
                     return res.redirect('/login');
                 }
-            }
+            // }
         } catch (error) {
             return res.send(error);
         }
@@ -56,7 +56,7 @@ const userController = {
         const { email, password } = req.body;
         const errors = validationResult(req);
         if (errors.errors.length > 0) {
-            res.render('./users/login', {
+            return res.render('./users/login', {
                 errors: errors.mapped(),
                 oldData: req.body,
             })
@@ -64,7 +64,7 @@ const userController = {
 
         try {
             if (!errors.isEmpty()) {
-                res.render('./users/login', {
+                return res.render('./users/login', {
                     'errors': errors.array(),
                     'prev': req.body
                 });

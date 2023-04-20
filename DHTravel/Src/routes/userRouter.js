@@ -31,14 +31,14 @@ userRouter.put('/user/:id/edit',upload.single('image'), userController.userEdit)
 userRouter.delete('/user/:id', userController.userDelete);
 
 userRouter.get('/register', guestMiddleware, userController.register);
-userRouter.post('/register',upload.single('image'), registerValidation, userController.registerPost);
+userRouter.post('/register', upload.single('image'), registerValidation, userController.registerPost);
 
 userRouter.get('/login',guestMiddleware, userController.login);
 userRouter.post('/login',loginValidation, userController.loginPost);
 
 userRouter.get('/profile',authMiddleware, userController.profile);
 userRouter.get('/profile/edit',authMiddleware, userController.getProfile);
-userRouter.put('/profile/:id/edit',authMiddleware,upload.single('image'), userController.profileEdit);
+userRouter.put('/profile/:id/edit', upload.single('image'), authMiddleware, userController.profileEdit);
 
 userRouter.get('/profile/logout/', userController.logout);
 
