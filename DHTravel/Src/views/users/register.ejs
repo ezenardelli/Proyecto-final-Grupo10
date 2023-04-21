@@ -28,6 +28,7 @@
                                 <%= errors.lastName.msg %>
                             </div>
                         <% } %>
+                        <div class="lastName-error"></div>
                     </p>
                     <p>
                         <input class="data-item" type="email" name="email" id="email"
@@ -37,6 +38,7 @@
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
+                        <div class="email-error"></div>
                     </p>
                     <p>
                         <input class="data-item" type="text" name="category" id="category"
@@ -46,6 +48,7 @@
                                 <%= errors.category.msg %>
                             </div>
                         <% } %>
+                        <div class="category-error"></div>
                     </p>
                     <label for=""></label>
                     <p>
@@ -56,6 +59,7 @@
                                 <%= errors.image.msg %>
                             </div>
                         <% } %>
+                        <div class="image-error"></div>
                     </p>
                     </label>
                     <p>
@@ -66,6 +70,7 @@
                                 <%= errors.password.msg %>
                             </div>
                         <% } %>
+                        <div class="password-error"></div>
                     </p>
                     <!--<p>
                         <label for="no-robot"></label>
@@ -93,6 +98,7 @@
                 </a>
             </div>
         </section>
+        <script src="/js/registerValidation.js"></script>
     </main>
     <%- include("../partials/footer.ejs") %>
 </body>
