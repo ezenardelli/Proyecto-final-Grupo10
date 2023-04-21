@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head'); %>
-<body>
-	<%- include('../partials/header'); %>
-    <div class="">
-		<div class="">
-			<div class="">
-				<h2>Bienvenido <%= user.firstName %>!</h2>
+	<body class="body-productId">
+		<%- include('../partials/header'); %>
+		<main class="main-container-detail">
+
+		
+			<section class="productId-box">
+				<h4 class="name-productId">
+					¡Bienvenido <%= user.firstName %>!
+				</h4>
+				<div class="img-paq">
 				<img src="/img/users/<%= user.image %> ">
-				<div class="">
-					<%= user.email %>
-					<h4><a href="/profile/edit">editar datos</a></h4>
-				</div>
 			</div>
-		</div>
-	</div>
+			<h4 class="h4-productId">
+				<span>Email:</span>
+				<%= user.email %>
+			</h4>
+			<button class="botton-productId">
+				<h4><a href="/profile/edit"><h4 class="h4-botton">Editar datos</a></h4>
+				</button>
+			
+			</section>
+
+	</main>
     <%- include('../partials/footer'); %>
 </body>
 </html>
