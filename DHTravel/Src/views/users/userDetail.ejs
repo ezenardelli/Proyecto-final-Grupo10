@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head'); %>
-<body>
-	
-    <div class="">
-		<div class="">
-			<div class="">
-				<h2><%= user.firstName %></h2>
-				<img src="/img/users/<%= user.image %> ">
-				<div class="">
-					<%= user.email %> 
-					<button><h4><a href="/user/<%= user.id %>/edit"><h4>editar datos</h4></a></h4></button>
-					<form action="/user/<%= user.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="_method" value="delete"> 
-                        <button type="submit"><h4>Eliminar datos</h4></button>
-                    </form>
+<%- include('../partials/head'); %>
+
+	<body class="body-productId">
+		<main class="main-container-detail">
+			<section class="productId-box">
+
+				<h4 class="name-productId">
+					<%= user.firstName %>
+				</h4>
+				<div class="img-paq">
+
+					<img src="/img/users/<%= user.image %> ">
 				</div>
+				<h4 class="h4-productId">
+					<span>Email:</span>
+					<%= user.email %>
+				</h4>
+				<div class="botones-productId">
+					<div class="div-botones">
+
+						<button class="botton-productId">
+							<h4><a href="/user/<%= user.id %>/edit">
+								<h4 class="h4-botton">Editar Datos</h4>
+								</a></h4>
+						</button>
+					</div>
+					<div class="div-botones">
+
+						<form action="/user/<%= user.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
+							<input type="hidden" name="_method" value="delete">
+							<button class="botton-productId" type="submit">
+								<h4 class="h4-botton">Eliminar Datos</h4>
+							</button>
+						</form>
+					</div>
+
 				</div>
-			</div>
-		</div>
-	</div>
-    
-</body>
+			</section>
+		</main>
+
+
+
+	</body>
+
 </html>

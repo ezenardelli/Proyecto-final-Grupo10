@@ -18,6 +18,7 @@
                                 <%= errors.firstName.msg %>
                             </div>
                         <% } %>
+                        <div class="firstName-error"></div>
                     </p>
                     <p>
                         <input class="data-item" type="text" name="lastName" id="lastName"
@@ -48,11 +49,11 @@
                     </p>
                     <label for=""></label>
                     <p>
-                        <input class="data-item" type="file" name="userImage" id="userImage"
-                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.userImage : null %>">
-                        <% if (locals.errors && errors.userImage) { %>
+                        <input class="data-item" type="file" name="image" id="image"
+                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
+                        <% if (locals.errors && errors.image) { %>
                             <div class="validation-error">
-                                <%= errors.userImage.msg %>
+                                <%= errors.image.msg %>
                             </div>
                         <% } %>
                     </p>
@@ -60,6 +61,11 @@
                     <p>
                         <input class="data-item" type="password" name="password" id="password"
                         placeholder="Contraseña">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="validation-error">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
                     </p>
                     <!--<p>
                         <label for="no-robot"></label>

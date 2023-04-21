@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const op = db.Sequelize.Op;
 
 const productController = {
     cart: (req, res) => {
@@ -10,7 +11,7 @@ const productController = {
         res.render('./products/productDetail')
     },
     allProducts: async (req, res) => {
-        db.Product.findAll()
+        await db.Product.findAll()
         .then((products) => {
             res.render('./products/allProducts', {products:products})
         })
@@ -21,16 +22,17 @@ const productController = {
     createProducts: (req, res) => {
         res.render('./products/productCreate')
     },
-    createProductsPost: (req, res) => {
-        const resultValidation = validationResult(req);
+    createProductsPost: async (req, res) => {
+        try{
+            const resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0) {
             res.render('./products/productCreate', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
             })
-        };
+        }else{
         
-        db.Product.create({
+        await db.Product.create({
             name: req.body.name,
             image: req.file.filename,
             description: req.body.description,
@@ -43,6 +45,10 @@ const productController = {
         });
         
         res.redirect('/products/listall');
+    }
+        } catch (error) {
+            res.send(error)
+        }
         
     },
     productId: (req, res) => {
