@@ -18,6 +18,7 @@
                                 <%= errors.firstName.msg %>
                             </div>
                         <% } %>
+                        <div class="firstName-error"></div>
                     </p>
                     <p>
                         <input class="data-item" type="text" name="lastName" id="lastName"
@@ -27,6 +28,7 @@
                                 <%= errors.lastName.msg %>
                             </div>
                         <% } %>
+                        <div class="lastName-error"></div>
                     </p>
                     <p>
                         <input class="data-item" type="email" name="email" id="email"
@@ -36,6 +38,7 @@
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
+                        <div class="email-error"></div>
                     </p>
                     <p>
                         <input class="data-item" type="text" name="category" id="category"
@@ -45,21 +48,29 @@
                                 <%= errors.category.msg %>
                             </div>
                         <% } %>
+                        <div class="category-error"></div>
                     </p>
                     <label for=""></label>
                     <p>
-                        <input class="data-item" type="file" name="userImage" id="userImage"
-                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.userImage : null %>">
-                        <% if (locals.errors && errors.userImage) { %>
+                        <input class="data-item" type="file" name="image" id="image"
+                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
+                        <% if (locals.errors && errors.image) { %>
                             <div class="validation-error">
-                                <%= errors.userImage.msg %>
+                                <%= errors.image.msg %>
                             </div>
                         <% } %>
+                        <div class="image-error"></div>
                     </p>
                     </label>
                     <p>
                         <input class="data-item" type="password" name="password" id="password"
                         placeholder="Contraseña">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="validation-error">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                        <div class="password-error"></div>
                     </p>
                     <!--<p>
                         <label for="no-robot"></label>
@@ -87,6 +98,7 @@
                 </a>
             </div>
         </section>
+        <script src="/js/registerValidation.js"></script>
     </main>
     <%- include("../partials/footer.ejs") %>
 </body>

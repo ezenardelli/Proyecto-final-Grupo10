@@ -25,14 +25,13 @@ productRouter.get('/detalle',authMiddleware, productController.detail);
 productRouter.get('/products/listall', productController.allProducts);
 
 productRouter.get('/product/create', productController.createProducts);
-productRouter.post('/product/create',upload.single('image'), productValidations, productController.createProductsPost);
+productRouter.post('/product/create', upload.single('image'), productValidations, productController.createProductsPost);
 
 productRouter.get('/product/:id', productController.productId);
 
 productRouter.get('/product/:id/edit', productController.productIdEdit);
 productRouter.put('/product/:id/edit',upload.single('image'), productController.productIdEditPut);
 
-// productRouter.get('/product/:id/delete', productController.productIdViewDelete);
 productRouter.delete('/product/:id', productController.productIdDelete);
 
 module.exports = productRouter;

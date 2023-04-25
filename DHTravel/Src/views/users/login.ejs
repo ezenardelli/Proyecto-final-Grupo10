@@ -11,13 +11,14 @@
             <div class="register-forms">
                 <form class="forms" action="/login" method="post">
                     <p>
-                        <input class="data-item" type="email" name="email" id="email"
+                        <input class="data-item" type="text" name="email" id="email"
                         placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
                             <div class="validation-error">
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
+                        <div class="email-error"></div>
                         <p>
                             <a class="letras" href="#">Recuperá tu cuenta</a>
                         </p>
@@ -25,6 +26,12 @@
                     <p>
                         <input class="data-item" type="password" name="password" id="password" 
                             placeholder="Contraseña">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="validation-error">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>
+                            <div class="password-error"></div>
                             <p>
                                 <a href="#" target="_blank">Olvidaste tu contraseña</a>
                             </p>
@@ -51,7 +58,9 @@
                 <a class="fi2" href="#"><i class=" main-icon fa-brands fa-google"></i></a>
             </div>
         </section>
+        <script src="/js/loginValidation.js"></script>
     </main>
     <%- include("../partials/footer.ejs") %>
+        <script src="/js/script.js"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ CREATE TABLE product (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(45) NOT NULL,
   image VARCHAR(100) NOT NULL, 
-  description VARCHAR(45) NOT NULL, 
+  description VARCHAR(200) NOT NULL, 
   origin VARCHAR(45) NOT NULL, 
   destination VARCHAR(45) NOT NULL, 
   person VARCHAR(45) NOT NULL, 

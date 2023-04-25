@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    
-</head>
-<body class="body-detail">
-    <img src="<%= `/img/productImage/${product.image}` %>" alt="">
-    <h4><%= product.name %></h4>
-    <h4><%= product.description %></h4>
-    <h4><%= product.origin %></h4>
-    <h4><%= product.destination %></h4>
-    <h4><%= product.person %></h4>
-    <h4><%= product.date %></h4>
-    <h4><%= product.price %></h4>
-    <h4><%= product.category_id %></h4>
-    <button>
-        <h4>
-            <a href="/product/<%= product.id %>/edit">
-                <h4>editar datos</h4>
-            </a>
-        </h4>
-    </button>
-		<form action="/product/<%= product.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="_method" value="delete"> 
-            <button type="submit">
-                <h4>Eliminar datos</h4>
-            </button>
-        </form>
-    
-    </main>
-</body>
+<%- include("../partials/head.ejs") %>
+    <body class="body-productId">
+        <%- include("../partials/header.ejs") %>
+            <main class="main-container-detail">
+                <section class="productId-box">
+                    <div class="img-paq">
+                        <img src="<%= `/img/productImage/${product.image}` %>" alt="">
+                    </div>
+                    <h4 class="name-productId">
+                        <%= product.name %>
+                    </h4 >
+                    <h4 class="description-productId">
+                        "<%= product.description %>"
+                    </h4>
+                    <h4 class="h4-productId">
+                        <span>Origen:</span> <%= product.origin %>
+                    </h4>
+                    <h4 class="h4-productId">
+                        <span>Destino:</span> <%= product.destination %>
+                    </h4>
+                    <h4 class="h4-productId">
+                        <span>Cantidad de Personas:</span>  <%= product.person %>
+                    </h4>
+                    <h4 class="h4-productId">
+                        <span>Fecha:</span> <%= product.date %>
+                    </h4>
+                    <h4 class="h4-productId">
+                        <span>Categoría:</span> <%= product.category_id %>
+                    </h4>
+                    <h4 class="price-productId">
+                        <%= product.price %> USD
+                    </h4>
+                    <div class="botones-productId">
+                        <div class="div-botones">
+                    <button class="botton-productId">
+                        <h4>
+                            <a href="/product/<%= product.id %>/edit">
+                                <h4 class="h4-botton">Editar datos</h4>
+                            </a>
+                        </h4>
+                    </button>
+                </div>
+                        <div class="div-botones">
+                    <form action="/product/<%= product.id %>/?_method=DELETE" method="POST"
+                        enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="delete">
+                        <button class="botton-productId" type="submit">
+                            <h4 class="h4-botton">Eliminar datos</h4>
+                        </button>
+                    </form>
+                </div>
+                    </div>
+                </section>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
 
 </html>

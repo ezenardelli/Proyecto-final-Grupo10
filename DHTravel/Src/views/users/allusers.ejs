@@ -2,29 +2,31 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
 
-    <body>
-        <main>
-            <h2>List of Users</h2>
-            <ul>
+<body class="body-allProducts">
+    <main>
+        <h2 class="titulo-h2">List of Products</h2>
+        <ul>
                 <% for(let i=0; i< user.length; i++) {%>
                     <li>
-                        <article class="card">
+                        <article class="card-allProducts">
                             <a href="/user/<%= user[i].id %>">
                                 <img src="<%= `/img/users/${user[i].image}` %>">
                                 <p>
-                                    <h4>first name: <%= user[i].firstName %>
+                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Nombre:</span> <%= user[i].firstName %>
                                     </h4>
-                                    <h4>last name: <%= user[i].lastName %>
+                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Apellido:</span> <%= user[i].lastName %>
                                     </h4>
-                                    <h4>email: <%= user[i].email %>
+                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Email:</span> <%= user[i].email %>
                                     </h4>
-                                    <h4>category: <%= user[i].category %>
+                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Categoria:</span> <%= user[i].category %>
                                     </h4>
                                 </p>
                             </a>
-                            <button>
-                                <a href="/user/<%= user[i].id %>">ver detalle</a>
-                            </button>
+                            <div class="contenedor-button">
+                                <button class="button-allProducts">
+                                    <a class="letra-button" href="/user/<%= user[i].id %>">Ver detalle</a>
+                                </button>
+                            </div>
                         </article>
                     </li>
                 <%}%>

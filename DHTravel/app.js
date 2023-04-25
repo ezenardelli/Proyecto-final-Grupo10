@@ -13,6 +13,8 @@ const adminRouter = require('./src/routes/adminRouter.js');
 
 const loggedMiddleware = require('./src/middlewares/loggedMiddleware');
 
+const connectConfig = require('./src/database/config/testConnection')
+
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -32,8 +34,12 @@ app.use( express.static(publicPath) )
 const port = process.env.PORT || 3031;
 
 app.listen(port, () => {
-    console.log(`servidor escuchando en puerto ${port}`);
-}); 
+    connectConfig.connect((error) =>{
+        if(error) throw error;
+        console.log('Connect to database dhtravel');
+    });
+    console.log(`Server listening on port ${port}`); 
+});
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/src/views');
