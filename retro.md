@@ -174,4 +174,29 @@ Lista de Retrospectivas:
   <ul>
   <li>Sobrecargar las actividades en una persona.</li>
   </ul>
+  
+  <h2 id="r2">Retrospectiva SPRINT 7</h2>
+Start doing:
+  <ul>
+  <li>Hacer más uso de herramientas de colaboración en línea para optimizar el trabajo en equipo.</li>
+  <li>Tomar en cuenta la opinión de los usuarios o clientes potenciales en las decisiones de diseño.</li>
+  </ul>
+More of:
+  <ul>
+  <li>Compartir conocimientos y habilidades entre los miembros del equipo.</li>
+  <li>Documentar el trabajo y las decisiones tomadas durante el proyecto.</li>
+  </ul>
+Keep Doing:
+  <ul>
+  <li>Mantener la comunicación abierta y constante.</li>
+  <li>Respetar las ideas y opiniones de todos los miembros del equipo.</li>
+  </ul>
+Less of:
+  <ul>
+  <li>No realizar revisiones de calidad antes de enviar el sprint.</li>
+  </ul>
+Stop Doing:
+  <ul>
+  <li>No tomar en cuenta la retroalimentación del equipo y las opiniones externas.</li>
+  </ul>
 
