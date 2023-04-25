@@ -19,6 +19,7 @@
                                     <%= errors.name.msg %>
                                 </div>
                             <% } %>
+                            <div class="name-error"></div>
                         </p>
                         <p>
                             <input type="text" class="data-itemAdmin-textarea" name="description" id="description" cols="30"
@@ -29,14 +30,16 @@
                                     <%= errors.description.msg %>
                                 </div>
                             <% } %>
+                            <div class="description-error"></div>
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="file" name="image" value="<%= locals.oldData ? oldData.image : null %>">
+                            <input class="data-itemAdmin" type="file" name="image" id='image' placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
                             <% if (locals.errors && errors.image) { %>
                                 <div class="validation-error">
                                     <%= errors.image.msg %>
                                 </div>
                             <% } %>
+                            <div class="image-error"></div>
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="text" name="origin" id="origin" 
@@ -46,6 +49,7 @@
                                     <%= errors.origin.msg %>
                                 </div>
                             <% } %>
+                            <div class="origin-error"></div>
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="text" name="destination" id="destination" 
@@ -55,6 +59,7 @@
                                         <%= errors.destination.msg %>
                                     </div>
                                 <% } %>
+                                <div class="destination-error"></div>
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="text" name="person" id="person" 
@@ -64,6 +69,7 @@
                                         <%= errors.person.msg %>
                                     </div>
                                 <% } %>
+                                <div class="person-error"></div>
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="text" name="category" id="category"
@@ -73,6 +79,7 @@
                                         <%= errors.category.msg %>
                                     </div>
                                 <% } %>
+                                <div class="category-error"></div>
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="text" name="date" id="date"
@@ -82,6 +89,7 @@
                                         <%= errors.date.msg %>
                                     </div>
                                 <% } %>
+                                <div class="date-error"></div>
                         </p>
                         <p>
                             <input class="data-itemAdmin" type="text" name="price" id="price"
@@ -91,6 +99,7 @@
                                         <%= errors.price.msg %>
                                     </div>
                                 <% } %>
+                                <div class="price-error"></div>
                         </p>
                         <div class="botones-form-admin">
                         <p>
@@ -100,9 +109,11 @@
                             <button class="submit-b" type="reset">Eliminar datos</button>
                         </p>
                     </div>
+                    <script src="/js/productValidate.js"></script>
                     </form>
                 </div>
             </section>
+            
         </main>
     </body>
 </html>
