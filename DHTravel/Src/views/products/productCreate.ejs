@@ -33,7 +33,7 @@
                             <div class="description-error"></div>
                         </p>
                         <p>
-                            <input class="data-itemAdmin" type="file" name="image" value="<%= locals.oldData ? oldData.image : null %>">
+                            <input class="data-itemAdmin" type="file" name="image" id='image' placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
                             <% if (locals.errors && errors.image) { %>
                                 <div class="validation-error">
                                     <%= errors.image.msg %>
@@ -109,9 +109,11 @@
                             <button class="submit-b" type="reset">Eliminar datos</button>
                         </p>
                     </div>
+                    <script src="/js/productValidate.js"></script>
                     </form>
                 </div>
             </section>
+            
         </main>
     </body>
 </html>

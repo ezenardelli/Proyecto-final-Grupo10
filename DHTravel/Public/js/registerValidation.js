@@ -1,8 +1,7 @@
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
     let form = document.querySelector("form.forms");
-
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    
+    form.addEventListener('submit', (e) => {
         
         let errors = [];
 
@@ -35,19 +34,24 @@ window.addEventListener("load", () => {
             let error = document.querySelector('.lastName-error');
             error.innerHTML = '';
         };
-
-        // let email = document.querySelector('#email');
-        // if (email.value == '') {
-        //     errors.push('Debe completar el campo con su correo electronico.');
-        // } else if (email.value.length ) {
-        //     errors.push('Debe ingresar un correo valido.');
-        // } else if (correo en la db) {
-        //     rtwe
+        
+        let email = document.querySelector('#email');
+        let emailError = [];
+        if (email.value == '') {
+            emailError.push('Debe completar el campo con su correo electronico.');
+        } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+            emailErrors.push('Debe ingresar un formato de correo valido.');
+        };
+        // } else if (dbEmail) {
+        //     errors.push('El correo electronico ya se encuentra en uso.');
         // };            
-        // if (errors.length > 0) {
-        //     let error = document.querySelector('.email-error');
-        //     error.innerHTML +=  ;
-        // };
+        if (emailError.length > 0) {
+            let error = document.querySelector('.email-error');
+            error.innerHTML = `<h3 class="error-message">${emailError[0]}</h3>`;
+        } else {
+            let error = document.querySelector('.email-error');
+            error.innerHTML = '';
+        };
 
         let category = document.querySelector('#category');
         errors = [];
@@ -62,11 +66,12 @@ window.addEventListener("load", () => {
             error.innerHTML = '';
         };
 
-        let image = document.querySelector('#image');
+        let image = document.getElementById('image');
         errors = [];
+        let imageExtensions = ['.png', '.gif', '.jpeg', '.jpg'];
         if (image.value == '') {
             errors.push('Debe seleccionar una imagen de perfil.');
-        } else if (image.value.length < 8) {
+        } else if (image.value.length > 0 && !imageExtensions.find(img => image.value.includes(img))) {
             errors.push('Las extenciones permitidas son .JPG, .JPEG, .PNG, .GIF .');
         };           
         if (errors.length > 0) {
@@ -83,7 +88,7 @@ window.addEventListener("load", () => {
             errors.push('Debe completar el campo con su contraseña.');
         } else if (password.value.length < 8) {
             errors.push('La contraseña debe contener al menos 8 caracteres.');
-        }  else if (password.value.length < 8) {
+        }  else if (!password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/)) {
             errors.push('Debe contener una letra minuscula, una mayuscula, un numero y un caracter especial.');
         };            
         if (errors.length > 0) {
@@ -94,12 +99,10 @@ window.addEventListener("load", () => {
             error.innerHTML = '';
         };
         
-        
-        
         if (errors.length > 0) {
-            
+            e.preventDefault();
         } else {
-            
+            form.submit();
         }
     
     })

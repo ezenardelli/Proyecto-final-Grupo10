@@ -18,6 +18,7 @@
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
+                        <div class="email-error"></div>
                         <p>
                             <a class="letras" href="#">Recuperá tu cuenta</a>
                         </p>
@@ -30,6 +31,7 @@
                                     <%= errors.password.msg %>
                                 </div>
                             <% } %>
+                            <div class="password-error"></div>
                             <p>
                                 <a href="#" target="_blank">Olvidaste tu contraseña</a>
                             </p>
@@ -56,6 +58,7 @@
                 <a class="fi2" href="#"><i class=" main-icon fa-brands fa-google"></i></a>
             </div>
         </section>
+        <script src="/js/loginValidation.js"></script>
     </main>
     <%- include("../partials/footer.ejs") %>
 </body>
