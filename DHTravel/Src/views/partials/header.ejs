@@ -11,7 +11,8 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
-        <div class="login-container">
+    </section>
+    <section class="login-section">
             <nav class="login">
                 <ul class="ul-li" type="none">
                     <% if (locals.userLogged) { %>
@@ -45,17 +46,17 @@
                     <% } else { %>
                     <div class="li-item">
                         <li>
-                            <a href="/login">Ingresa</a>
+                            <a href="/login" class="btn-hover">Ingresa</a>
                         </li>
                     </div>
                     <div class="li-item">
                         <li>
-                            <a href="/register">Registrarte</a>
+                            <a href="/register" class="btn-hover">Registrarte</a>
                         </li>
                     </div>
                     <div class="li-item">
                         <li>
-                            <a href="/carrito">
+                            <a href="/carrito" class="btn-hover">
                                 <i class="fa-solid fa-cart-flatbed"></i>
                             </a>
                         </li>
@@ -63,6 +64,5 @@
                     <% } %>
                 </ul>
             </nav>
-        </div>
     </section>
 </header>

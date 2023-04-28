@@ -1,7 +1,10 @@
+const db = require('../database/models');
+const op = db.Sequelize.Op;
+
 const adminController ={
-    admin: (req, res) =>{
-        res.render('./')
-    } 
+    notPermission: (req, res) => {
+        return res.render('./main/youShallNotPass')
+    }
 };
 
 module.exports = adminController;

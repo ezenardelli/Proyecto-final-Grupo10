@@ -1,0 +1,51 @@
+<header>
+    <section class="top-header">
+        <div class="">
+            <ul>
+                <li>
+                    <a href="/users/listall">Users</a>
+                </li>
+                <li>
+                    <a href="/products/listall">Products</a>
+                </li>
+                <li>
+                    <a href="/product/create">Create product</a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input class="input-searcher" type="text" placeholder="Buscar producto">
+            <button class="icon-a">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="login-container">
+            <nav class="login">
+                <ul class="ul-li" type="none">
+                    <% if (locals.userLogged) { %>
+                    <div class="li-item">
+                        <li>
+                            <a href="/profile">
+                                <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;"> 
+                            </a>
+                        </li>
+                    </div>
+                    <div class="li-item">
+                        <h4><a href="/profile">Bienvenido Admin!</a></h4>
+                    </div>
+                    <div class="li-item">
+                        <li>
+                            <a href="/profile/logout">Logout</a>
+                        </li>
+                    </div>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</header>
