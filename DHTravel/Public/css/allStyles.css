@@ -20,8 +20,8 @@ header {
     width: 100vw;
     height: 10vh;
     display: flex;
-    justify-content: center;
-} 
+    justify-content: flex-start;
+}
 
 .logo-container {
     width: 30%;
@@ -30,10 +30,10 @@ header {
 }
 
 .login-section {
-    padding-top:-100px;
+    padding-top: -100px;
 }
 
-.login{
+.login {
     width: 100vw;
 }
 
@@ -42,9 +42,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-} 
+}
 
-.li-item{
+.li-item {
     width: 33%;
 }
 
@@ -63,33 +63,58 @@ header {
     margin: 10% 10%;
 }
 
-.search-bar {
-    margin-top: 20px;
-    width: 60%;
+.search-box {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 20px 0;
+}
+
+.input-searcher[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #4b426b;
+    font-size: 16px;
+    color: rgb(60, 63, 95);
+    transition: width 0.5s ease;
+}
+
+.input-searcher[type="text"]:focus {
+    outline: none;
+    width: 60%;
+    transition: 1.2s;
+}
+
+.icon-a {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.fa-search {
+    color: #ccc;
+}
+
+.input-searcher[type="text"]:focus+button .fa-search {
+    color: #ccc;
 }
 
 .input-searcher {
     width: 50vw;
     height: 30px;
-} 
+}
 
-.search-bar input {
-    max-width: 600px;
+.search-box input {
+    max-width: 800px;
     border-radius: 20px;
     border: solid 2px #20142A;
     text-align: center;
-    font-weight: 100;
+    font-weight: 300;
     background: linear-gradient(45deg, #3b314b, #2b1d46);
-}
-
-.search-bar button {
-    width: 25px;
-    height: 25px;
-    border-radius: 100px;
-    color: #FFC396;
-    background-color: #20142A;
 }
 
 /*FOOTER*/
@@ -304,18 +329,26 @@ footer {
     header {
         height: 125px;
     }
+    .search-box {
+        width: 100%;
+        padding-right: 80px;
+    }
 
     .input-searcher {
         width: 40vw;
         height: 30px;
-    } 
+    }
 
     .top-header {
         height: 70px;
     }
+    .header-logo {
+        width: 60%;
+        padding-top: 5px;
+    }
 
     .logo-container {
-        padding-right: 80px;
+        padding-right: 10px;
         width: 130px;
     }
 
@@ -337,9 +370,16 @@ footer {
         height: 240px;
         margin-bottom: 0px;
     }
+
     footer div {
         height: 100%;
     }
+
+    .info-li {
+        height: 90px;
+    }
+
+
 
     .btn-hover {
         font-size: 12px;
@@ -352,11 +392,13 @@ footer {
 
     .social-media {
         font-size: 250%;
+        height: 65px;
     }
 
     .copyright-info {
         padding-bottom: 20px;
         font-size: 20px;
+        height: 65px;
     }
 
     .copy-p {

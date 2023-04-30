@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-    <body class="index-body">
-        <% if (user && user.category === 1) { %>
-            <%- include("../partials/adminNav.ejs") %>
-        <% } else { %>
-            <%- include("../partials/header.ejs") %>
-        <% } %>
-            <main class="main-index">
-                <div class="div-fondo">
-                <!-- <h2 class="titulo-index">Encontrá tu escencia...</h2> -->
-                <div class="container-plus">
-                <div class="container-index">
-                    <div class="box-index">
-                        <img class="img-index" src="img/productImage/img17.jpg">
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/productImage/img13.jpg">
-                    </div>
-                    <div class="box-index">
-                        <img class="img-index" src="img/productImage/img3.jpg">
-                    </div>
-                </div>
-            </div>
-                <!-- <h2 class="titulo-index">...y elegí tu destino</h2> -->
-            
-                <div class="container-card" >
-                    <% for (let i=0; i < 9; i++) { %>
-                        <div class="card-index ">
-                            <img class="img-index" src="<%= `/img/productImage/${products[i].image}` %>">
-                        <div class="contenido-card">
-                                <h3>
-                                    <%= products[i].name %>
-                                </h3>
-                                <p>
-                                    <%= products[i].description %>
-                                </p>
-                                <a href="#">Comprar</a>
-                            </div>
-                        </div>
-                        <% } %>
-                </div>
-                
-            </div>
-            <div class="card">
-                <img class="card-img" src="img/productImage/img3.jpg" alt="">
-                <div class="card-content">
-                    <h4>Nueva York</h4>
-                    <p>Contenido de la tarjeta</p>
-                </div>
-            </div>
 
-                <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp" target="_blank">
-                    <i class="fa fa-whatsapp icono"></i>
-                </a>
-                <% if (!(user && user.category === 1)) { %>
-                    <%- include("../partials/wrapper.ejs") %>
-                <% } %>    
-            </main>
+    <body class="index-body">
+        <% if (user && user.category===1) { %>
+            <%- include("../partials/adminNav.ejs") %>
+                <% } else { %>
+                    <%- include("../partials/header.ejs") %>
+                        <% } %>
+                            <main class="main-index">
+                                <div class="div-fondo">
+                                    <!-- <h2 class="titulo-index">Encontrá tu escencia...</h2>  -->
+                                    <div class="container-plus">
+                                        <div class="container-index">
+                                            <div class="box-index">
+                                                <img class="img-index" src="img/productImage/img17.jpg">
+                                            </div>
+                                            <div class="box-index">
+                                                <img class="img-index" src="img/productImage/img13.jpg">
+                                            </div>
+                                            <div class="box-index">
+                                                <img class="img-index" src="img/productImage/img3.jpg">
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!-- <h2 class="titulo-index">...y elegí tu destino</h2> -->
+                                    <div class="container-card">
+                                        <% for (let i=0; i < 12; i++) { %>
+                                            <div class="card">
+                                                <img class="card-img img-index"
+                                                    src="<%= `/img/productImage/${products[i].image}` %>" alt="">
+                                                <div class="card-content">
+                                                    <h4>
+                                                        <%= products[i].name %>
+                                                    </h4>
+                                                    <p>
+                                                        <%= products[i].description %>
+                                                    </p>
+                                                    <div class="cb-container">
+                                                        <div class="button" id="button-2">
+                                                            <div id="slide"></div>
+                                                            <a href="#">explorar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <% } %>
+                                    </div>
+                                </div>
+                                
+                                <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp"
+                                    target="_blank">
+                                    <i class="fa fa-whatsapp icono"></i>
+                                </a>
+                                <% if (!(user && user.category===1)) { %>
+                                    <%- include("../partials/wrapper.ejs") %>
+                                        <% } %>
+                            </main>
     </body>
-    <% if (!(user && user.category === 1)) { %>
+    <% if (!(user && user.category===1)) { %>
         <%- include("../partials/footer.ejs") %>
-    <% } %>
+            <% } %>
 
 </html>

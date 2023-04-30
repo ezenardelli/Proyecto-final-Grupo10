@@ -5,17 +5,26 @@
     text-decoration: none;
 }
 
-.body-login {
+/* .body-login {
     background-image: url(/img/productImage/grecia.jpg);
     background-position-y: center;
     background-position-x: center;
     background-size: 300vh;
     background-repeat: no-repeat;
     font-family: Mako, Imprima;
+} */
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 .main-container {
-    height: 500px;
+    height: 600px;
     margin-bottom: 100px;
 }
 
@@ -40,7 +49,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 3%;
+    margin-top: 10%;
     margin-bottom: 10%;
     background-color: #20142A;
     border-radius: 20px;
