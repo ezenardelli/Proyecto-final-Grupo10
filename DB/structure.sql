@@ -6,7 +6,7 @@ CREATE TABLE user (
   firstName VARCHAR(45) NOT NULL,
   lastName VARCHAR(45) NOT NULL,
   email VARCHAR(45) NOT NULL,
-  category VARCHAR(45) NOT NULL,
+  category TINYINT(1) NOT NULL,
   password VARCHAR(100),
   image VARCHAR(100) NOT NULL
 );
@@ -29,7 +29,7 @@ CREATE TABLE product (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(45) NOT NULL,
   image VARCHAR(100) NOT NULL, 
-  description VARCHAR(200) NOT NULL, 
+  description VARCHAR(300) NOT NULL, 
   origin VARCHAR(45) NOT NULL, 
   destination VARCHAR(45) NOT NULL, 
   person VARCHAR(45) NOT NULL, 
