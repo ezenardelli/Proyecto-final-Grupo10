@@ -3,45 +3,49 @@
 <%- include('../partials/head'); %>
 
 	<body class="body-productId">
-		<main class="main-container-detail">
-			<section class="productId-box">
-
-				<h4 class="name-productId">
-					<%= user.firstName %>
-				</h4>
-				<div class="img-paq">
-
-					<img src="/img/users/<%= user.image %> ">
-				</div>
-				<h4 class="h4-productId">
-					<span>Email:</span>
-					<%= user.email %>
-				</h4>
-				<div class="botones-productId">
-					<div class="div-botones">
-
-						<button class="botton-productId">
-							<h4><a href="/user/<%= user.id %>/edit">
-								<h4 class="h4-botton">Editar Datos</h4>
-								</a></h4>
-						</button>
+		<%- include('../partials/adminNav.ejs') %>
+			<main class="main-containerAdmin udetail-main">
+				<section class="edit-form udetail">
+					<div class="udetail-img">
+						<img src="/img/users/<%= user.image %> ">
 					</div>
-					<div class="div-botones">
-
-						<form action="/user/<%= user.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
-							<input type="hidden" name="_method" value="delete">
-							<button class="botton-productId" type="submit">
-								<h4 class="h4-botton">Eliminar Datos</h4>
+					<div class="udetail-info">
+						<div class="udetail-container">
+							<h4 class="udetail-h4">First name: <%= user.firstName %>
+							</h4>
+						</div>
+						<div class="udetail-container">
+							<h4 class="udetail-h4">Last name: <%= user.lastName %>
+							</h4>
+						</div>
+						<div class="udetail-container">
+							<h4 class="udetail-h4">Email: <%= user.email %>
+							</h4>
+						</div>
+						<div class="udetail-container">
+							<h4 class="udetail-h4">Category: <%= user.category %>
+							</h4>
+						</div>
+					</div>
+					<div class="udetail-btns">
+						<div class="udetail-container">
+							<button class="login-btn udetail-btn">
+								<a href="/user/<%= user.id %>/edit">
+									<h4 class="">EDIT VALUES</h4>
+								</a>
 							</button>
-						</form>
+						</div>
+						<div class="udetail-container">
+							<form action="/user/<%= user.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
+								<input type="hidden" name="_method" value="delete">
+								<button class="login-btn udetail-btn" type="submit">
+									<h4 class="">DELETE PROFILE</h4>
+								</button>
+							</form>
+						</div>
 					</div>
-
-				</div>
-			</section>
-		</main>
-
-
-
+				</section>
+			</main>
 	</body>
 
 </html>

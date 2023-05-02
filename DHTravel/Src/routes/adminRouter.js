@@ -2,6 +2,8 @@ const express = require('express');
 const adminRouter = express.Router();
 const adminController = require('../controller/adminController');
 
-adminRouter.get('/admin', adminController.admin);
+
+adminRouter.get('/you-shall-not-pass!', adminController.notPermission);
+
 
 module.exports = adminRouter;

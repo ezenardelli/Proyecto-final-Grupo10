@@ -1,0 +1,102 @@
+/* USER EDIT */
+.edit-form {
+    margin: auto;
+    width: 90vw;
+    max-width: 400px;
+    height: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-bottom: 9%;
+    background-color: #20142A;
+    border-radius: 5px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
+    }
+    .main-containerAdmin {
+        padding-top: 3%;
+        margin-top: 0%;
+        padding-bottom: 6%;
+        width: 100vw;
+        background-image: url(/img/adminUse/RazerChroma.png);
+        background-position-y: center;
+        background-position-x: center;
+    }
+    .btn-edit {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'Mako';
+    }
+
+/* USER DETAIL */
+.udetail-main {
+    height: 100vh;
+}
+.udetail-img {
+    width: 150px;
+    margin: auto;
+    margin-top: 10%;
+}
+.udetail-h4 {
+    font-size: 15px;
+    color: #a297ad;
+    font-weight: 200;
+    height: 10px;
+}
+.udetail {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    max-width: 300px;
+}
+.udetail-info {
+    width: 250px;
+    height: 30%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.udetail-container {
+    margin: auto;
+    height: 30px;
+    font-family: 'Mako';
+}
+.udetail-container img {
+    width: 160px;
+    height: 130px;
+}
+.udetail-btns {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+}
+.udetail-btn h4 {
+    color: #ffffff;
+    font-family: 'Mako';
+    height: 2vh;
+}
+.udetail-btn  {
+    font-size: 10px;
+    width: 100px;
+}
+
+.userinfo-container {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.user-info {
+    margin: 10px 20px 10px 20px;
+}
+.allusers-container {
+    background-image: url(/img/adminUse/RazerChroma.png);
+    background-position-y: center;
+    background-position-x: center;
+    background-attachment: fixed ;
+}

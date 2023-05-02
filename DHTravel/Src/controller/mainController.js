@@ -5,7 +5,8 @@ const mainController = {
     index: async (req, res) => {
         try {
             let products = await db.Product.findAll();
-            return res.render('./products/index', { products });
+            let user = req.session.userLogged; 
+            return res.render('./products/index', { products,user });
         } catch (error) {
             return res.send(error);
         };

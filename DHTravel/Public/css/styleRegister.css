@@ -6,7 +6,6 @@ font-family: 'Mako', sans-serif;
 */
 
 
-
 .body-register {
     background-image: url(/img/productImage/sunset-background.jpg);
     background-position-y: center;
@@ -15,121 +14,76 @@ font-family: 'Mako', sans-serif;
 }
 
 .main-container {
-    height: 500px;
-    margin-bottom: 100px;
+    height: 800px;
 }
 
-.data-box {
+.on-register {
     margin: auto;
     width: 90vw;
-    max-width: 350px;
-    height: 500px;
+    max-width: 400px;
+    height: 700px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 7%;
+    margin-bottom: 9%;
     background-color: #20142A;
-    border-radius: 20px;
-    border-start-start-radius: 120px;
-    border-end-end-radius: 120px;
+    border-radius: 5px;
     border: solid 1px #5B050C;
     background-color: rgba(32, 20, 42, 0.9);
-}
-
-.data-box input {
-    width: 70vw;
-    max-width: 250px;
-}
-
-.data-logo-container {
-    display: flex;
-    justify-content: center;
-}
-
-.data-logo {
-    width: 100px;
-    opacity: 0.7;
-}
-
-.data-item {
-    height: 25px;
-    margin-top: 20px;
-    border-radius: 20px;
-    border-end-end-radius: 100px;
-    border-start-start-radius: 100px;
-    text-align: center;
-    border-color: #5B050C;
-}
+    }
 
 .register-forms {
     display: flex;
     justify-content: space-evenly;
+    height: 250px;
 }
 
-.forms {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
+.register {
+    height: 600px;
+    margin-top: -170px;
 }
 
-.main-h4 {
+.main-icon,
+.main-icon:visited {
+    color: rgb(125, 111, 170);
+}
+
+.main-h4 h4 {
     font-size: 15px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    color: #FFC396;
+    padding-top: 40px;
+    color: #9e92a7;
+    font-weight: 200;
+}
+.form-group .reg {
+    position: relative;
+    font-size: 15px;
+    color: #a297ad;
+    font-family: 'Mako';
+    width: 70vw;
+    max-width: 280px;
+    margin: auto;
+    }
+
+    .reg-btn {
+        margin-top: 30px;
+    }
+
+/* ERRORS  */
+.firstName-error,
+.lastName-error,
+.category-error,
+.image-error {
+    font-size: 11px;
+    color: #5B050C;
+    height: 5px;
 }
 
-.register-icon {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.fi1,
-.fi1:visited {
-    color: #171BAB;
-}
-
-.fi2,
-.fi2:visited {
-    color: #d3d1d1;
-}
-
-.main-icon {
-    font-size: 300%;
-    padding: 10px;
-}
-
-.main-button {
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
-    border-radius: 100px;
-    border: solid 2px #900A0A;
-    background-color: #20142A;
-    color: #900A0A;
-    box-shadow: 1px 1px #5B050C;
-}
-
-.forms p {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 
 /*productEdit*/
-.main-containerAdmin {
-    padding-top: 6%;
-    margin-top: 0%;
-    padding-bottom: 6%;
-    width: 100vw;
-    background-image: url(/img/productImage/581591.jpg);
-    background-position-y: 65%;
-    background-position-x: center;
-}
+
 
 .data-boxAdmin {
     font-family: mako , imprima;
@@ -253,34 +207,6 @@ font-family: 'Mako', sans-serif;
 /*NOTEBOOKS*/
 @media (min-width: 750px) {
 
-    .login-container {
-        padding-top: 10px;
-        font-size: 20px;
-    }
-    
-    .footer-nav-li {
-        width: 100%;
-        margin-right: 20px;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .footer-nav li {
-        padding-left: 30px;
-    }
-
-    .social-media {
-        font-size: 250%;
-    }
-
-    .copyright-info {
-        padding-bottom: 20px;
-        font-size: 20px;
-    }
-
-    .copy-p {
-        font-size: 15px;
-    }
 }
 
 /*DESKTOP*/
