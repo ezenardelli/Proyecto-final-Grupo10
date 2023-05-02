@@ -4,66 +4,7 @@
     padding: 0px;
     text-decoration: none;
 }
-
-/* .body-login {
-    background-image: url(/img/productImage/grecia.jpg);
-    background-position-y: center;
-    background-position-x: center;
-    background-size: 300vh;
-    background-repeat: no-repeat;
-    font-family: Mako, Imprima;
-} */
-
-.video-background {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-.main-container {
-    height: 600px;
-    margin-bottom: 100px;
-}
-
-.main-button-login{
-    animation: movimiento 9s infinite linear ;
-}
-@keyframes movimiento{
-    from {
-        transform: rotate(0deg);
-
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-
-.data-box {
-    margin: auto;
-    width: 90vw;
-    max-width: 350px;
-    height: 500px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    background-color: #20142A;
-    border-radius: 20px;
-    border-start-start-radius: 120px;
-    border-end-end-radius: 120px;
-    border: solid 1px #5B050C;
-    background-color: rgba(32, 20, 42, 0.9);
-}
-
-.data-box input {
-    width: 70vw;
-    max-width: 250px;
-}
-
+/* LOGIN FORM */
 .data-logo-container {
     display: flex;
     justify-content: center;
@@ -73,77 +14,173 @@
     width: 100px;
     opacity: 0.7;
 }
-
-.data-item {
-    height: 25px;
-    margin-top: 20px;
-    border-radius: 20px;
-    border-end-end-radius: 100px;
-    border-start-start-radius: 100px;
-    text-align: center;
-    border-color: #5B050C;
-}
-
-.register-forms {
+.login-form {
     display: flex;
-    justify-content: space-evenly;
-}
-
-.forms {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
 }
-
-.main-h4 {
+.form-group {
+    position: relative;
     font-size: 15px;
-    font-weight: 400;
+    color: #a297ad;
+    font-family: 'Mako';
+    width: 70vw;
+    max-width: 280px;
+    margin: auto ;
+    }
+    .form-group + .form-group {
+    margin-top: 30px;
+    }
+    
+    .form-group .form-label {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 13px;
+    transition: .3s;
+    }
+    
+    .form-group .form-control {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    height: 35px;
+    background: none;
+    border: none;
+    padding: 5px 0;
+    transition: .3s;
+    border-bottom: 1px solid #777;
+    color: #555;
+    }
+    
+    .form-group .form-control:focus {
+    outline: none;
+    box-shadow: 0 1px #420e6d;
+    border-color: #1a062b;
+}
+
+.form-group .form-control:valid {
+    outline: none;
+    box-shadow: 0 1px #420e6d;
+    border-color: #1a062b;
+}
+
+.form-group .form-control:focus + .form-label,
+.form-group .form-control:valid + .form-label {
+    font-size: 12px;
+    color: #cfbddd;
+    transform: translateY(-20px);
+}
+
+    .onlogin {
+    margin: auto;
+    width: 90vw;
+    max-width: 400px;
+    height: 500px;
     display: flex;
-    justify-content: center;
-    color: #FFC396;
-}
-
-.register-icon {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.fi1,
-.fi1:visited {
-    color: #171BAB;
-}
-
-.fi2,
-.fi2:visited {
-    color: orange;
-}
-
-.main-icon {
-    font-size: 300%;
-    padding: 10px;
-}
-
-.main-button-login {
-    width: 50px;
-    height: 50px;
-    margin-top: 20px;
-    margin-right: 100px;
-    border-radius: 100px;
-    border: solid 2px #14b398;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 9%;
+    margin-bottom: 9%;
     background-color: #20142A;
-    color: #addad0;
-    box-shadow: 1px 1px #047461;
-    cursor: pointer;
-    color: #FFC396;
+    border-radius: 5px;
+    border: solid 1px #5B050C;
+    background-color: rgba(32, 20, 42, 0.9);
+    }
+
+    .remember-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .remember-container h4 {
+        font-size: 16px;
+        color: #a297ad;
+        font-weight: 200;
+    }
+    .remember-button {
+        margin-right: 15px;
+    }
+
+    .login-complement ,
+    .login-complement:visited {
+        font-size: 12px;
+        color: #57428a;
+    }
+
+/*BUTTON ANIMATION*/
+.login-btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    width: 70vw;
+    max-width: 270px;
+    color: #ffffff;
+    font-size: 15px;
 }
 
-
-.forms p {
-    display: flex;
-    flex-direction: row-reverse;
+.login-btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 97, 237, 1);
+    z-index: -2;
 }
+
+.login-btn:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(14, 30, 117, 0.884);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.login-btn:hover {
+    color: #807ca1;
+}
+
+.login-btn:hover:before {
+    width: 100%;
+} 
+
+.body-login {
+    background-image: url(/img/productImage/grecia.jpg);
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 300vh;
+    background-repeat: no-repeat;
+    font-family: Mako, Imprima;
+}
+/* ERRORS */
+.password-error,
+.email-error{
+    font-size: 11px;
+    color: #5B050C;
+}
+
+/* .video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+} */
 
 /*TABLET*/
 @media (min-width: 460px) {

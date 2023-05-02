@@ -1,70 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head.ejs") %>
-<body class="body-login">
-    <%- include("../partials/header.ejs") %>
-    <main class="main-container">
-        <video autoplay muted loop class="video-background">
-            <source src="img/FarCryLoadingScreen.mp4" type="video/mp4">
-        </video>
-        <section class="data-box">
-            <div class="data-logo-container">
-                <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
-            </div>
-            <div class="register-forms">
-                <form class="forms" action="/login" method="post">
-                    <p>
-                        <input class="data-item" type="text" name="email" id="email"
-                        placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="validation-error">
-                                <%= errors.email.msg %>
-                            </div>
-                        <% } %>
-                        <div class="email-error"></div>
-                        <p>
-                            <a class="letras" href="#">Recuperá tu cuenta</a>
-                        </p>
-                        
-                    </p>
-                    <p>
-                        <input class="data-item" type="password" name="password" id="password" 
-                            placeholder="Contraseña">
-                            <% if (locals.errors && errors.password) { %>
-                                <div class="validation-error">
-                                    <%= errors.password.msg %>
-                                </div>
-                            <% } %>
-                            <div class="password-error"></div>
-                            <p>
-                                <a href="#" target="_blank">Olvidaste tu contraseña</a>
-                            </p>
-                    </p>
-                    <div class="remember-container">
-                        <input type="checkbox" class="remember-button" name="rememberUser">
-                        <h4>Recordar mi usuario</h4>
-                    </div>
-                    <p>
-                        <button class="main-button-login" type="submit">
-                            <i class="material-symbols-outlined">
-                                airplanemode_active
-                            </i></button>
-                    </p>
-                </form>
-            </div>
-            <div class="main-h4">
-                <p>
-                <h4>logueate con</h4>
-                </p>
-            </div>
-            <div class="register-icon">
-                <a class="fi1" href="#"><i class="main-icon fa-brands fa-facebook"></i></a>
-                <a class="fi2" href="#"><i class=" main-icon fa-brands fa-google"></i></a>
-            </div>
-        </section>
-        <script src="/js/loginValidation.js"></script>
-    </main>
-    <%- include("../partials/footer.ejs") %>
+<%- include("../partials/head.ejs") %>
 
-</body>
+    <body class="body-login">
+        <%- include("../partials/header.ejs") %>
+            <main class="main-container">
+                <!-- <video autoplay muted loop class="video-background">
+            <source src="img/FarCryLoadingScreen.mp4" type="video/mp4">
+        </video> -->
+                <section class="onlogin">
+                    <div class="data-logo-container">
+                        <a href="/"><img class="data-logo" src="/img/logo.png" alt="DHTravel Logo"></a>
+                    </div>
+                    <div class="register-forms login-container">
+                        <form class="login-form" action="/login" method="post">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="email" id="email" 
+                                value="<%= locals.oldData ? oldData.email : null %>" >
+                                <label class="form-label">Correo electronico</label>
+                                <p>
+                                    <a class="login-complement" href="#">Recuperá tu cuenta</a>
+                                </p>
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="validation-error">
+                                        <%= errors.email.msg %>
+                                    </div>
+                                <% } %>
+                                <div class="email-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control"type="password" name="password" id="password" >
+                                <label class="form-label">Contraseña</label>
+                                <p>
+                                    <a class="login-complement" href="#" target="_blank">Olvidaste tu contraseña</a>
+                                </p>
+                                <% if (locals.errors && errors.password) { %>
+                                    <div class="validation-error">
+                                        <%= errors.password.msg %>
+                                    </div>
+                                <% } %>
+                                <div class="password-error"></div>
+                            </div>
+                            <div class="remember-container">
+                                <input type="checkbox" class="remember-button" name="rememberUser">
+                                <h4>Recordar mi usuario</h4>
+                            </div>
+                            <p>
+                                <button class="login-btn" type="submit">
+                                    <h4>LOGIN</h4>                               
+                                </button>
+                            </p>
+                            <script src="/js/loginValidation.js"></script>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+
+    </body>
+
 </html>

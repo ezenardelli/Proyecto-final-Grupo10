@@ -7,7 +7,7 @@
 
 /*HEADER*/
 header {
-    width: 100%;
+    width: 100vw;
     height: 15vh;
     margin: auto;
     display: flex;
@@ -17,8 +17,8 @@ header {
 }
 
 .top-header {
-    width: 100vw;
-    height: 10vh;
+    width: 100%;
+    height: 9vh;
     display: flex;
     justify-content: flex-start;
 }
@@ -115,6 +115,25 @@ header {
     text-align: center;
     font-weight: 300;
     background: linear-gradient(45deg, #3b314b, #2b1d46);
+}
+
+/* NAV LOGGED */
+
+.logged li{
+    padding-top: 17px;
+}
+.art1 h4 {
+    color: wheat;
+}
+.art4 li a{
+    margin-right: 0px;
+}
+.ul-li .ul-logged{
+    width: 100%;
+    height: 5vh;
+}
+.btn-logged {
+    width: 5px;
 }
 
 /*FOOTER*/
@@ -233,56 +252,6 @@ footer {
     outline-color: #338305;
 }
 
-
-
-/*animacion de boton*/
-/* .button {
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    border-radius: 10rem;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: 0.15rem;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.button:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0cf;
-    border-radius: 10rem;
-    z-index: -2;
-}
-
-.button:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: rgb(50, 100, 112);
-    transition: all 0.3s;
-    border-radius: 10rem;
-    z-index: -1;
-}
-
-.button:hover {
-    color: #fff;
-}
-
-.button:hover:before {
-    width: 100%;
-} */
-
 .btn-hover {
     font-size: 10px;
     text-align: center;
@@ -310,6 +279,12 @@ footer {
 .btn-hover:hover:before {
     width: 100%;
     left: 0;
+}
+/* ERRORS */
+.validation-error {
+    font-size: 11px;
+    color: #463f6d;
+    height: 5px;
 }
 
 /*TABLET*/
@@ -357,7 +332,7 @@ footer {
     }
 
     .li-item a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .footer-nav-li {
@@ -378,8 +353,6 @@ footer {
     .info-li {
         height: 90px;
     }
-
-
 
     .btn-hover {
         font-size: 12px;

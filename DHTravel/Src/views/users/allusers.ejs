@@ -2,34 +2,59 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
 
-<body class="body-allProducts">
-    <main>
-        <h2 class="titulo-h2">List of Products</h2>
-        <ul>
+    <body class="body-allProducts">
+        <main class="allusers-container">
+            <%- include('../partials/adminNav.ejs') %>
+            <ul class="userinfo-container">
                 <% for(let i=0; i< user.length; i++) {%>
-                    <li>
-                        <article class="card-allProducts">
-                            <a href="/user/<%= user[i].id %>">
-                                <img src="<%= `/img/users/${user[i].image}` %>">
-                                <p>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Nombre:</span> <%= user[i].firstName %>
-                                    </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Apellido:</span> <%= user[i].lastName %>
-                                    </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Email:</span> <%= user[i].email %>
-                                    </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Categoria:</span> <%= user[i].category %>
-                                    </h4>
-                                </p>
-                            </a>
-                            <div class="contenedor-button">
-                                <button class="button-allProducts">
-                                    <a class="letra-button" href="/user/<%= user[i].id %>">Ver detalle</a>
-                                </button>
+                    <li class="user-info">
+                        <section class="edit-form udetail">
+                            <div class="udetail-img">
+                                <img src="<%= `/img/users/${user[i].image}` %> ">
                             </div>
-                        </article>
+                            <div class="udetail-info">
+                                <div class="udetail-container">
+                                    <h4 class="udetail-h4">ID: <%= user[i].id %>
+                                    </h4>
+                                </div>
+                                <div class="udetail-container">
+                                    <h4 class="udetail-h4">First name: <%= user[i].firstName %>
+                                    </h4>
+                                </div>
+                                <div class="udetail-container">
+                                    <h4 class="udetail-h4">Last name: <%= user[i].lastName %>
+                                    </h4>
+                                </div>
+                                <div class="udetail-container">
+                                    <h4 class="udetail-h4">Email: <%= user[i].email %>
+                                    </h4>
+                                </div>
+                                <div class="udetail-container">
+                                    <h4 class="udetail-h4">Category: <%= user[i].category %>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="udetail-btns">
+                                <div class="udetail-container">
+                                    <button class="login-btn udetail-btn">
+                                        <a href="/user/<%= user[i].id %>/edit">
+                                            <h4 class="">EDIT VALUES</h4>
+                                        </a>
+                                    </button>
+                                </div>
+                                <div class="udetail-container">
+                                    <form action="/user/<%= user[i].id %>/?_method=DELETE" method="POST"
+                                        enctype="multipart/form-data">
+                                        <input type="hidden" name="_method" value="delete">
+                                        <button class="login-btn udetail-btn" type="submit">
+                                            <h4 class="">DELETE PROFILE</h4>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
                     </li>
-                <%}%>
+                    <%}%>
             </ul>
         </main>
     </body>

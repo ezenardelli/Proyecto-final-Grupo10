@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-    let form = document.querySelector("form.forms");
+    let form = document.querySelector(".login-form");
     
     form.addEventListener("submit", (e) => {
         
