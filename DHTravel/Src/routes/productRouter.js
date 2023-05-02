@@ -6,6 +6,7 @@ const multer = require('multer');
 const { body } = require('express-validator');
 
 const productValidations = require('../middlewares/productValidationMiddelware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
@@ -22,14 +23,14 @@ const upload = multer({storage});
 
 productRouter.get('/carrito',authMiddleware, productController.cart);
 productRouter.get('/detalle',authMiddleware, productController.detail);
-productRouter.get('/products/listall', productController.allProducts);
+productRouter.get('/products/listall', adminMiddleware, productController.allProducts);
 
-productRouter.get('/product/create', productController.createProducts);
+productRouter.get('/product/create', adminMiddleware, productController.createProducts);
 productRouter.post('/product/create', upload.single('image'), productValidations, productController.createProductsPost);
 
-productRouter.get('/product/:id', productController.productId);
+productRouter.get('/product/:id', adminMiddleware, productController.productId);
 
-productRouter.get('/product/:id/edit', productController.productIdEdit);
+productRouter.get('/product/:id/edit', adminMiddleware, productController.productIdEdit);
 productRouter.put('/product/:id/edit',upload.single('image'), productController.productIdEditPut);
 
 productRouter.delete('/product/:id', productController.productIdDelete);

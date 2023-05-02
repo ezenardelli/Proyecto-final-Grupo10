@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    let form = document.querySelector("form.forms");
+    let form = document.querySelector("form.register");
     
     form.addEventListener('submit', (e) => {
         
@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
         let email = document.querySelector('#email');
         let emailError = [];
         if (email.value == '') {
-            emailError.push('Debe completar el campo con su correo electronico.');
+            emailError.push('Debe ingresar su correo electronico.');
         } else if (!/\S+@\S+\.\S+/.test(email.value)) {
             emailErrors.push('Debe ingresar un formato de correo valido.');
         };
@@ -53,18 +53,18 @@ window.addEventListener('load', () => {
             error.innerHTML = '';
         };
 
-        let category = document.querySelector('#category');
-        errors = [];
-        if (category.value == '') {
-            errors.push('Debe elegir una categoria.');
-        };           
-        if (errors.length > 0) {
-            let error = document.querySelector('.category-error');
-            error.innerHTML = `<h3 class="error-message">${errors[0]}</h3>`;
-        } else {
-            let error = document.querySelector('.category-error');
-            error.innerHTML = '';
-        };
+        // let category = document.querySelector('#category');
+        // errors = [];
+        // if (category.value == '') {
+        //     errors.push('Debe elegir una categoria.');
+        // };           
+        // if (errors.length > 0) {
+        //     let error = document.querySelector('.category-error');
+        //     error.innerHTML = `<h3 class="error-message">${errors[0]}</h3>`;
+        // } else {
+        //     let error = document.querySelector('.category-error');
+        //     error.innerHTML = '';
+        // };
 
         let image = document.getElementById('image');
         errors = [];
@@ -85,7 +85,7 @@ window.addEventListener('load', () => {
         let password = document.querySelector('#password');
         errors = [];
         if (password.value == '') {
-            errors.push('Debe completar el campo con su contraseña.');
+            errors.push('Debe completar con su contraseña.');
         } else if (password.value.length < 8) {
             errors.push('La contraseña debe contener al menos 8 caracteres.');
         }  else if (!password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/)) {

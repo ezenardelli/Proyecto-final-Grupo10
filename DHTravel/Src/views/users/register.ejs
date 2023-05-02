@@ -1,105 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head.ejs") %>
-<body class="body-register">
-    <%- include("../partials/header.ejs") %>
-    <main class="main-container">
-        <section class="data-box">
-            <div class="data-logo-container">
-                <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
-            </div>
-            <div class="register-forms">
-                <form class="forms" action="/register" method="POST" enctype="multipart/form-data">
-                    <p>
-                        <input class="data-item" type="text" name="firstName" id="firstName"
-                        placeholder="Nombres" value="<%= locals.oldData ? oldData.firstName : null %>">
-                        <% if (locals.errors && errors.firstName) { %>
-                            <div class="validation-error">
-                                <%= errors.firstName.msg %>
+<%- include("../partials/head.ejs") %>
+
+    <body class="body-register">
+        <%- include("../partials/header.ejs") %>
+            <main class="main-container">
+                <section class="on-register">
+                    <div class="register-forms login-container">
+                        <form class="login-form register" action="/register" method="POST" enctype="multipart/form-data">
+                            <div class="form-group reg">
+                                <input class="form-control" type="text" name="firstName" id="firstName"
+                                    value="<%= locals.oldData ? oldData.firstName : null %>">
+                                <label class="form-label">Nombres</label>
+                                <% if (locals.errors && errors.firstName) { %>
+                                    <div class="validation-error">
+                                        <%= errors.firstName.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="firstName-error"></div>
                             </div>
-                        <% } %>
-                        <div class="firstName-error"></div>
-                    </p>
-                    <p>
-                        <input class="data-item" type="text" name="lastName" id="lastName"
-                        placeholder="Apellidos" value="<%= locals.oldData ? oldData.lastName : null %>">
-                        <% if (locals.errors && errors.lastName) { %>
-                            <div class="validation-error">
-                                <%= errors.lastName.msg %>
+                            <div class="form-group reg">
+                                <input class="form-control" type="text" name="lastName" id="lastName"
+                                    value="<%= locals.oldData ? oldData.lastName : null %>">
+                                <label class="form-label">Apellidos</label>
+                                <% if (locals.errors && errors.lastName) { %>
+                                    <div class="validation-error">
+                                        <%= errors.lastName.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="lastName-error"></div>
                             </div>
-                        <% } %>
-                        <div class="lastName-error"></div>
-                    </p>
-                    <p>
-                        <input class="data-item" type="email" name="email" id="email"
-                        placeholder="Correo electronico" value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="validation-error">
-                                <%= errors.email.msg %>
+                            <div class="form-group reg">
+                                <input class="form-control" type="email" name="email" id="email"
+                                    value="<%= locals.oldData ? oldData.email : null %>">
+                                <label class="form-label">Correo electronico</label>
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="validation-error">
+                                        <%= errors.email.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="email-error"></div>
                             </div>
-                        <% } %>
-                        <div class="email-error"></div>
-                    </p>
-                    <p>
-                        <input class="data-item" type="text" name="category" id="category"
-                        placeholder="Elija una categoria" value="<%= locals.oldData ? oldData.category : null %>">
-                        <% if (locals.errors && errors.category) { %>
-                            <div class="validation-error">
-                                <%= errors.category.msg %>
+                            <div class="form-group">
+                                <input class="form-control" type="file" name="image" id="image"
+                                    value="<%= locals.oldData ? oldData.image : null %>">
+                                <label class="form-label">Imagen de perfil</label>
+                                <% if (locals.errors && errors.image) { %>
+                                    <div class="validation-error">
+                                        <%= errors.image.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="image-error"></div>
                             </div>
-                        <% } %>
-                        <div class="category-error"></div>
-                    </p>
-                    <label for=""></label>
-                    <p>
-                        <input class="data-item" type="file" name="image" id="image"
-                        placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
-                        <% if (locals.errors && errors.image) { %>
-                            <div class="validation-error">
-                                <%= errors.image.msg %>
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" id="password">
+                                <label class="form-label">Contraseña</label>
+                                <% if (locals.errors && errors.password) { %>
+                                    <div class="validation-error">
+                                        <%= errors.password.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="password-error"></div>
                             </div>
-                        <% } %>
-                        <div class="image-error"></div>
-                    </p>
-                    </label>
-                    <p>
-                        <input class="data-item" type="password" name="password" id="password"
-                        placeholder="Contraseña">
-                        <% if (locals.errors && errors.password) { %>
-                            <div class="validation-error">
-                                <%= errors.password.msg %>
+                            <div class="form-group">
+                                <input class="form-control" type="hidden" name="category" id="category" value="0"
+                                    value="<%= locals.oldData ? oldData.category : null %>">
+                                <!-- <label class="form-label">Category</label>
+                                <% if (locals.errors && errors.category) { %>
+                                    <div class="validation-error">
+                                        <%= errors.category.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="category-error"></div> -->
                             </div>
-                        <% } %>
-                        <div class="password-error"></div>
-                    </p>
-                    <!--<p>
-                        <label for="no-robot"></label>
-                        <input class="data-item" type="checkbox" name="no-robot" id="no-robot">
-                    </p>-->
-                    <p>
-                        <button class="main-button-login" type="submit">
-                            <i class="material-symbols-outlined">
-                                airplanemode_active
-                            </i></button>
-                    </p>
-                </form>
-            </div>
-            <div class="main-h4">
-                <p>
-                <h4>Tambien registrate con</h4>
-                </p>
-            </div>
-            <div class="register-icon">
-                <a class="fi1" href="#">
-                    <i class="main-icon fa-brands fa-facebook"></i>
-                </a>
-                <a class="fi2" href="#">
-                    <i class=" main-icon fa-brands fa-google"></i>
-                </a>
-            </div>
-        </section>
-        <script src="/js/registerValidation.js"></script>
-    </main>
-    <%- include("../partials/footer.ejs") %>
-</body>
+                            <p>
+                                <button class="login-btn reg-btn" type="submit">
+                                    <h4>Registrate</h4>
+                                </button>
+                            </p>
+                            <div class="main-h4">
+                                <p>
+                                <h4>Tambien registrate con</h4>
+                                </p>
+                            </div>
+                            <div class="register-icon">
+                                <a class="fi1" href="#">
+                                    <i class="main-icon fa-brands fa-facebook"></i>
+                                </a>
+                                <a class="fi2" href="#">
+                                    <i class=" main-icon fa-brands fa-google"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <script src="/js/registerValidation.js"></script>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
 </html>

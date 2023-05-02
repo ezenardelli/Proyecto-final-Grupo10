@@ -9,6 +9,8 @@ const registerValidation = require('../middlewares/registerValidationMiddleware'
 const loginValidation = require('../middlewares/loginValidateMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authentificationMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
+
 
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
@@ -22,11 +24,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage});
 
-userRouter.get('/users/listall', userController.getAllUsers);
-userRouter.get('/user/:id', userController.getUser);
+userRouter.get('/users/listall', adminMiddleware, userController.getAllUsers);
+userRouter.get('/user/:id', adminMiddleware, userController.getUser);
 
-userRouter.get('/user/:id/edit', userController.getUserEdit);
-userRouter.put('/user/:id/edit',upload.single('image'), userController.userEdit);
+userRouter.get('/user/:id/edit', adminMiddleware, userController.getUserEdit);
+userRouter.put('/user/:id/edit', upload.single('image'), userController.userEdit);
 
 userRouter.delete('/user/:id', userController.userDelete);
 

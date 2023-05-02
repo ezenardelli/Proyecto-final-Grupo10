@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         category: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.TINYINT(1),
             allowNull: false
         },
         password: {
