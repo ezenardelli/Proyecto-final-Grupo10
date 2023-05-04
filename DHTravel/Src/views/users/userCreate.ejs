@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %>
+<%- include('../partials/head.ejs') %>
 
-    <body class="body-register">
-        <%- include("../partials/header.ejs") %>
-            <main class="main-container">
-                <section class="on-register">
+    <body>
+        <%- include('../partials/adminNav.ejs') %>
+            <main class="main-containerAdmin u-create-main">
+                <section class="on-register u-create-sec">
                     <div class="register-forms login-container">
-                        <form class="login-form register" action="/register" method="POST" enctype="multipart/form-data">
+                        <form class="login-form register" action="/register" method="POST"
+                            enctype="multipart/form-data">
                             <div class="form-group reg">
                                 <input class="form-control" type="text" name="firstName" id="firstName"
                                     value="<%= locals.oldData ? oldData.firstName : null %>">
@@ -62,42 +63,41 @@
                                     <% } %>
                                         <div class="password-error"></div>
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="hidden" name="category" id="category" value="0"
-                                    value="<%= locals.oldData ? oldData.category : null %>">
-                                <!-- <label class="form-label">Category</label>
+                            <p class="form-group reg prd">
+                                <select class="form-control" id="category" name="category">
+                                    <option value=""></option>
+                                    <option value="0" <% if(locals.oldData && locals.oldData.category==='0' ) { %>
+                                        selected <% } %>>Guest</option>
+                                    <option value="1" <% if(locals.oldData && locals.oldData.category==='1' ) { %>
+                                        selected <% } %>>Admin</option>
+                                </select>
+                                <label class="form-label" for="category">Category</label>
                                 <% if (locals.errors && errors.category) { %>
                                     <div class="validation-error">
                                         <%= errors.category.msg %>
                                     </div>
                                     <% } %>
-                                        <div class="category-error"></div> -->
-                            </div>
-                            <p>
-                                <button class="login-btn reg-btn" type="submit">
-                                    <h4>Registrate</h4>
-                                </button>
+                                        <div class="category-error p-error"></div>
                             </p>
-                            <div class="main-h4">
+                            <div class="u-create-btn">
                                 <p>
-                                <h4>Tambien registrate con</h4>
+                                    <button class="login-btn reg-btn" type="submit">
+                                        <h4>CREATE</h4>
+                                    </button>
+                                </p>
+                                <p>
+                                    <button class="login-btn reg-btn " type="reset">
+                                        <h4>CLEAR</h4>
+                                    </button>
                                 </p>
                             </div>
-                            <div class="register-icon">
-                                <a class="fi1" href="#">
-                                    <i class="main-icon fa-brands fa-facebook"></i>
-                                </a>
-                                <a class="fi2" href="#">
-                                    <i class=" main-icon fa-brands fa-google"></i>
-                                </a>
-                            </div>
+                            
                         </form>
                     </div>
                 </section>
 
                 <script src="/js/registerValidation.js"></script>
             </main>
-            <%- include("../partials/footer.ejs") %>
     </body>
 
 </html>

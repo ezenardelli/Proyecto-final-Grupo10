@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
         if (email.value == '') {
             emailError.push('Debe ingresar su correo electronico.');
         } else if (!/\S+@\S+\.\S+/.test(email.value)) {
-            emailErrors.push('Debe ingresar un formato de correo valido.');
+            emailError.push('Debe ingresar un formato de correo valido.');
         };
         // } else if (dbEmail) {
         //     errors.push('El correo electronico ya se encuentra en uso.');
