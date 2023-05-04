@@ -248,5 +248,7 @@ font-family: 'Mako', sans-serif;
 }
 
 /*DESKTOP*/
+@media (min-width: 1280px) {
 
+}
 

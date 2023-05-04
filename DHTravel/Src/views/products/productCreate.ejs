@@ -1,119 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs') %>
+
     <body>
-        <main class="main-containerAdmin">
-            <section class="data-boxAdmin">
-                <div class="data-logoAdmin">
-                    <a href="/">
-                        <img class="data-logo" src="/img/logo.png" alt="DHTravel Logo">
-                    </a>
-                </div>
-                <div class="register-formsAdmin">
-                    <form class="formsAdmin" action="/product/create" method="POST" enctype="multipart/form-data">
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="name" id="name"
-                                placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.name : null %>">
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="validation-error">
-                                    <%= errors.name.msg %>
-                                </div>
-                            <% } %>
-                            <div class="name-error"></div>
-                        </p>
-                        <p>
-                            <input type="text" class="data-itemAdmin-textarea" name="description" id="description" cols="30"
-                                rows="10" placeholder=" Descripcion del producto" value="<%= locals.oldData ? oldData.description : null %>">
-                            </input>
-                            <% if (locals.errors && errors.description) { %>
-                                <div class="validation-error">
-                                    <%= errors.description.msg %>
-                                </div>
-                            <% } %>
-                            <div class="description-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="file" name="image" id='image' placeholder="Imagen de perfil" value="<%= locals.oldData ? oldData.image : null %>">
-                            <% if (locals.errors && errors.image) { %>
-                                <div class="validation-error">
-                                    <%= errors.image.msg %>
-                                </div>
-                            <% } %>
-                            <div class="image-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="origin" id="origin" 
-                                placeholder="Origen del viaje" value="<%= locals.oldData ? oldData.origin : null %>">
-                            <% if (locals.errors && errors.origin) { %>
-                                <div class="validation-error">
-                                    <%= errors.origin.msg %>
-                                </div>
-                            <% } %>
-                            <div class="origin-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="destination" id="destination" 
-                                placeholder="Destino del viaje" value="<%= locals.oldData ? oldData.destination : null %>">
+        <%- include('../partials/adminNav.ejs') %>
+            <main class="main-containerAdmin">
+                <section class="edit-form edit-admin">
+                    <div class="register-forms login-container prd-div">
+                        <form class="login-form register product-create" action="/product/create" method="POST"
+                            enctype="multipart/form-data">
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="name" id="name"
+                                    value="<%= locals.oldData ? oldData.name : null %>">
+                                <label class="form-label">Name</label>
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="validation-error">
+                                        <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="name-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="description" id="description"
+                                    value="<%= locals.oldData ? oldData.description : null %>">
+                                <label class="form-label">Description</label>
+                                <% if (locals.errors && errors.description) { %>
+                                    <div class="validation-error">
+                                        <%= errors.description.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="description-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="file" name="image" id="image" multiple
+                                    value="<%= locals.oldData ? oldData.image : null %>">
+                                <label class="form-label">Product image</label>
+                                <% if (locals.errors && errors.image) { %>
+                                    <div class="validation-error">
+                                        <%= errors.image.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="image-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="origin" id="origin"
+                                    value="<%= locals.oldData ? oldData.origin : null %>">
+                                <label class="form-label">Origin</label>
+                                <% if (locals.errors && errors.origin) { %>
+                                    <div class="validation-error">
+                                        <%= errors.origin.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="origin-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="destination" id="destination"
+                                    value="<%= locals.oldData ? oldData.destination : null %>">
+                                <label class="form-label">Destination</label>
                                 <% if (locals.errors && errors.destination) { %>
                                     <div class="validation-error">
                                         <%= errors.destination.msg %>
                                     </div>
-                                <% } %>
-                                <div class="destination-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="person" id="person" 
-                                placeholder="Numero de personas incluidas" value="<%= locals.oldData ? oldData.person : null %>">
-                                <% if (locals.errors && errors.person) { %>
-                                    <div class="validation-error">
-                                        <%= errors.person.msg %>
-                                    </div>
-                                <% } %>
-                                <div class="person-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="category" id="category"
-                                placeholder="Categoria" value="<%= locals.oldData ? oldData.category : null %>">
+                                    <% } %>
+                                        <div class="destination-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <select class="form-control" id="category" name="category">
+                                    <option value=""></option>
+                                    <option value="1" <% if(locals.oldData && locals.oldData.category==='1' ) {
+                                        %> selected <% } %>>Solteros</option>
+                                    <option value="2" <% if(locals.oldData && locals.oldData.category==='2' ) {
+                                        %> selected <% } %>>Parejas</option>
+                                    <option value="3" <% if(locals.oldData && locals.oldData.category==='3' ) {
+                                        %> selected <% } %>>Familiar</option>
+                                    <option value="4" <% if(locals.oldData && locals.oldData.category==='4' ) {
+                                        %> selected <% } %>>Amigos</option>
+                                    <option value="5" <% if(locals.oldData && locals.oldData.category==='5' ) {
+                                        %> selected <% } %>>Aventureros</option>
+                                    <option value="6" <% if(locals.oldData && locals.oldData.category==='6' ) {
+                                        %> selected <% } %>>Negocios</option>
+                                </select>
+                                <label class="form-label" for="category">Category</label>
                                 <% if (locals.errors && errors.category) { %>
                                     <div class="validation-error">
                                         <%= errors.category.msg %>
                                     </div>
-                                <% } %>
-                                <div class="category-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="date" id="date"
-                                placeholder="Fecha de inicio" value="<%= locals.oldData ? oldData.date : null %>">
+                                    <% } %>
+                                        <div class="category-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="person" id="person"
+                                    value="<%= locals.oldData ? oldData.person : null %>">
+                                <label class="form-label">Persons includes</label>
+                                <% if (locals.errors && errors.person) { %>
+                                    <div class="validation-error">
+                                        <%= errors.person.msg %>
+                                    </div>
+                                    <% } %>
+                                        <div class="person-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="date" id="date"
+                                    value="<%= locals.oldData ? oldData.date : null %>">
+                                <label class="form-label">Date</label>
                                 <% if (locals.errors && errors.date) { %>
                                     <div class="validation-error">
                                         <%= errors.date.msg %>
                                     </div>
-                                <% } %>
-                                <div class="date-error"></div>
-                        </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="price" id="price"
-                                placeholder="Precio del producto" value="<%= locals.oldData ? oldData.price : null %>">
+                                    <% } %>
+                                        <div class="date-error p-error"></div>
+                            </p>
+                            <p class="form-group reg prd">
+                                <input class="form-control" type="text" name="price" id="price"
+                                    value="<%= locals.oldData ? oldData.price : null %>">
+                                <label class="form-label">Price</label>
                                 <% if (locals.errors && errors.price) { %>
                                     <div class="validation-error">
                                         <%= errors.price.msg %>
                                     </div>
-                                <% } %>
-                                <div class="price-error"></div>
-                        </p>
-                        <div class="botones-form-admin">
-                        <p>
-                            <button class="submit-b" type="submit">Crear Paquete</button>
-                        </p>
-                        <p>
-                            <button class="submit-b" type="reset">Eliminar datos</button>
-                        </p>
+                                    <% } %>
+                                        <div class="price-error p-error"></div>
+                            </p>
+                            <p class="btn-edit">
+                                <button class="login-btn reg-btn" type="submit">
+                                    <h4>CREATE</h4>
+                                </button>
+                                <button class="login-btn reg-btn" type="reset">
+                                    <h4>CLEAN</h4>
+                                </button>
+                            </p>
+                        </form>
+
                     </div>
-                    <script src="/js/productValidate.js"></script>
-                    </form>
-                </div>
-            </section>
-            
-        </main>
+                </section>
+            </main>
+            <script src="/js/productValidate.js"></script>
     </body>
+
 </html>

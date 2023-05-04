@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %>
-    <body class="body-productId">
-        <%- include("../partials/header.ejs") %>
-            <main class="main-container-detail">
-                <section class="productId-box">
-                    <div class="img-paq">
-                        <img src="<%= `/img/productImage/${product.image}` %>" alt="">
-                    </div>
-                    <h4 class="name-productId">
-                        <%= product.name %>
-                    </h4 >
-                    <h4 class="description-productId">
-                        "<%= product.description %>"
-                    </h4>
-                    <h4 class="h4-productId">
-                        <span>Origen:</span> <%= product.origin %>
-                    </h4>
-                    <h4 class="h4-productId">
-                        <span>Destino:</span> <%= product.destination %>
-                    </h4>
-                    <h4 class="h4-productId">
-                        <span>Cantidad de Personas:</span>  <%= product.person %>
-                    </h4>
-                    <h4 class="h4-productId">
-                        <span>Fecha:</span> <%= product.date %>
-                    </h4>
-                    <h4 class="h4-productId">
-                        <span>Categoría:</span> <%= product.category_id %>
-                    </h4>
-                    <h4 class="price-productId">
-                        <%= product.price %> USD
-                    </h4>
-                    <div class="botones-productId">
-                        <div class="div-botones">
-                    <button class="botton-productId">
-                        <h4>
-                            <a href="/product/<%= product.id %>/edit">
-                                <h4 class="h4-botton">Editar datos</h4>
-                            </a>
-                        </h4>
-                    </button>
+<%- include('../partials/head.ejs') %>
+
+    <body class="body-allProducts">
+        <main class="allusers-container">
+            <%- include('../partials/adminNav.ejs') %>
+                <div class="container-card">
+                        <div class="card admin-card">
+                            <img src="<%= `/img/productImage/${product.image}` %>" alt="">
+                            <div class="card-content admin-content">
+                                <div class="card-info-title">
+                                    <h4>
+                                        Name: <%= product.name %>
+                                    </h4>
+                                </div>
+                                <div class="card-info-description">
+                                    <h4>Description: <%= product.description %>
+                                    </h4>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Origin: <%= product.origin %>
+                                    </h4>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Destination: <%= product.destination %>
+                                    </h4>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Person include: <%= product.person %>
+                                    </h4>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Date: <%= product.date %>
+                                    </h4>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Price: $ <%= product.price %>
+                                    </h4>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Category: <%= product.category_id %>
+                                    </h4>
+                                </div>
+                                    <div class="cb-container btn1">
+                                        <div class="button" id="button-2">
+                                            <div id="slide"></div>
+                                            <a href="/product/<%= product.id %>/edit">EDIT VALUES</a>
+                                        </div>
+                                    </div>
+                                    <div class="cb-container btn2">
+                                        <form class="button" id="button-2">
+                                            <div id="slide"></div>
+                                            <input type="hidden" name="_method" value="delete">
+                                            <button class="admin-btn" type="submit">DELETE PRODUCT</button>
+                                        </form>
+                                    </div>
+                            </div>
+                        </div>
                 </div>
-                        <div class="div-botones">
-                    <form action="/product/<%= product.id %>/?_method=DELETE" method="POST"
-                        enctype="multipart/form-data">
-                        <input type="hidden" name="_method" value="delete">
-                        <button class="botton-productId" type="submit">
-                            <h4 class="h4-botton">Eliminar datos</h4>
-                        </button>
-                    </form>
-                </div>
-                    </div>
-                </section>
-            </main>
-            <%- include("../partials/footer.ejs") %>
+        </main>
     </body>
 
 </html>

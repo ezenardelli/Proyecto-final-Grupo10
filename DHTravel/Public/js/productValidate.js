@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    let form = document.querySelector('.formsAdmin');
+    let form = document.querySelector('form.product-create');
 
     form.addEventListener('submit', (e) => {
         
@@ -70,7 +70,7 @@ window.addEventListener('load', () => {
         errors = [];
         if (destination.value == '') {
             errors.push('Debe completar con el destino del producto.');
-        } else if (destination.value.length < 5) {
+        } else if (destination.value.length < 3) {
             errors.push('El destino debe contener al menos 3 caracteres.');
         };            
         if (errors.length > 0) {

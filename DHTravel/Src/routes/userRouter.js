@@ -25,6 +25,10 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 userRouter.get('/users/listall', adminMiddleware, userController.getAllUsers);
+
+userRouter.get('/user/create',adminMiddleware, userController.getUserCreate);
+userRouter.post('/user/create', upload.single('image'), registerValidation, userController.userCreate);
+
 userRouter.get('/user/:id', adminMiddleware, userController.getUser);
 
 userRouter.get('/user/:id/edit', adminMiddleware, userController.getUserEdit);
