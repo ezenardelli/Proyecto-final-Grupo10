@@ -14,7 +14,7 @@
                                     <div class="container-plus">
                                         <div class="container-index">
                                             <div class="box-index">
-                                                <img class="img-index" src="img/productImage/img17.jpg">
+                                                <img class="img-index" src="img/productImage/img-index5.jpg">
                                             </div>
                                             <div class="box-index">
                                                 <img class="img-index" src="img/productImage/img13.jpg">
@@ -28,6 +28,7 @@
                                     <div class="container-card">
                                         <% for (let i=0; i < 12; i++) { %>
                                             <div class="card">
+                                                <div class="card-overlay"></div>
                                                 <img class="card-img img-index"
                                                     src="<%= `/img/productImage/${products[i].image}` %>" alt="">
                                                 <div class="card-content">
@@ -40,7 +41,7 @@
                                                     <div class="cb-container">
                                                         <div class="button" id="button-2">
                                                             <div id="slide"></div>
-                                                            <a href="#">explorar</a>
+                                                            <a href="/product/<%= products[i].id %>">explorar</a>
                                                         </div>
                                                     </div>
                                                 </div>

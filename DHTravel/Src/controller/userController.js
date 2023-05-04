@@ -181,6 +181,52 @@ const userController = {
             return res.send(error);
         }
     },
+
+    getUserCreate: (req, res) => {
+        res.render('./users/userCreate')
+    },
+
+    userCreate: (req, res) => {
+        async (req, res) => {
+
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                return res.render('./users/userCreate', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                });
+            }
+        
+            try {
+                if (!resultValidation.isEmpty()) {
+                    return res.render('./users/userCreate', {
+                        errors: resultValidation.array(),
+                        prev: req.body
+                    });
+                } else {
+                    // const userExist = await db.User.findOne({ where: { email: req.body.email } })
+                    // if (userExist) {
+                    //     return res.send('El usuario ya se encuentra registrado');
+                    // } else {
+                        const newUser = {
+                            firstName: req.body.firstName,
+                            lastName: req.body.lastName,
+                            email: req.body.email,
+                            category: req.body.category,
+                            image: req.file.filename,
+                            password: bcrypt.hashSync(req.body.password, 10)
+                        };
+                        await db.User.create(newUser);
+        
+                        return res.redirect('/users/listall');
+                    }
+                // }
+            } catch (error) {
+                return res.send(error);
+            }
+    }
+},
+
     userDelete: (req, res) => {
         db.User.destroy({
             where: {

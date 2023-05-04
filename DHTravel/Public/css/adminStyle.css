@@ -10,7 +10,7 @@
     margin-bottom: 9%;
     background-color: #20142A;
     border-radius: 5px;
-    border: solid 1px #5B050C;
+    /* border: solid 1px #5B050C; */
     background-color: rgba(32, 20, 42, 0.9);
     }
     .main-containerAdmin {
@@ -94,9 +94,114 @@
 .user-info {
     margin: 10px 20px 10px 20px;
 }
+
+/* ALLUSERS */
 .allusers-container {
     background-image: url(/img/adminUse/RazerChroma.png);
     background-position-y: center;
     background-position-x: center;
     background-attachment: fixed ;
+    height: 100%;
 }
+.alluser-container {
+    margin-bottom: 0;
+} 
+
+/* USER CREATE */
+.u-create-sec {
+    margin-top: 5px;
+    margin-bottom: 50px;
+    height: 700px;
+    border: none;
+}
+.u-create-btn {
+    position: absolute;
+    bottom: 90px;
+    font-family: 'Mako';
+    
+}
+
+
+
+/* ALLPRODUCTS */
+.admin-card {
+    width: 350px;
+    height: 500px;
+}
+.card-info{
+    height: 5%;
+}
+.admin-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-info h4 {
+    font-size: 15px;
+    margin-bottom: -20px;
+}
+.card-info-title {
+    height: 10%;
+    z-index: 1;
+}
+.card-info-description h4 {
+    height: 5%;
+    font-size: 15px;
+    margin-left: 14px;
+    margin-top: -20px;
+}  
+.card-info-description,
+.card-info {
+    z-index: 1;
+}
+.btn1 {
+    position: fixed;
+    right: 80px;
+}
+.btn2 {
+    position: fixed;
+    right: -80px;
+}
+
+.admin-btn{
+    background-color: transparent;
+    font-size: 13px;
+    font-family: 'Mako';
+    overflow: hidden;
+}
+
+/* PRODUCT EDIT */
+.edit-admin {
+    height: 780px;
+}
+
+/* PRODUCT CREATE  */
+.product-create {
+    height: 600px;
+}
+.prd {
+    height: 210px;
+}
+/* ERRORS  */
+.name-error,
+.description-error,
+.destination-error,
+.origin-error,
+.person-error,  
+.date-error,
+.price-error {
+    font-size: 11px;
+    color: #5B050C;
+    height: 5px;
+    font-family: 'Mako';
+}
+
+.prd {
+    margin-bottom: 25px;
+}
+.p-error{
+    position: relative;
+    bottom: 23px;
+} 
+
+/* PRODUCT DETAIL */

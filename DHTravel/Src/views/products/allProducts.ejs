@@ -3,42 +3,65 @@
 <%- include('../partials/head.ejs') %>
 
     <body class="body-allProducts">
-        <main>
-            <h2 class="titulo-h2">List of Products</h2>
-            <ul>
-                <% for(let i=0; i< products.length; i++) {%>
-                    <li>
-                        <article class="card-allProducts">
-                            <a href="/product/<%= products[i].id %>">
-                                <img src="<%= `/img/productImage/${products[i].image}` %>">
-                                <p>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Nombre:</span> <%= products[i].name %>
+        <main class="allusers-container">
+            <%- include('../partials/adminNav.ejs') %>
+                <div class="container-card">
+                    <% for (let i=0; i < products.length; i++) { %>
+                        <div class="card admin-card">
+                            <div class="card-overlay"></div>
+                            <img class="card-img img-index" src="<%= `/img/productImage/${products[i].image}` %>"
+                                alt="">
+                            <div class="card-content admin-content">
+                                <div class="card-info-title">
+                                    <h4>
+                                        <%= products[i].name %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Descripción:</span> "<%= products[i].description %>"
+                                </div>
+                                <div class="card-info-description">
+                                    <h4>Description: <%= products[i].description %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Origen:</span> <%= products[i].origin %>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Origin: <%= products[i].origin %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Destino:</span> <%= products[i].destination %>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Destination: <%= products[i].destination %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Personas:</span> <%= products[i].person %>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Person include: <%= products[i].person %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Fecha: </span> <%= products[i].date %>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Date: <%= products[i].date %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Precio:</span> <%= products[i].price %> USD
+                                </div>
+                                <div class="card-info">
+                                    <h4>Price: $ <%= products[i].price %>
                                     </h4>
-                                    <h4 class="h4-allProducts"> <span class="span-allProducts">Categoria:</span> <%= products[i].category_id %>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Category: <%= products[i].category_id %>
                                     </h4>
-                                </p>
-                            </a>
-                            <div class="contenedor-button">
-                                <button class="button-allProducts">
-                                    <a class="letra-button" href="/product/<%= products[i].id %>">Ver detalle</a>
-                                </button>
+                                </div>
+                                    <div class="cb-container btn1">
+                                        <div class="button" id="button-2">
+                                            <div id="slide"></div>
+                                            <a href="/product/<%= products[i].id %>/edit">EDIT VALUES</a>
+                                        </div>
+                                    </div>
+                                    <div class="cb-container btn2">
+                                        <form class="button" id="button-2">
+                                            <div id="slide"></div>
+                                            <input type="hidden" name="_method" value="delete">
+                                            <button class="admin-btn" type="submit">DELETE PRODUCT</button>
+                                        </form>
+                                    </div>
                             </div>
-                        </article>
-                    </li>
-                <%}%>
-            </ul>
+                        </div>
+                        <% } %>
+                </div>
         </main>
     </body>
 
