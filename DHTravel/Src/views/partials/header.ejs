@@ -11,29 +11,31 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
+        <% if (locals.userLogged) { %>
+            <div class="li-item logged art1">
+                <h4>Hola <%= locals.userLogged.firstName %>!</h4>
+            </div>
+            <% } %>
     </section>
-    <section class="login-section">
-            <nav class="login">
+    <section class="login-section ls-logged">
+            <nav class="login nav-logged">
                 <ul class="ul-li ul-logged" type="none">
                     <% if (locals.userLogged) { %>
-                    <div class="li-item logged art1">
-                        <h4>Hola <%= locals.userLogged.firstName %>!</h4>
-                    </div>
-                    <div class="li-item logged art2">
+                    <div class="li-item">
                         <li>
-                            <a href="/profile" class="btn-hover btn-logged">My profile</a>
-                        </li>
-                    </div>
-                    <div class="li-item logged art3">
-                        <li>
-                            <a href="/carrito" class="btn-hover btn-logged">
+                            <a href="/cart" class="btn-hover hover-log">
                                 <i class="fa-solid fa-cart-flatbed"></i>
                             </a>
                         </li>
                     </div>
-                    <div class="li-item logged art4">
+                    <div class="li-item">
                         <li>
-                            <a href="/profile/logout" class="btn-hover btn-logged">Logout</a>
+                            <a href="/profile" class="btn-hover hover-log">Profile</a>
+                        </li>
+                    </div>
+                    <div class="li-item">
+                        <li>
+                            <a href="/profile/logout" class="btn-hover hover-log">Logout</a>
                         </li>
                     </div>
                     <% } else { %>
@@ -49,7 +51,7 @@
                     </div>
                     <div class="li-item">
                         <li>
-                            <a href="/carrito" class="btn-hover">
+                            <a href="/cart" class="btn-hover">
                                 <i class="fa-solid fa-cart-flatbed"></i>
                             </a>
                         </li>

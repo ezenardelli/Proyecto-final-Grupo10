@@ -115,8 +115,8 @@
     border: none;
 }
 .u-create-btn {
-    position: absolute;
-    bottom: 90px;
+    position: relative;
+    bottom: 10px;
     font-family: 'Mako';
     
 }
