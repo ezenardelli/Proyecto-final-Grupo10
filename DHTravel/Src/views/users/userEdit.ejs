@@ -10,26 +10,29 @@
                         <form class="login-form register" action="/user/<%= user.id %>/edit?_method=PUT" method="POST"
                             enctype="multipart/form-data">
                             <p class="form-group reg">
-                                <input class="form-control" type="text" name="firstName" id="firstName"
+                                <input class="form-control1" type="text" name="firstName" id="firstName"
                                     value="<%= user.firstName %>">
                                 <label class="form-label">First name</label>
                             </p>
                             <p class="form-group reg">
-                                <input class="form-control" type="text" name="lastName" id="lastName"
+                                <input class="form-control1" type="text" name="lastName" id="lastName"
                                     value="<%= user.lastName %>">
                                 <label class="form-label">Last name</label>
                             </p>
                             <p class="form-group reg">
-                                <input class="form-control" type="file" name="image" multiple>
+                                <input class="form-control1" type="file" name="image" multiple>
                                 <label class="form-label">Profile image</label>
                             </p>
                             <p class="form-group reg">
-                                <input class="form-control" type="text" name="email" id="email" value="<%= user.email %>">
+                                <input class="form-control1" type="text" name="email" id="email" value="<%= user.email %>">
                                 <label class="form-label">email</label>
                             </p>
                             <p class="form-group reg">
-                                <input class="form-control" type="text" name="category" id="category"
-                                    value="<%= user.category %>">
+                                <select class="form-control1" name="category" id="category" >
+                                    <option value=""><%= user.category  %></option>
+                                    <option value="0">Guest</option>
+                                    <option value="1">Admin</option>
+                                </select>
                                 <label class="form-label">Category</label>
                             </p>
                             <p class="btn-edit">
@@ -39,6 +42,13 @@
                                 <button class="login-btn reg-btn" type="reset">
                                     <h4>CLEAN</h4>
                                 </button>
+                                <!-- <form class="form-btn" action="/user/<%= user.id %>/?_method=DELETE" method="POST"
+                                    enctype="multipart/form-data">
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button class="login-btn reg-btn" type="submit">
+                                        <h4 class="">DELETE PROFILE</h4>
+                                    </button>
+                                </form> -->
                             </p>
                         </form>
                     </div>

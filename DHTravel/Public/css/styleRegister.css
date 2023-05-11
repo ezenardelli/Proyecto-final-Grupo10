@@ -31,7 +31,7 @@ font-family: 'Mako', sans-serif;
     border-radius: 5px;
     border: solid 1px #5B050C;
     background-color: rgba(32, 20, 42, 0.9);
-    }
+}
 
 .register-forms {
     display: flex;
@@ -55,6 +55,7 @@ font-family: 'Mako', sans-serif;
     color: #9e92a7;
     font-weight: 200;
 }
+
 .form-group .reg {
     position: relative;
     font-size: 15px;
@@ -63,11 +64,11 @@ font-family: 'Mako', sans-serif;
     width: 70vw;
     max-width: 280px;
     margin: auto;
-    }
+}
 
-    .reg-btn {
-        margin-top: 30px;
-    }
+.reg-btn {
+    margin-top: 30px;
+}
 
 /* ERRORS  */
 .firstName-error,
@@ -75,26 +76,24 @@ font-family: 'Mako', sans-serif;
 .category-error,
 .image-error {
     font-size: 11px;
-    color: #5B050C;
+    color: #860c16;
     height: 5px;
 }
 
 /*TABLET*/
 @media (min-width: 460px) {
-    
+
     .social-media {
         justify-content: flex-end;
     }
 
     .social-media i {
         padding: 20px;
-    }     
+    }
 }
 
 /*NOTEBOOKS*/
-@media (min-width: 750px) {
-
-}
+@media (min-width: 750px) {}
 
 /*DESKTOP*/
 @media (min-width: 1280px) {}

@@ -45,19 +45,12 @@
                                     <h4>Category: <%= products[i].category_id %>
                                     </h4>
                                 </div>
-                                    <div class="cb-container btn1">
-                                        <div class="button" id="button-2">
-                                            <div id="slide"></div>
-                                            <a href="/product/<%= products[i].id %>/edit">EDIT VALUES</a>
-                                        </div>
+                                <div class="cb-container btn1">
+                                    <div class="button" id="button-2">
+                                        <div id="slide"></div>
+                                        <a href="/product/<%= products[i].id %>/edit">EDIT VALUES</a>
                                     </div>
-                                    <div class="cb-container btn2">
-                                        <form class="button" id="button-2">
-                                            <div id="slide"></div>
-                                            <input type="hidden" name="_method" value="delete">
-                                            <button class="admin-btn" type="submit">DELETE PRODUCT</button>
-                                        </form>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <% } %>
