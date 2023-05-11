@@ -73,6 +73,7 @@
 }
 
 
+
     .onlogin {
     margin: auto;
     width: 90vw;
@@ -166,13 +167,13 @@
     background-position-x: center;
     background-size: 300vh;
     background-repeat: no-repeat;
-    font-family: Mako, Imprima;
+    font-family: 'Mako';
 }
 /* ERRORS */
 .password-error,
 .email-error{
     font-size: 11px;
-    color: #5B050C;
+    color: #860c16;
 }
 
 /* .video-background {
