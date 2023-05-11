@@ -60,18 +60,19 @@
     border-color: #1a062b;
 }
 
-.form-group .form-control:valid {
+.form-group .form-control:focus {
     outline: none;
     box-shadow: 0 1px #420e6d;
     border-color: #1a062b;
 }
 
-.form-group .form-control:focus + .form-label,
-.form-group .form-control:valid + .form-label {
+.form-group .form-control:focus + .form-label {
     font-size: 12px;
-    color: #cfbddd;
+    color: rgb(207, 189, 221);
     transform: translateY(-20px);
 }
+
+
 
     .onlogin {
     margin: auto;
@@ -166,13 +167,13 @@
     background-position-x: center;
     background-size: 300vh;
     background-repeat: no-repeat;
-    font-family: Mako, Imprima;
+    font-family: 'Mako';
 }
 /* ERRORS */
 .password-error,
 .email-error{
     font-size: 11px;
-    color: #5B050C;
+    color: #860c16;
 }
 
 /* .video-background {
