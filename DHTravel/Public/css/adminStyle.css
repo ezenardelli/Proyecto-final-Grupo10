@@ -12,38 +12,43 @@
     border-radius: 5px;
     /* border: solid 1px #5B050C; */
     background-color: rgba(32, 20, 42, 0.9);
-    }
-    .main-containerAdmin {
-        padding-top: 3%;
-        margin-top: 0%;
-        padding-bottom: 6%;
-        width: 100vw;
-        background-image: url(/img/adminUse/RazerChroma.png);
-        background-position-y: center;
-        background-position-x: center;
-    }
-    .btn-edit {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        font-family: 'Mako';
-    }
+}
+
+.main-containerAdmin {
+    padding-top: 3%;
+    margin-top: 0%;
+    padding-bottom: 6%;
+    width: 100vw;
+    background-image: url(/img/adminUse/RazerChroma.png);
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.btn-edit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Mako';
+}
 
 /* USER DETAIL */
 .udetail-main {
     height: 100vh;
 }
+
 .udetail-img {
     width: 150px;
     margin: auto;
     margin-top: 10%;
 }
+
 .udetail-h4 {
     font-size: 15px;
     color: #a297ad;
     font-weight: 200;
     height: 10px;
 }
+
 .udetail {
     margin: auto;
     display: flex;
@@ -52,32 +57,38 @@
     height: 400px;
     max-width: 300px;
 }
+
 .udetail-info {
     width: 250px;
     height: 30%;
     margin-left: 20px;
     margin-top: 20px;
 }
+
 .udetail-container {
     margin: auto;
     height: 30px;
     font-family: 'Mako';
 }
+
 .udetail-container img {
     width: 160px;
     height: 130px;
 }
+
 .udetail-btns {
     height: 25%;
     display: flex;
     justify-content: center;
 }
+
 .udetail-btn h4 {
     color: #ffffff;
     font-family: 'Mako';
     height: 2vh;
 }
-.udetail-btn  {
+
+.udetail-btn {
     font-size: 10px;
     width: 100px;
 }
@@ -91,6 +102,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 .user-info {
     margin: 10px 20px 10px 20px;
 }
@@ -100,12 +112,84 @@
     background-image: url(/img/adminUse/RazerChroma.png);
     background-position-y: center;
     background-position-x: center;
-    background-attachment: fixed ;
+    background-attachment: fixed;
     height: 100%;
 }
+
 .alluser-container {
     margin-bottom: 0;
-} 
+}
+
+.ub-container {
+    width: 100%;
+    margin: auto;
+    margin-bottom: -10px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.ub-button {
+    background-color: rgba(255, 255, 255, 0.315);
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #0a0042;
+    border-radius: 4px;
+    margin: 20px 20px 20px 20px;
+    color: #1c1729;
+    font-family: 'Mako';
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cb-a {
+    color: rgba(39, 36, 92, 0.671);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+#ub-button-2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    bottom: 10px;
+}
+
+#ub-button-2 a {
+    position: relative;
+    transition: all .35s ease-Out;
+    color: #362a53;
+}
+
+#ub-slide {
+    width: 100%;
+    height: 100%;
+    left: -200px;
+    background: #110a4e;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: 0;
+}
+
+#ub-button-2:hover #ub-slide {
+    left: 0;
+}
+
+#ub-button-2:hover a {
+    color: #e0dede;
+}
+
 
 /* USER CREATE */
 .u-create-sec {
@@ -114,11 +198,23 @@
     height: 700px;
     border: none;
 }
+
 .u-create-btn {
     position: relative;
     bottom: 10px;
     font-family: 'Mako';
-    
+}
+
+/* USER EDIT */
+
+.ue-form {
+    display: block;
+}
+.ue-cont {
+    margin: auto;
+}
+.ue-btn {
+    margin-top: 12px;
 }
 
 
@@ -128,38 +224,45 @@
     width: 350px;
     height: 500px;
 }
-.card-info{
+
+.card-info {
     height: 5%;
 }
-.admin-content{
+
+.admin-content {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .card-info h4 {
     font-size: 15px;
     margin-bottom: -20px;
 }
+
 .card-info-title {
     height: 10%;
     z-index: 1;
 }
+
 .card-info-description h4 {
     height: 5%;
     font-size: 15px;
     margin-left: 14px;
     margin-top: -20px;
-}  
+}
+
 .card-info-description,
 .card-info {
     z-index: 1;
 }
+
 .btn1 {
     margin: auto;
 }
 
 
-.admin-btn{
+.admin-btn {
     background-color: transparent;
     font-size: 13px;
     font-family: 'Mako';
@@ -171,19 +274,42 @@
     height: 780px;
 }
 
+.btn-2 {
+    margin: auto;
+    margin-top: 15px;
+}
+
+.pe-btn {
+    margin-top: 10px;
+}
+
+.pe-btn-del::before {
+    background-color: #7c0810;
+}
+
+.pe-btn-del::after {
+    background-color: #a50000;
+}
+
+.p-edit-form {
+    display: block;
+}
+
 /* PRODUCT CREATE  */
 .product-create {
     height: 600px;
 }
+
 .prd {
     height: 210px;
 }
+
 /* ERRORS  */
 .name-error,
 .description-error,
 .destination-error,
 .origin-error,
-.person-error,  
+.person-error,
 .date-error,
 .price-error,
 .category-error,
@@ -197,10 +323,11 @@
 .prd {
     margin-bottom: 25px;
 }
-.p-error{
+
+.p-error {
     position: relative;
     bottom: 23px;
-} 
+}
 
 /* PRODUCT DETAIL */
 .form-group .form-control1 {
@@ -214,9 +341,9 @@
     transition: .3s;
     border-bottom: 1px solid #777;
     color: #555;
-    }
-    
-    .form-group .form-control1:focus {
+}
+
+.form-group .form-control1:focus {
     outline: none;
     box-shadow: 0 1px #420e6d;
     border-color: #1a062b;
@@ -228,7 +355,7 @@
     border-color: #1a062b;
 }
 
-.form-group .form-control1:valid + .form-label {
+.form-group .form-control1:valid+.form-label {
     font-size: 12px;
     color: rgb(207, 189, 221);
     transform: translateY(-20px);

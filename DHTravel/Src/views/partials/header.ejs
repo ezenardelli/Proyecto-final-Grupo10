@@ -6,11 +6,12 @@
             </a>
         </div>
         <div class="search-box">
-            <input class="input-searcher" type="text" placeholder="Encuentre su destino">
-            <button class="icon-a">
+            <input class="input-searcher" id="searchInput" type="text" placeholder="Encuentre su destino">
+            <button class="icon-a" id="searchButton">
                 <i class="fas fa-search"></i>
             </button>
         </div>
+        <div id="resultadoBusqueda"></div>
         <% if (locals.userLogged) { %>
             <div class="li-item logged art1">
                 <h4>Hola <%= locals.userLogged.firstName %>!</h4>
@@ -60,4 +61,5 @@
                 </ul>
             </nav>
     </section>
+    <script src="/js/searchBar.js"></script>
 </header>
