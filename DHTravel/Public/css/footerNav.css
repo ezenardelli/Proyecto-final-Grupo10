@@ -1,0 +1,83 @@
+.fn-body {
+    width: 100vw;
+    background-image: url(/img/productImage/img5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    font-family: Mako, Imprima;
+    color: rgb(170, 150, 216);
+    background-attachment: fixed;
+}
+.fn-body-qa {
+    width: 100vw;
+    background-image: url(/img/productImage/venecia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    font-family: Mako, Imprima;
+    color: rgb(170, 150, 216);
+    background-attachment: fixed;
+}
+.fn-body-contact {
+    width: 100vw;
+    background-image: url(/img/productImage/img-index5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    font-family: Mako, Imprima;
+    color: rgb(170, 150, 216);
+    background-attachment: fixed;
+}
+.under-body {
+    background-color: rgb(217, 221, 223);
+}
+
+
+.fn-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    background-color: rgba(39, 14, 56, 0.582);
+    border-radius: 5px;
+    min-width: 300px;
+    max-width: 1100px;
+    margin: 5%;
+}
+
+.fn-info {
+    margin: 10px 15px 10px 15px;
+}
+
+.fn-h1 {
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.fn-contact {
+    margin-top: 20px;
+}
+.fn-contact a:visited {
+    color: rgb(170, 150, 216);
+}
+
+@media (min-width: 460px) {
+    .fn-container {
+        margin: 5%;
+    }
+
+}
+
+@media (min-width: 750px) {
+}
+
+@media (min-width: 1250px) {
+    .fn-container {
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}

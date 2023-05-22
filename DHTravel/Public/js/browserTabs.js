@@ -7,18 +7,23 @@ window.addEventListener('load', () => {
             'register': 'Register',
             'login': 'Login',
             'profile': 'Profile',
-            'carrito': 'Shopping Cart',
-            'detalle': 'Cart Detail',
+            'cart': 'Shopping Cart',
+            'detail': 'Cart Detail',
             'products/listall': 'Products',
             'product/create': 'Product Create',
-            'product/:id': 'Product Detail',
+            'product/:id/detail': 'Product Detail',
             'product/:id/edit': 'Edit Product',
             'users/listall': 'Users List',
             'user/:id': 'User Detail',
             'user/:id/edit': 'Edit User',
             'profile/edit': 'Edit Profile',
-            'admin-home': 'Admin Home'
-
+            'you-shall-not-pass!': 'Not permission',
+            'Terms': 'Terms',
+            'Q&A': 'Q&A',
+            'Contact': 'Contact',
+            'About-us': 'About us',
+            'HHRR': 'HHRR',
+            'Payment-method': 'Payment method'
         };
         const dinamicRoute = dinamic.slice(1).split('.')[0];
         

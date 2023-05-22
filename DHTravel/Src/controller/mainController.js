@@ -11,7 +11,23 @@ const mainController = {
             return res.send(error);
         };
     },
-    contact: () => { 
+    contact: (req, res) => { 
+        return res.render('./main/contact')
+    },
+    terms: (req, res) => { 
+        return res.render('./main/terms')
+    },
+    frecuent: (req, res) => { 
+        return res.render('./main/q&a')
+    },
+    hhrr: (req, res) => { 
+        return res.render('./main/hhrr')
+    },
+    aboutus: (req, res) => { 
+        return res.render('./main/about-us')
+    },
+    payment: (req, res) => { 
+        return res.render('./main/paymentMethod')
     },
 };
 
