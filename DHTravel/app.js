@@ -50,5 +50,5 @@ app.use(productRouter);
 app.use(adminRouter);
 
 app.use((req, res, next) => {
-    res.status(404).render('./partials/error-404');
+    res.status(404).render('./main/error-404');
 });
