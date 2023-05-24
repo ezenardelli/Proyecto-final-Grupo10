@@ -79,10 +79,10 @@ const userController = {
                         }
                         return res.redirect('/');
                     } else {
-                        return res.send('Correo electrónico o contraseña incorrecta');
+                        return res.render('./partials/popup', { message: 'Correo electrónico o contraseña incorrecta' });
                     }
                 } else {
-                    return res.send('Correo electrónico o contraseña incorrecta');
+                    return res.render('./partials/popup', { message: 'Correo electrónico o contraseña incorrecta' });
                 }
             }
 

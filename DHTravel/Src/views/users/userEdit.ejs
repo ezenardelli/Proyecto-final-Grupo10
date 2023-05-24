@@ -6,7 +6,7 @@
         <%- include('../partials/adminNav.ejs') %>
             <main class="main-containerAdmin">
                 <section class="edit-form">
-                    <div class="register-forms login-container">
+                    <div class="register-forms login-container ue-form">
                         <form class="login-form register" action="/user/<%= user.id %>/edit?_method=PUT" method="POST"
                             enctype="multipart/form-data">
                             <p class="form-group reg">
@@ -35,20 +35,20 @@
                                 </select>
                                 <label class="form-label">Category</label>
                             </p>
-                            <p class="btn-edit">
-                                <button class="login-btn reg-btn" type="submit">
-                                    <h4>MODIFY</h4>
+                            <p class="btn-edit ue-cont">
+                                <button class="login-btn reg-btn ue-btn" type="submit">
+                                    <h4>MODIFY USER</h4>
                                 </button>
-                                <button class="login-btn reg-btn" type="reset">
-                                    <h4>CLEAN</h4>
+                                <button class="login-btn reg-btn ue-btn" type="reset">
+                                    <h4>CLEAN DATA</h4>
                                 </button>
-                                <!-- <form class="form-btn" action="/user/<%= user.id %>/?_method=DELETE" method="POST"
+                                <form action="/user/<%= user.id %>/?_method=DELETE" method="POST"
                                     enctype="multipart/form-data">
                                     <input type="hidden" name="_method" value="delete">
-                                    <button class="login-btn reg-btn" type="submit">
-                                        <h4 class="">DELETE PROFILE</h4>
+                                    <button class="login-btn reg-btn ue-btn pe-btn pe-btn-del" type="submit">
+                                        <h4 class="">DELETE USER</h4>
                                     </button>
-                                </form> -->
+                                </form> 
                             </p>
                         </form>
                     </div>

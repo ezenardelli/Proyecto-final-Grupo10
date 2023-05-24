@@ -50,17 +50,16 @@
                                     </div>
                                 </div>
 
-                                <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp"
-                                    target="_blank">
+                                <a href="https://wa.link/1be0nx" class="btn-wsp" target="_blank">
                                     <i class="fa fa-whatsapp icono"></i>
                                 </a>
                                 <% if (!(user && user.category===1)) { %>
                                     <%- include("../partials/wrapper.ejs") %>
                                         <% } %>
                             </main>
+                            <% if (!(user && user.category===1)) { %>
+                                <%- include("../partials/footer.ejs") %>
+                                    <% } %>
     </body>
-    <% if (!(user && user.category===1)) { %>
-        <%- include("../partials/footer.ejs") %>
-            <% } %>
 
 </html>

@@ -8,8 +8,10 @@ const cookies = require('cookie-parser');
 
 const mainRouter = require('./src/routes/mainRouter.js');
 const userRouter = require('./src/routes/userRouter.js');
-const productRouter = require('./src/routes/productRouter.js');
+const productRouter = require('./Src/routes/productRouter.js');
 const adminRouter = require('./src/routes/adminRouter.js');
+const productApiRouter = require('./Src/routes/api/productApiRouter.js');
+const userApiRouter = require('./Src/routes/api/userApiRouter.js');
 
 const loggedMiddleware = require('./src/middlewares/loggedMiddleware');
 
@@ -48,3 +50,9 @@ app.use(mainRouter);
 app.use(userRouter);
 app.use(productRouter);
 app.use(adminRouter);
+app.use(userApiRouter);
+app.use(productApiRouter);
+
+app.use((req, res, next) => {
+    res.status(404).render('./main/error-404');
+});
