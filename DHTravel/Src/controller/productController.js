@@ -8,7 +8,12 @@ const productController = {
         res.render('./products/productCart')
     },
     detail: (req, res) => {
-        res.render('./products/productDetail')
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                res.render('./products/productDetail', {products:product} )
+            }).catch((error) => {
+                res.status(500).send(error)
+            });
     },
     allProducts: async (req, res) => {
         await db.Product.findAll()

@@ -5,7 +5,7 @@
     <%- include('../partials/adminNav.ejs') %>
         <main class="main-containerAdmin">
             <section class="edit-form edit-admin">
-                <div class="register-forms login-container">
+                <div class="register-forms login-container p-edit-form">
                     <form class="login-form register" action="/product/<%= product.id %>/edit?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <p class="form-group reg">
@@ -59,23 +59,22 @@
                                 value="<%= product.price %>">
                             <label class="form-label">Price</label>
                         </p>
-                        <p class="btn-edit">
-                                <button class="login-btn reg-btn" type="submit">
-                                    <h4>MODIFY</h4>
+                        <p class="btn-edit btn-2">
+                                <button class="login-btn reg-btn pe-btn" type="submit">
+                                    <h4>MODIFY PRODUCT</h4>
                                 </button>
-                                <button class="login-btn reg-btn" type="reset">
-                                    <h4>CLEAN</h4>
+                                <button class="login-btn reg-btn pe-btn" type="reset">
+                                    <h4>CLEAN DATA</h4>
                                 </button>
-                                <!-- <form action="/product/<%= product.id %>/?_method=DELETE" method="POST"
-                                    enctype="multipart/form-data">
-                                    <input type="hidden" name="_method" value="delete">
-                                    <button class="login-btn reg-btn" type="submit">
-                                        <h4 class="">DELETE PROFILE</h4>
-                                    </button>
-                                </form>     -->
-                                
                         </p>
                     </form>
+                    <form class="useredit-btn" action="/product/<%= product.id %>/?_method=DELETE" method="POST"
+                        enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="delete">
+                        <button class="login-btn reg-btn pe-btn pe-btn-del" type="submit">
+                            <h4 class="">DELETE PRODUCT</h4>
+                        </button>
+                    </form>  
                 </div>
             </section>
         </main>

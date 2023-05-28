@@ -39,6 +39,11 @@ font-family: 'Mako', sans-serif;
     height: 250px;
 }
 
+.register-icon {
+    margin: auto;
+    font-size: 60px;
+}
+
 .register {
     height: 600px;
     margin-top: -170px;
@@ -47,6 +52,10 @@ font-family: 'Mako', sans-serif;
 .main-icon,
 .main-icon:visited {
     color: rgb(125, 111, 170);
+}
+
+.main-h4 {
+    margin: auto;
 }
 
 .main-h4 h4 {

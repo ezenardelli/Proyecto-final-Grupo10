@@ -8,13 +8,12 @@ const cookies = require('cookie-parser');
 
 const mainRouter = require('./src/routes/mainRouter.js');
 const userRouter = require('./src/routes/userRouter.js');
-const productRouter = require('./src/routes/productRouter.js');
+const productRouter = require('./Src/routes/productRouter.js');
 const adminRouter = require('./src/routes/adminRouter.js');
 
 const loggedMiddleware = require('./src/middlewares/loggedMiddleware');
 
 const connectConfig = require('./src/database/config/testConnection')
-
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -48,3 +47,7 @@ app.use(mainRouter);
 app.use(userRouter);
 app.use(productRouter);
 app.use(adminRouter);
+
+app.use((req, res, next) => {
+    res.status(404).render('./main/error-404');
+});

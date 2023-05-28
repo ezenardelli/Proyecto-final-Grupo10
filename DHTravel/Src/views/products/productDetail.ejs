@@ -3,40 +3,65 @@
 <%- include("../partials/head.ejs") %>
 <body class="body-detail">
     <%- include("../partials/header.ejs") %>
-    <main class="main-container-detail">
-        <section class="detail-box">
-            <div class="img-paq">
-                <img src="/img/rio-carnival-2023 copia.png" alt="paquete brasil">
-            </div>
-            <section class="paquete">
-                <div class="incluye">
-                    <h3>Incluye</h3>
-                </div>
-                <div class="main-h3">
-                    <p>
-                        Traslados Aeropuerto <br>
-                        Seguro al viajero <br>
-                        4 Noches de hotel 4 estrellas <br>
-                        Desayuno <br>
-                        3 Noches de Carnavales <br>
-                    </p>
-                </div>
-                <div class="precio">
-                    <h3 class="h3-detail">Precio Total US$ 900</h3>
-                </div>
-            </section>
-            <section class="comprar">
-                <div class="main-h4">
-                    <p>
-                        <button class="boton"><a href="/carrito">
-                            <h4>Comprar paquete</h4>
-                        </a></button>
-                    </p>
-                </div>
-            </section>
+    <main class="profile-edit edit-prof">
+        <section class="edit-form sec-up1 sec-up2">
 
+            <div class="profile-edit-img">
+                <img src="/img/productImage/<%= products.image %> " style="width: 150px; border-radius: 5px;">
+            </div>
+
+            <div class="register-forms login-container ue-form">
+                <div class="login-form register">
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="name" id="name"
+                            value="<%= products.name %>" readonly>
+                        <label class="form-label2">Nombre</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="email" id="email"
+                            value="<%= products.description %>" readonly>
+                        <label class="form-label2">Descripción:</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="origin" id="origin"
+                            value="<%= products.origin%>" readonly>
+                        <label class="form-label2">Origen</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="destino" id="destino"
+                            value="<%= products.destination %>" readonly>
+                        <label class="form-label2">Destino</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="person" id="person"
+                            value="<%= products.person %>" readonly>
+                        <label class="form-label2">Personas:</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="date" id="date"
+                            value="<%= products.date %>" readonly>
+                        <label class="form-label2">Fecha:</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="price" id="price"
+                            value="<%= products.price %>" readonly>
+                        <label class="form-label2">Precio:</label>
+                    </p>
+                    <p class="form-group reg">
+                        <input class="form-control1" type="text" name="category" id="category"
+                            value="<%= products.category_id %>" readonly>
+                        <label class="form-label2">Categoria:</label>
+                    </p>
+                    <p class="form-group reg">
+                    <div class="button3 " id="button-4">
+                        <div id="slide"></div>
+                        <a href="/cart">Comprar</a>
+                    </div>
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
     <%- include("../partials/footer.ejs") %>
 </body>
-</footer>
+</html>

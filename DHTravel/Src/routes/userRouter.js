@@ -48,4 +48,5 @@ userRouter.put('/profile/:id/edit', upload.single('image'), authMiddleware, user
 
 userRouter.get('/profile/logout/', userController.logout);
 
+
 module.exports = userRouter;
