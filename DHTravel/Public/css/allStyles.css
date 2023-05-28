@@ -394,20 +394,106 @@ footer {
 .lp-error {
     height: 90vh;
 }
+
 .img-404 {
     margin-top: -100px;
     width: 60%;
     min-width: 300px;
     max-width: 700px;
 }
-.error-h1{
+
+.error-h1 {
     margin-bottom: 50px;
     font-size: 100px;
     letter-spacing: 10px;
 }
+
 .error-p {
-    font-size: 30px ;
+    font-size: 30px;
 }
+
+.profile-edit {
+    padding-top: 3%;
+    margin-top: 0%;
+    padding-bottom: 6%;
+    width: 100vw;
+    background-image: url(/img/productImage/img5.jpg);
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-edit-img {
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+}
+
+.edit-prof {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.form-label2 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -12px;
+}
+
+.form-label3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.button3 {
+    background-color: rgba(255, 255, 255, 0.315);
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #0a0042;
+    border-radius: 4px;
+    margin: 20px 20px 20px 20px;
+    color: #1c1729;
+    font-family: 'Mako';
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    bottom: 60px;
+    left: 100px;
+}
+
+#button-3 a {
+    position: relative;
+    transition: all .35s ease-Out;
+    color: #362a53;
+}
+
+
+
+#button-3:hover #slide {
+    left: 0;
+}
+
+#button-3:hover a {
+    color: #e0dede;
+}
+
+
 
 /*TABLET*/
 @media (min-width: 460px) {
@@ -424,7 +510,7 @@ footer {
         font-size: 30px;
     }
 
-    .error-h1{
+    .error-h1 {
         font-size: 100px;
     }
 }
@@ -523,7 +609,7 @@ footer {
         font-size: 40px;
     }
 
-    .error-h1{
+    .error-h1 {
         margin-bottom: 50px;
         font-size: 100px;
         letter-spacing: 10px;

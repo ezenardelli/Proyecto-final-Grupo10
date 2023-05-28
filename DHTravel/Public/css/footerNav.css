@@ -31,6 +31,29 @@
     color: rgb(170, 150, 216);
     background-attachment: fixed;
 }
+.fn-body-payment {
+    width: 100vw;
+    background-image: url(/img/productImage/puntacana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    font-family: Mako, Imprima;
+    color: rgb(170, 150, 216);
+    background-attachment: fixed;
+}
+.fn-body-aboutus {
+    width: 100vw;
+    background-image: url(/img/productImage/img-index4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    font-family: Mako, Imprima;
+    color: rgb(170, 150, 216);
+    background-attachment: fixed;
+}
+
 .under-body {
     background-color: rgb(217, 221, 223);
 }

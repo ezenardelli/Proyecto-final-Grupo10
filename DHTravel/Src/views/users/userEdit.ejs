@@ -5,6 +5,11 @@
     <body>
         <%- include('../partials/adminNav.ejs') %>
             <main class="main-containerAdmin">
+
+                <!-- <video class="video-background" autoplay loop muted>
+                    <source src="/img/video-back.mp4" type="video/mp4">
+                </video> -->
+                
                 <section class="edit-form">
                     <div class="register-forms login-container ue-form">
                         <form class="login-form register" action="/user/<%= user.id %>/edit?_method=PUT" method="POST"
@@ -41,15 +46,15 @@
                                 </button>
                                 <button class="login-btn reg-btn ue-btn" type="reset">
                                     <h4>CLEAN DATA</h4>
-                                </button>
-                                <form action="/user/<%= user.id %>/?_method=DELETE" method="POST"
-                                    enctype="multipart/form-data">
-                                    <input type="hidden" name="_method" value="delete">
-                                    <button class="login-btn reg-btn ue-btn pe-btn pe-btn-del" type="submit">
-                                        <h4 class="">DELETE USER</h4>
-                                    </button>
-                                </form> 
+                                </button> 
                             </p>
+                        </form>
+                        <form class="delete-btn" action="/user/<%= user.id %>/?_method=DELETE" method="POST"
+                            enctype="multipart/form-data">
+                            <input type="hidden" name="_method" value="delete">
+                            <button class="login-btn reg-btn ue-btn pe-btn pe-btn-del" type="submit">
+                                <h4 class="">DELETE USER</h4>
+                            </button>
                         </form>
                     </div>
                 </section>

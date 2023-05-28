@@ -1,29 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head'); %>
-	<body class="body-productId">
+<%- include('../partials/head'); %>
+
+	<body>
 		<%- include('../partials/header'); %>
-		<main class="main-container-detail">
 
-		
-			<section class="productId-box">
-				<h4 class="name-productId">
-					¡Bienvenido <%= user.firstName %>!
-				</h4>
-				<div class="img-paq">
-				<img src="/img/users/<%= user.image %> ">
-			</div>
-			<h4 class="h4-productId">
-				<span>Email:</span>
-				<%= user.email %>
-			</h4>
-			<button class="botton-productId">
-				<h4><a href="/profile/edit"><h4 class="h4-botton">Editar datos</a></h4>
-				</button>
-			
-			</section>
+			<main class="profile-edit edit-prof">
+				<section class="edit-form sec-up1">
 
-	</main>
-    <%- include('../partials/footer'); %>
-</body>
+					<div class="profile-edit-img">
+						<img src="/img/users/<%= user.image %> " style="width: 150px; border-radius: 5px;">
+					</div>
+
+					<div class="register-forms login-container ue-form">
+						<div class="login-form register" action="/profile/<%= user.id %>/edit?_method=PUT"
+							method="POST" enctype="multipart/form-data">
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="firstName" id="firstName"
+									value="<%= user.firstName %>" readonly>
+								<label class="form-label2">Nombre</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName"
+									value="<%= user.lastName %>" readonly>
+								<label class="form-label2">Apellido</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="email" id="email"
+									value="<%= user.email %>" readonly>
+								<label class="form-label2">Email</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName" value="Ninguno"
+									readonly>
+								<label class="form-label2">Comentarios efectuados:</label>
+							</p>
+							<p class="form-group reg">
+							<div class="button3" id="button-3">
+								<div id="slide"></div>
+								<a href="/profile/edit">Modificar</a>
+							</div>
+							</p>
+						</div>
+					</div>
+				</section>
+				<section class="edit-form sec-up2">
+					<div class="register-forms login-container ue-form">
+						<div class="login-form register">
+							<p class="form-group reg">
+								<label class="form-label2 form-label3">Historial de movimientos</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="firstName" id="firstName" value="2"
+									readonly>
+								<label class="form-label2">Viajes realizados:</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName" value="0"
+									readonly>
+								<label class="form-label2">Devoluciones efectuadas:</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName" value="1"
+									readonly>
+								<label class="form-label2">Cupones utilizados:</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName" value="Ninguna"
+									readonly>
+								<label class="form-label2">Peticiones especiales:</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName" value="9/10"
+									readonly>
+								<label class="form-label2">Ultima calificacion efectuada:</label>
+							</p>
+							<p class="form-group reg">
+								<input class="form-control1" type="text" name="lastName" id="lastName" value="Ninguno"
+									readonly>
+								<label class="form-label2">Comentarios efectuados:</label>
+							</p>
+						</div>
+					</div>
+				</section>
+			</main>
+			<%- include('../partials/footer'); %>
+	</body>
+
 </html>
