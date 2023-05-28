@@ -15,7 +15,6 @@ const loggedMiddleware = require('./src/middlewares/loggedMiddleware');
 
 const connectConfig = require('./src/database/config/testConnection')
 
-app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(methodOverride('_method'));

@@ -8,7 +8,7 @@ export default function LastMovieInDb() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:3031/api/products/');
+                const response = await axios.get('http://localhost:3050/api/products/');
                 const products = response.data.products;
 
                 if (products && products.length > 0) {

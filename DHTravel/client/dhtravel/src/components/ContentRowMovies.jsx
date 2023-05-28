@@ -5,8 +5,8 @@ export default function ContentRowMovies() {
         const [state, setState] = useState({ products: [], users: [] });
 
         const apiInfo = async () => {
-            const jsonProducts = await axios('http://localhost:3031/api/products/');
-            const jsonUsers = await axios('http://localhost:3031/api/users/');
+            const jsonProducts = await axios('http://localhost:3050/api/products/');
+            const jsonUsers = await axios('http://localhost:3050/api/users/');
             const dataProducts = await jsonProducts.data;
             const dataUsers = await jsonUsers.data;
             setState({ products: dataProducts, users: dataUsers });

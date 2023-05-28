@@ -6,7 +6,7 @@ export default function GenresInDb() {
     const [state, setState] = useState([]);
 
     const apiInfo = async () => {
-        const jsonProducts = await axios('http://localhost:3031/api/products/');
+        const jsonProducts = await axios('http://localhost:3050/api/products/');
         const dataProducts = await jsonProducts.data;
         setState(dataProducts);
     }

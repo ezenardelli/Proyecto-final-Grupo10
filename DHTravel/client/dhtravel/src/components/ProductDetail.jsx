@@ -9,7 +9,7 @@ export default function ProductDetail() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`http://localhost:3031/api/products/${id}`);
+                const response = await axios.get(`http://localhost:3050/api/products/${id}`);
                 const productData = response.data;
 
                 setProduct(productData);
