@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
         resultado.innerHTML = "";
 
         try {
-            const response = await fetch(`http://localhost:3031/api/products/?name=${input}`);
+            const response = await fetch(`http://localhost:3050/api/products/?name=${input}`);
 
             const data = await response.json();
 
