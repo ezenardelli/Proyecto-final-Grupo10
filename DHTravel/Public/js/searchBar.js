@@ -6,18 +6,20 @@ window.addEventListener('load', () => {
         resultado.innerHTML = "";
 
         try {
-            // Realiza la consulta a la base de datos
-            const productos = await db.Product.findAll({
-                where: {
-                    nombre: {
-                        [Op.like]: '%' + input + '%'
-                    }
-                }
-            });
+            const response = await fetch(`http://localhost:3050/api/products/?name=${input}`);
 
-            // Muestra los resultados de la búsqueda
-            productos.forEach(function (producto) {
-                resultado.innerHTML += '<p>' + producto.nombre + '</p>';
+            const data = await response.json();
+
+            const productos = data.products;
+
+            const productosFiltrados = productos.filter(producto => {
+                const productName = producto[0].name.toLowerCase();
+                return productName.includes(input);
+
+            });            
+            
+            productosFiltrados.forEach(function (producto) {
+                resultado.innerHTML += `<a href="/product/${producto[0].id}/detail"><p>${producto[0].name}</p></a>`;
             });
         } catch (error) {
             console.log('Error al buscar productos:', error);
