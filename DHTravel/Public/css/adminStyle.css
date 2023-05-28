@@ -162,6 +162,170 @@ body.open .menu a {
     }
 }
 
+/*ADMIN NAVBAR*/
+.admin-header-cont {
+    position: fixed;
+    z-index: 10;
+}
+
+.admin-header {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.admin-h1 {
+    margin-right: 50px ;
+    font-size: 40px;
+    letter-spacing: 7px;
+    color: #764596;
+}
+.img-admin {
+    margin-top: 15px;
+    width: 100px;
+}
+
+.burger {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.burger,
+.menu {
+    position: fixed;
+}
+
+.burger {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    background-image: url(/img/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.open .burger {
+    background-image: url(/img/close.svg);
+}
+
+.menu {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 400px;
+    height: 100%;
+    background: #13041f;
+    translate: -100% 0;
+    transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+.menu nav {
+    opacity: 0;
+}
+
+@keyframes menu-in {
+    0% {
+        clip-path: ellipse(60% 60% at 0% 50%);
+    }
+
+    100% {
+        clip-path: ellipse(120% 120% at 0% 50%);
+    }
+}
+
+body.open .menu {
+    opacity: 1;
+    visibility: visible;
+    translate: 0;
+    animation: menu-in 0.375s;
+}
+
+body.open .menu nav {
+    opacity: 1;
+}
+
+.menu nav:hover a {
+    opacity: 0.25;
+}
+
+.menu nav a:hover {
+    opacity: 1;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    position: relative;
+    top: -150px;
+    color: #764596;
+    font-size: 22px;
+    font-family: "Mako";
+    padding: 20px 0;
+    width: 300px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.menu a::before,
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.menu a::before {
+    opacity: 0;
+    background: rgb(255 255 255 / 20%);
+}
+
+.menu a::after {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    background: #9a85d1;
+}
+
+.menu a:hover::before {
+    opacity: 1;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+body.open .menu a {
+    animation: appear 0.25s backwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        translate: -30px 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* USER EDIT */
 .edit-form {
     margin: auto;
@@ -425,7 +589,6 @@ body.open .menu a {
     bottom: 20px;
     left: 100px;
 }
-
 
 /* ALLPRODUCTS */
 .admin-card {

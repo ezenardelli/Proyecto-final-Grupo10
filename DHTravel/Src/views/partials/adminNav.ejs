@@ -1,49 +1,35 @@
-<header>
-    <section class="">
-        <div class="">
-            <ul>
-                <li>
-                    <a href="/users/listall">Users</a>
-                </li>
-                <li>
-                    <a href="/products/listall">Products</a>
-                </li>
-                <li>
-                    <a href="/user/create">Create user</a>
-                </li>
-                <li>
-                    <a href="/product/create">Create product</a>
-                </li>
-            </ul>
-        </div>
-        <div class="">
-            <input class="" type="text" placeholder="Buscar producto">
-            <button class="">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-        <div class="">
-            <nav class="">
-                <ul class="ul-li" type="none">
-                    <% if (locals.userLogged) { %>
-                    <div class="">
-                        <li>
-                            <a href="/profile">
-                                <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;"> 
-                            </a>
-                        </li>
-                    </div>
-                    <div class="">
-                        <h4><a href="/profile">Bienvenido Admin!</a></h4>
-                    </div>
-                    <div class="">
-                        <li>
-                            <a href="/profile/logout">Logout</a>
-                        </li>
-                    </div>
-                    <% } %>
-                </ul>
+<header >
+    
+    <div class="admin-header">
+        <h1 class="admin-h1">DHTravel Admin Interface</h1>
+        <a href="/"><img class="img-admin" src="/img/logo.png" alt=""></a>
+    </div>
+    
+    <body>
+        <% if (locals.userLogged) { %>
+        <button class="burger" onclick="toggleMenu()"></button>
+        
+        <div class="menu">
+            <nav>
+                <div class="a1">
+                    <h4 ><a href="/profile">Welcome back <%= locals.userLogged.firstName %>!</a></h4>
+                </div>
+                <div class="a1">
+                    <a href="/profile">
+                        <img  src="/img/users/<%= locals.userLogged.image %>" width="100" style="border-radius: 50%;"> 
+                    </a>
+                </div>
+                <a href="/users/listall" style="animation-delay: 0.2s">Users</a>
+                <a href="/products/listall" style="animation-delay: 0.3s">Products</a>
+                <a href="/user/create" style="animation-delay: 0.4s">Create user</a>
+                <a href="/product/create" style="animation-delay: 0.5s">Create product</a>
+                <a href="/profile/logout" style="animation-delay: 0.5s">Logout<i class="fas fa-arrow-right-from-bracket"></i></a>
             </nav>
         </div>
-    </section>
+        <% } %>
+    </body>
+    <script type="text/javascript">
+        const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+
 </header>

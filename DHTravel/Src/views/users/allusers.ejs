@@ -5,6 +5,9 @@
     <body class="body-allProducts">
         <main class="allusers-container">
             <%- include('../partials/adminNav.ejs') %>
+            <!-- <video class="video-background" autoplay loop muted>
+                <source src="/img/video-back.mp4" type="video/mp4">
+            </video> -->
             <ul class="userinfo-container alluser-container">
                 <% for(let i=0; i< user.length; i++) {%>
                     <li class="user-info">
@@ -30,7 +33,12 @@
                                     </h4>
                                 </div>
                                 <div class="udetail-container">
-                                    <h4 class="udetail-h4">Category: <%= user[i].category %>
+                                    <h4 class="udetail-h4">Category:
+                                        <% if (user[i].category === 0) { %>
+                                            guest
+                                        <% } else if (user[i].category === 1) { %>
+                                            admin
+                                        <% } %>
                                     </h4>
                                 </div>
                             </div>
@@ -43,7 +51,7 @@
                         </section>
                     </li>
                     <%}%>
-            </ul>
+            </ul>  
         </main>
     </body>
 

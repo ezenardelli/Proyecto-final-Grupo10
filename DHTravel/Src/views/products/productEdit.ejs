@@ -66,16 +66,15 @@
                                 <button class="login-btn reg-btn pe-btn" type="reset">
                                     <h4>CLEAN DATA</h4>
                                 </button>
-                                <form action="/product/<%= product.id %>/?_method=DELETE" method="POST"
-                                    enctype="multipart/form-data">
-                                    <input type="hidden" name="_method" value="delete">
-                                    <button class="login-btn reg-btn pe-btn pe-btn-del" type="submit">
-                                        <h4 class="">DELETE PRODUCT</h4>
-                                    </button>
-                                </form>    
-                                
                         </p>
                     </form>
+                    <form class="useredit-btn" action="/product/<%= product.id %>/?_method=DELETE" method="POST"
+                        enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="delete">
+                        <button class="login-btn reg-btn pe-btn pe-btn-del" type="submit">
+                            <h4 class="">DELETE PRODUCT</h4>
+                        </button>
+                    </form>  
                 </div>
             </section>
         </main>

@@ -2,34 +2,42 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
     <body>
-        <main class="main-containerAdmin">
-            <section class="data-boxAdmin">
-                <div class="data-logoAdmin">
-                    <img src="/img/users/<%= user.image %> ">
+        <%- include("../partials/header.ejs") %>
+        <main class="profile-edit">
+            <section class="edit-form">
+                
+                <div class="profile-edit-img">
+                    <img src="/img/users/<%= user.image %> " style="width: 100px; border-radius: 5px;" >
                 </div>
-                <div class="register-formsAdmin">
-                    <form class="formsAdmin" action="/profile/<%= user.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="firstName" id="firstName" value="<%= user.firstName %>"
-                                placeholder="First name">
+                
+                <div class="register-forms login-container ue-form"> 
+                    <form class="login-form register" action="/profile/<%= user.id %>/edit?_method=PUT" method="POST"
+                        enctype="multipart/form-data"> 
+                        <p class="form-group reg">
+                            <input class="form-control1" type="text" name="firstName" id="firstName"
+                                value="<%= user.firstName %>">
+                            <label class="form-label">Nombre</label>
                         </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="lastName" id="lastName" value="<%= user.lastName %>"
-                                placeholder="Last name">
+                        <p class="form-group reg">
+                            <input class="form-control1" type="text" name="lastName" id="lastName"
+                                value="<%= user.lastName %>">
+                            <label class="form-label">Apellido</label>
                         </p>
-                        <p>
-                            <input class="data-itemAdmin" type="file" name="image" multiple>
+                        <p class="form-group reg">
+                            <input class="form-control1" type="file" name="image" multiple>
+                            <label class="form-label">Imagen de perfil</label>
                         </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="email" id="email" value="<%= user.email %>"
-                                placeholder="Email">
+                        <p class="form-group reg">
+                            <input class="form-control1" type="text" name="email" id="email" value="<%= user.email %>">
+                            <label class="form-label">Email</label>
                         </p>
-                        <p>
-                            <input class="data-itemAdmin" type="text" name="category" id="category" value="<%= user.category %>"
-                                placeholder="Category">
-                        </p>
-                        <p>
-                            <button class="submit-b" type="submit">modificar datos</button>
+                        <p class="btn-edit ue-cont">
+                            <button class="login-btn reg-btn ue-btn" type="submit">
+                                <h4>MODIFICAR PERFIL</h4>
+                            </button>
+                            <button class="login-btn reg-btn ue-btn" type="reset">
+                                <h4>LIMPIAR DATOS</h4>
+                            </button>
                         </p>
                     </form>
                 </div>
