@@ -62,7 +62,10 @@ header {
     width: 50px;
     margin: 10% 10%;
 }
-
+.container-search {
+    display: flex;
+    flex-direction: column;
+}
 .search-box {
     display: flex;
     justify-content: center;
