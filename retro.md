@@ -200,3 +200,29 @@ Stop Doing:
   <li>No tomar en cuenta la retroalimentación del equipo y las opiniones externas.</li>
   </ul>
 
+  <h2 id="r2">Retrospectiva SPRINT 8</h2>
+Start doing:
+  <ul>
+  <li>Establecer metas claras y prioritarias al inicio del sprint para enfocar nuestros esfuerzos en los objetivos principales.</li>
+  <li>Hacer un seguimiento regular del progreso del sprint para asegurarnos de estar avanzando hacia las metas establecidas.</li>
+  </ul>
+More of:
+  <ul>
+  <li>Asignar tareas y responsabilidades de manera equitativa y considerar la capacidad y experiencia de cada miembro del equipo al asignarlas.</li>
+  <li>Fomentar la colaboración y la participación activa de todos los miembros del equipo en las reuniones y decisiones relacionadas con el sprint.</li>
+  </ul>
+Keep Doing:
+  <ul>
+  <li>Mantener una comunicación abierta y efectiva para resolver dudas y problemas de manera oportuna.</li>
+  <li>Realizar investigaciones individuales y compartirlas con el equipo para enriquecer nuestro conocimiento y mejorar la calidad del trabajo.</li>
+  </ul>
+Less of:
+  <ul>
+  <li>Desviarnos de los objetivos principales del sprint y distraernos con tareas secundarias o menos relevantes.</li>
+  <li>Dejar detalles incompletos al final del sprint sin asignarles la debida importancia.</li>
+  </ul>
+Stop Doing:
+  <ul>
+  <li>Postergar las tareas clave del sprint y no asignarles suficiente tiempo y atención.</li>
+  <li>No seguir un plan de trabajo establecido y desviarnos de las fechas y plazos establecidos.</li>
+  </ul>
